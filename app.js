@@ -99,6 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Codificar el mensaje para URL
             const encodedMessage = encodeURIComponent(message);
             
+            // Registrar conversión en Google Analytics si está definido
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Engagement',
+                    'event_label': `Formulario Contacto: ${experience}`,
+                    'value': 1
+                });
+            }
+            
             // Crear el enlace directo a WhatsApp (Web o App)
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
             
@@ -336,6 +345,16 @@ document.addEventListener('DOMContentLoaded', () => {
             message += `¿Me podrían dar disponibilidad y el precio especial para nuestro grupo? ¡Muchas gracias! 🛶🐊🌌`;
             
             const encodedMessage = encodeURIComponent(message);
+            
+            // Registrar conversión en Google Analytics si está definido
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'Engagement',
+                    'event_label': `Modal Cotizar: ${tour.title}`,
+                    'value': 1
+                });
+            }
+            
             const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
             
             window.open(whatsappUrl, '_blank');
