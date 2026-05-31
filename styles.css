@@ -394,15 +394,29 @@ nav a:hover {
     .lagoon-activity-card {
         margin: 0 auto;
         width: 100%;
+        padding: 1.5rem !important; /* Tighter on mobile */
     }
     .hero-features-bar {
         position: relative;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem 1rem;
+        padding: 1.5rem;
         background: #fff;
         width: 100%;
+        border-radius: var(--radius-md);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        margin-bottom: -3rem; /* Overlap effect */
+        z-index: 10;
+    }
+    .hero-features-bar > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-features-bar > div > div {
+        text-align: center !important;
+        align-items: center;
     }
 }
 /* 6. EXPERIENCES SECTION */
@@ -2457,7 +2471,7 @@ footer {
     /* Ensure the main info grid cards fit beautifully */
     .experiences-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
+        gap: 1rem; /* Tighter gap on tablet/mobile */
     }
     
     /* Adjust grid elements to avoid massive tall stacks */
@@ -2478,8 +2492,9 @@ footer {
     
     /* Optimize card height to feel less massive and bulky on mobile */
     .exp-card {
-        height: 420px !important;
-        padding: 1.75rem !important;
+        height: 340px !important;
+        padding: 1.5rem !important;
+        border-radius: var(--radius-md);
     }
     
     /* Tighter padding on quiz */
