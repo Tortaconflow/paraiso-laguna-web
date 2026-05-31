@@ -366,6 +366,10 @@ nav a:hover {
     .hero {
         padding-bottom: 0;
         min-height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-right: 0;
     }
     .hero-bg::after {
         background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.95) 30%, rgba(255,255,255,1) 100%);
@@ -375,7 +379,7 @@ nav a:hover {
         gap: 3rem;
         text-align: center;
         margin-top: 6rem;
-        padding-bottom: 2rem;
+        padding: 0 2rem 2rem 2rem;
     }
     .hero-content {
         text-align: center;
@@ -398,6 +402,7 @@ nav a:hover {
         gap: 1.5rem;
         padding: 2rem;
         background: #fff;
+        width: 100%;
     }
 }
 /* 6. EXPERIENCES SECTION */
