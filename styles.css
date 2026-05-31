@@ -294,6 +294,28 @@ nav a:hover {
     width: 100%;
 }
 
+.hero-badge {
+    display: inline-block;
+    background: rgba(37, 211, 102, 0.1);
+    color: var(--accent-green, #128C7E);
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.hero-underline {
+    width: 80px;
+    height: 3px;
+    background: var(--accent-orange, #F28E2B);
+    border: none;
+    margin: 1rem 0 1.5rem 0;
+    border-radius: 2px;
+}
+
 .hero h1 span.nature-text {
     font-family: 'Playfair Display', serif;
     font-style: italic;
@@ -321,9 +343,33 @@ nav a:hover {
     display: flex;
     justify-content: flex-start;
     gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-features-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.8));
+    z-index: 2;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 991px) {
+    .hero {
+        padding-bottom: 0;
+        min-height: auto;
+    }
+    .hero-bg::after {
+        background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.95) 30%, rgba(255,255,255,1) 100%);
+    }
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -334,11 +380,24 @@ nav a:hover {
     .hero-content {
         text-align: center;
     }
+    .hero-underline {
+        margin-left: auto;
+        margin-right: auto;
+    }
     .hero-actions {
         justify-content: center;
     }
     .lagoon-activity-card {
         margin: 0 auto;
+        width: 100%;
+    }
+    .hero-features-bar {
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        padding: 2rem;
+        background: #fff;
     }
 }
 /* 6. EXPERIENCES SECTION */
