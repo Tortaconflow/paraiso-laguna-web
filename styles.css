@@ -2492,7 +2492,8 @@ footer {
     
     /* Optimize card height to feel less massive and bulky on mobile */
     .exp-card {
-        height: 340px !important;
+        height: 420px !important;
+        min-height: 420px;
         padding: 1.5rem !important;
         border-radius: var(--radius-md);
     }
