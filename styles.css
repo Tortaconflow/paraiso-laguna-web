@@ -65,9 +65,10 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -239,7 +240,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 8rem 2rem 4rem 2rem;
+    padding: 8rem 2rem 8rem 2rem;
 }
 
 /* Video or image background container */
@@ -279,10 +280,10 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
     width: 100%;
     max-width: 1200px;
-    margin: 4rem auto 0 auto;
+    margin: 3rem auto 5rem auto;
     z-index: 2;
 }
 
@@ -353,10 +354,10 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    padding: 1.5rem 2rem;
+    gap: 2rem;
+    padding: 1.5rem 1rem;
     border-top: 1px solid rgba(0,0,0,0.05);
-    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.8));
+    background: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(255,255,255,0.85) 100%);
     z-index: 2;
     flex-wrap: wrap;
 }
@@ -375,10 +376,11 @@ nav a:hover {
     }
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
         text-align: center;
-        margin-top: 6rem;
-        padding: 0 2rem 2rem 2rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        padding: 0 1.5rem 1rem 1.5rem;
     }
     .hero-content {
         text-align: center;
@@ -405,7 +407,7 @@ nav a:hover {
         width: 100%;
         border-radius: var(--radius-md);
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        margin-bottom: -3rem; /* Overlap effect */
+        margin-bottom: 0; 
         z-index: 10;
     }
     .hero-features-bar > div {
