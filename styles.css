@@ -237,10 +237,11 @@ nav a:hover {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
-    padding: 8rem 2rem 8rem 2rem;
+    padding: 8rem 2rem 0 2rem; /* reduced bottom padding since features bar is relative and at the bottom */
 }
 
 /* Video or image background container */
@@ -283,7 +284,7 @@ nav a:hover {
     gap: 3rem;
     width: 100%;
     max-width: 1200px;
-    margin: 3rem auto 5rem auto;
+    margin: auto auto; /* Centered vertically in available flex space! */
     z-index: 2;
 }
 
@@ -347,9 +348,7 @@ nav a:hover {
 }
 
 .hero-features-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -360,6 +359,15 @@ nav a:hover {
     background: linear-gradient(to top, rgba(255,255,255,1) 30%, rgba(255,255,255,0.85) 100%);
     z-index: 2;
     flex-wrap: wrap;
+    margin-top: 2rem; /* ensures gap on small viewports */
+}
+
+.hero-title-emoji {
+    font-size: 0.85em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+    line-height: 1;
 }
 
 @media (max-width: 991px) {
