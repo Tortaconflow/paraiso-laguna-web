@@ -361,13 +361,25 @@ nav a:hover {
     flex-wrap: wrap;
     margin-top: 2rem; /* ensures gap on small viewports */
 }
+#hero-main-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 3.8vw, 2.8rem); /* beautifully scaled down from clamp(2.2rem, 5vw, 4rem) */
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin-bottom: 1.2rem;
+}
 
-.hero-title-emoji {
-    font-size: 0.85em;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 0.3rem;
-    line-height: 1;
+.hero-title-sub {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem); /* perfectly balanced subheader size */
+    color: var(--accent-green, #128C7E);
+    margin-top: 0.5rem;
+    line-height: 1.25;
 }
 
 @media (max-width: 991px) {
