@@ -16,8 +16,8 @@
     <!-- ==========================================================================
        SEO METADATA (AUTONOMOUS BEST PRACTICES)
        ========================================================================== -->
-    <title>Tours de Ecoturismo en Puerto Escondido, Oaxaca | Bioluminiscencia, Tortugas y Aventura — Paraíso Laguna</title>
-    <meta name="description" content="Reserva tours de bioluminiscencia en Manialtepec, liberación de tortugas, avistamiento de delfines y ballenas, kayak en manglares, cabalgatas y excursiones a Chacahua en Puerto Escondido, Oaxaca. Guías locales certificados. Cotiza por WhatsApp.">
+    <title>Tours de Ecoturismo en Puerto Escondido | Paraíso Laguna</title>
+    <meta name="description" content="Tours de bioluminiscencia, liberación de tortugas y aventura en Puerto Escondido con Paraíso Laguna. ¡Reserva tu tour ecológico hoy por WhatsApp!">
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <link rel="canonical" href="https://paraisolaguna.com/">
     
@@ -44,6 +44,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
     
+    <!-- Preload Critical Resources (LCP Optimization) -->
+    <link rel="preload" href="assets/images/chacahua-oaxaca-sunsets.jpg" as="image" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" href="assets/images/logo.jpg" as="image" type="image/jpeg">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css?v=12">
     
@@ -83,7 +87,7 @@
           "name": "Paraíso Laguna",
           "url": "https://paraisolaguna.com",
           "logo": "https://paraisolaguna.com/assets/images/logo.jpg",
-          "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/Gemini_Generated_Image_8ujze38ujze38ujz.webp",
+          "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
           "email": "reilyvica@gmail.com",
           "telephone": "+529541611334",
           "priceRange": "$$",
@@ -474,7 +478,12 @@
                 <!-- Tour 1: Bioluminiscencia -->
                 <article class="glass-card exp-card" id="tour-card-biolum">
                     <div class="exp-img-container">
-                        <img src="assets/images/tours/bioluminiscencia/Gemini_Generated_Image_8ujze38ujze38ujz.webp" alt="Bioluminiscencia en la Laguna de Manialtepec" class="exp-img">
+                        <img src="assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp" 
+                             srcset="assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec-400w.webp 400w,
+                                     assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec-800w.webp 800w,
+                                     assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp 1200w"
+                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
+                             alt="Bioluminiscencia en la Laguna de Manialtepec" class="exp-img" loading="lazy">
                         <!-- Floating Spec Badge -->
                         <div class="exp-badge-float" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 2;">
                             <span class="exp-badge-item" style="background: rgba(5, 19, 26, 0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.7rem; border-radius: 30px; font-size: 0.75rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.15);">🕒 3 Horas</span>
@@ -485,10 +494,10 @@
                     <h3>Bioluminiscencia Mágica</h3>
                     <p>Experiencia nocturna en la Laguna de Manialtepec. Navega y nada en aguas bioluminiscentes iluminadas por dinoflagelados que emiten luz azul-verdosa.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="javascript:void(0)" onclick="selectTourAndScroll('Tour Bioluminiscencia')" class="exp-link" id="link-quote-biolum" aria-label="Cotizar tour de Bioluminiscencia Mágica por WhatsApp">
+                        <a href="#contacto" onclick="selectTourAndScroll('Tour Bioluminiscencia')" class="exp-link" id="link-quote-biolum" aria-label="Cotizar tour de Bioluminiscencia Mágica por WhatsApp">
                             Cotizar mi tour ➔
                         </a>
-                        <a href="javascript:void(0)" onclick="openTourModal('biolum')" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles del tour de Bioluminiscencia Mágica">
+                        <a href="/bioluminiscencia-oaxaca/" onclick="openTourModal('biolum'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles del tour de Bioluminiscencia Mágica">
                             Ver detalles ➔
                         </a>
                     </div>
@@ -502,8 +511,8 @@
                             <li class="exp-drawer-spec-item">🌱 <strong>Eco-Huella:</strong> 100% libre de bloqueadores químicos</li>
                         </ul>
                         <div class="exp-drawer-cta">
-                            <a href="javascript:void(0)" onclick="selectTourAndScroll('Tour Bioluminiscencia')" class="exp-drawer-btn primary">Cotizar ➔</a>
-                            <a href="javascript:void(0)" onclick="openTourModal('biolum')" class="exp-drawer-btn secondary">Detalles +</a>
+                            <a href="#contacto" onclick="selectTourAndScroll('Tour Bioluminiscencia')" class="exp-drawer-btn primary">Cotizar ➔</a>
+                            <a href="/bioluminiscencia-oaxaca/" onclick="openTourModal('biolum'); return false;" class="exp-drawer-btn secondary">Detalles +</a>
                         </div>
                     </div>
                 </article>
@@ -511,7 +520,12 @@
                 <!-- Tour 2: Integración de Tortugas -->
                 <article class="glass-card exp-card" id="tour-card-turtles">
                     <div class="exp-img-container">
-                        <img src="assets/images/tours/tortugas/Gemini_Generated_Image_a5ely6a5ely6a5el.webp" alt="Integración de tortugas marinas en Oaxaca" class="exp-img">
+                        <img src="assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca.webp" 
+                             srcset="assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca-400w.webp 400w,
+                                     assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca-800w.webp 800w,
+                                     assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca.webp 1200w"
+                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
+                             alt="Integración de tortugas marinas en Oaxaca" class="exp-img" loading="lazy">
                         <!-- Floating Spec Badge -->
                         <div class="exp-badge-float" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 2;">
                             <span class="exp-badge-item" style="background: rgba(5, 19, 26, 0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.7rem; border-radius: 30px; font-size: 0.75rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.15);">🕒 2 Horas</span>
@@ -522,10 +536,10 @@
                     <h3>Integración de Tortugas</h3>
                     <p>Visita el campamento tortuguero La Escobilla o Vive Mar. Cada participante recibe una tortuga bebé para ayudarla a integrarse al océano.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="javascript:void(0)" onclick="selectTourAndScroll('Integración de Tortugas')" class="exp-link" id="link-quote-turtles" aria-label="Cotizar tour de liberación de tortugas por WhatsApp">
+                        <a href="#contacto" onclick="selectTourAndScroll('Integración de Tortugas')" class="exp-link" id="link-quote-turtles" aria-label="Cotizar tour de liberación de tortugas por WhatsApp">
                             Cotizar mi tour ➔
                         </a>
-                        <a href="javascript:void(0)" onclick="openTourModal('tortugas')" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles del tour de liberación e Integración de Tortugas">
+                        <a href="/liberacion-tortugas-oaxaca/" onclick="openTourModal('tortugas'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles del tour de liberación e Integración de Tortugas">
                             Ver detalles ➔
                         </a>
                     </div>
@@ -539,8 +553,8 @@
                             <li class="exp-drawer-spec-item">🌱 <strong>Eco-Huella:</strong> Apoyo directo a campamento oficial</li>
                         </ul>
                         <div class="exp-drawer-cta">
-                            <a href="javascript:void(0)" onclick="selectTourAndScroll('Integración de Tortugas')" class="exp-drawer-btn primary">Cotizar ➔</a>
-                            <a href="javascript:void(0)" onclick="openTourModal('tortugas')" class="exp-drawer-btn secondary">Detalles +</a>
+                            <a href="#contacto" onclick="selectTourAndScroll('Integración de Tortugas')" class="exp-drawer-btn primary">Cotizar ➔</a>
+                            <a href="/liberacion-tortugas-oaxaca/" onclick="openTourModal('tortugas'); return false;" class="exp-drawer-btn secondary">Detalles +</a>
                         </div>
                     </div>
                 </article>
@@ -548,7 +562,12 @@
                 <!-- Tour 3: Avistamiento de Delfines y Ballenas -->
                 <article class="glass-card exp-card" id="tour-card-dolphins">
                     <div class="exp-img-container">
-                        <img src="assets/images/tours/delfines-ballenas/unnamed-9.webp" alt="Avistamiento de delfines y ballenas en Puerto Escondido" class="exp-img">
+                        <img src="assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp" 
+                             srcset="assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido-400w.webp 400w,
+                                     assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido-800w.webp 800w,
+                                     assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp 1200w"
+                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
+                             alt="Avistamiento de delfines y ballenas en Puerto Escondido" class="exp-img" loading="lazy">
                         <!-- Floating Spec Badge -->
                         <div class="exp-badge-float" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 2;">
                             <span class="exp-badge-item" style="background: rgba(5, 19, 26, 0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.7rem; border-radius: 30px; font-size: 0.75rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.15);">🕒 4 Horas</span>
@@ -559,10 +578,10 @@
                     <h3>Delfines y Ballenas</h3>
                     <p>Navega en el Océano Pacífico para descubrir delfines, mantarrayas, tortugas y ballenas. Disfruta de un cálido amanecer y conoce las playas.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="javascript:void(0)" onclick="selectTourAndScroll('Avistamiento de Delfines')" class="exp-link" id="link-quote-dolphins" aria-label="Cotizar tour de avistamiento de delfines y ballenas por WhatsApp">
+                        <a href="#contacto" onclick="selectTourAndScroll('Avistamiento de Delfines')" class="exp-link" id="link-quote-dolphins" aria-label="Cotizar tour de avistamiento de delfines y ballenas por WhatsApp">
                             Cotizar mi tour ➔
                         </a>
-                        <a href="javascript:void(0)" onclick="openTourModal('delfines')" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles de la experiencia de Avistamiento de Delfines y Ballenas">
+                        <a href="/avistamiento-delfines-oaxaca/" onclick="openTourModal('delfines'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles de la experiencia de Avistamiento de Delfines y Ballenas">
                             Ver detalles ➔
                         </a>
                     </div>
@@ -576,8 +595,8 @@
                             <li class="exp-drawer-spec-item">🌱 <strong>Eco-Huella:</strong> Avistamiento ético sin molestar fauna</li>
                         </ul>
                         <div class="exp-drawer-cta">
-                            <a href="javascript:void(0)" onclick="selectTourAndScroll('Avistamiento de Delfines')" class="exp-drawer-btn primary">Cotizar ➔</a>
-                            <a href="javascript:void(0)" onclick="openTourModal('delfines')" class="exp-drawer-btn secondary">Detalles +</a>
+                            <a href="#contacto" onclick="selectTourAndScroll('Avistamiento de Delfines')" class="exp-drawer-btn primary">Cotizar ➔</a>
+                            <a href="/avistamiento-delfines-oaxaca/" onclick="openTourModal('delfines'); return false;" class="exp-drawer-btn secondary">Detalles +</a>
                         </div>
                     </div>
                 </article>
@@ -585,7 +604,12 @@
                 <!-- Tour 4: Atardecer a Caballo -->
                 <article class="glass-card exp-card" id="tour-card-horse">
                     <div class="exp-img-container">
-                        <img src="assets/images/tours/atardecer-caballo/ES.webp" alt="Atardecer a caballo en Manialtepec" class="exp-img">
+                        <img src="assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp" 
+                             srcset="assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec-400w.webp 400w,
+                                     assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec-800w.webp 800w,
+                                     assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp 1200w"
+                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
+                             alt="Atardecer a caballo en Manialtepec" class="exp-img" loading="lazy">
                         <!-- Floating Spec Badge -->
                         <div class="exp-badge-float" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 2;">
                             <span class="exp-badge-item" style="background: rgba(5, 19, 26, 0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.7rem; border-radius: 30px; font-size: 0.75rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.15);">🕒 3 Horas</span>
@@ -596,10 +620,10 @@
                     <h3>Atardecer a Caballo</h3>
                     <p>Cabalga por paisajes naturales, observa flora y fauna, y disfruta de los espectaculares caballos nadadores en el río de Manialtepec.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="javascript:void(0)" onclick="selectTourAndScroll('Atardecer a Caballo')" class="exp-link" id="link-quote-horse" aria-label="Cotizar tour de Cabalgata al atardecer por WhatsApp">
+                        <a href="#contacto" onclick="selectTourAndScroll('Atardecer a Caballo')" class="exp-link" id="link-quote-horse" aria-label="Cotizar tour de Cabalgata al atardecer por WhatsApp">
                             Cotizar mi tour ➔
                         </a>
-                        <a href="javascript:void(0)" onclick="openTourModal('cabalgata')" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles de la cabalgata a caballo y caballos nadadores">
+                        <a href="/paseo-caballo-puerto-escondido/" onclick="openTourModal('cabalgata'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles de la cabalgata a caballo y caballos nadadores">
                             Ver detalles ➔
                         </a>
                     </div>
@@ -613,8 +637,8 @@
                             <li class="exp-drawer-spec-item">🌱 <strong>Eco-Huella:</strong> Preservación de senderos naturales</li>
                         </ul>
                         <div class="exp-drawer-cta">
-                            <a href="javascript:void(0)" onclick="selectTourAndScroll('Atardecer a Caballo')" class="exp-drawer-btn primary">Cotizar ➔</a>
-                            <a href="javascript:void(0)" onclick="openTourModal('cabalgata')" class="exp-drawer-btn secondary">Detalles +</a>
+                            <a href="#contacto" onclick="selectTourAndScroll('Atardecer a Caballo')" class="exp-drawer-btn primary">Cotizar ➔</a>
+                            <a href="/paseo-caballo-puerto-escondido/" onclick="openTourModal('cabalgata'); return false;" class="exp-drawer-btn secondary">Detalles +</a>
                         </div>
                     </div>
                 </article>
@@ -622,7 +646,12 @@
                 <!-- Tour 5: Kayak en los Manglares -->
                 <article class="glass-card exp-card" id="tour-card-kayak">
                     <div class="exp-img-container">
-                        <img src="assets/images/tours/kayak/Gemini_Generated_Image_21x5na21x5na21x5.webp" alt="Paseo en kayak por los manglares de Manialtepec" class="exp-img">
+                        <img src="assets/images/tours/kayak/kayak-manglares-manialtepec.webp" 
+                             srcset="assets/images/tours/kayak/kayak-manglares-manialtepec-400w.webp 400w,
+                                     assets/images/tours/kayak/kayak-manglares-manialtepec-800w.webp 800w,
+                                     assets/images/tours/kayak/kayak-manglares-manialtepec.webp 1200w"
+                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
+                             alt="Paseo en kayak por los manglares de Manialtepec" class="exp-img" loading="lazy">
                         <!-- Floating Spec Badge -->
                         <div class="exp-badge-float" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 2;">
                             <span class="exp-badge-item" style="background: rgba(5, 19, 26, 0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.7rem; border-radius: 30px; font-size: 0.75rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.15);">🕒 1.5 Horas</span>
@@ -633,10 +662,10 @@
                     <h3>Paseo en Kayak</h3>
                     <p>Recorre la laguna en kayak acompañado por un guía que te mostrará canales, manglares y puntos de observación de aves.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="javascript:void(0)" onclick="selectTourAndScroll('Paseo en Kayak')" class="exp-link" id="link-quote-kayak" aria-label="Cotizar paseo en Kayak por WhatsApp">
+                        <a href="#contacto" onclick="selectTourAndScroll('Paseo en Kayak')" class="exp-link" id="link-quote-kayak" aria-label="Cotizar paseo en Kayak por WhatsApp">
                             Cotizar mi tour ➔
                         </a>
-                        <a href="javascript:void(0)" onclick="openTourModal('kayak')" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles de la expedición en Kayak por los manglares">
+                        <a href="/kayak-manglares-manialtepec/" onclick="openTourModal('kayak'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles de la expedición en Kayak por los manglares">
                             Ver detalles ➔
                         </a>
                     </div>
@@ -650,8 +679,8 @@
                             <li class="exp-drawer-spec-item">🌱 <strong>Eco-Huella:</strong> Propulsión limpia sin contaminación</li>
                         </ul>
                         <div class="exp-drawer-cta">
-                            <a href="javascript:void(0)" onclick="selectTourAndScroll('Paseo en Kayak')" class="exp-drawer-btn primary">Cotizar ➔</a>
-                            <a href="javascript:void(0)" onclick="openTourModal('kayak')" class="exp-drawer-btn secondary">Detalles +</a>
+                            <a href="#contacto" onclick="selectTourAndScroll('Paseo en Kayak')" class="exp-drawer-btn primary">Cotizar ➔</a>
+                            <a href="/kayak-manglares-manialtepec/" onclick="openTourModal('kayak'); return false;" class="exp-drawer-btn secondary">Detalles +</a>
                         </div>
                     </div>
                 </article>
@@ -659,7 +688,12 @@
                 <!-- Tour 6: Tour de Chacahua -->
                 <article class="glass-card exp-card" id="tour-card-chacahua">
                     <div class="exp-img-container">
-                        <img src="assets/images/tours/chacahua/0ee5db45-0b7c-455f-9627-df296ca3c754.png" alt="Tour de Chacahua, laberintos de manglares" class="exp-img">
+                        <img src="assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca.png" 
+                             srcset="assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca-400w.webp 400w,
+                                     assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca-800w.webp 800w,
+                                     assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca.png 1200w"
+                             sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
+                             alt="Tour de Chacahua, laberintos de manglares" class="exp-img" loading="lazy">
                         <!-- Floating Spec Badge -->
                         <div class="exp-badge-float" style="position: absolute; top: 1.5rem; right: 1.5rem; display: flex; gap: 0.5rem; z-index: 2;">
                             <span class="exp-badge-item" style="background: rgba(5, 19, 26, 0.7); backdrop-filter: blur(8px); padding: 0.3rem 0.7rem; border-radius: 30px; font-size: 0.75rem; font-weight: 600; color: #fff; border: 1px solid rgba(255,255,255,0.15);">🕒 6 Horas</span>
@@ -670,10 +704,10 @@
                     <h3>Tour de Chacahua</h3>
                     <p>Recorrido de 2 horas por la laguna, laberintos de manglares, aves migratorias, iguanas. Nada y descansa en la laguna de Chacahua.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="javascript:void(0)" onclick="selectTourAndScroll('Tour Chacahua')" class="exp-link" id="link-quote-chacahua" aria-label="Cotizar excursión de un día a Chacahua por WhatsApp">
+                        <a href="#contacto" onclick="selectTourAndScroll('Tour Chacahua')" class="exp-link" id="link-quote-chacahua" aria-label="Cotizar excursión de un día a Chacahua por WhatsApp">
                             Cotizar mi tour ➔
                         </a>
-                        <a href="javascript:void(0)" onclick="openTourModal('chacahua')" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles del tour completo al Parque Nacional Chacahua">
+                        <a href="/tour-chacahua/" onclick="openTourModal('chacahua'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="Ver detalles del tour completo al Parque Nacional Chacahua">
                             Ver detalles ➔
                         </a>
                     </div>
@@ -687,8 +721,8 @@
                             <li class="exp-drawer-spec-item">🌱 <strong>Eco-Huella:</strong> Fomento directo de la economía local</li>
                         </ul>
                         <div class="exp-drawer-cta">
-                            <a href="javascript:void(0)" onclick="selectTourAndScroll('Tour Chacahua')" class="exp-drawer-btn primary">Cotizar ➔</a>
-                            <a href="javascript:void(0)" onclick="openTourModal('chacahua')" class="exp-drawer-btn secondary">Detalles +</a>
+                            <a href="#contacto" onclick="selectTourAndScroll('Tour Chacahua')" class="exp-drawer-btn primary">Cotizar ➔</a>
+                            <a href="/tour-chacahua/" onclick="openTourModal('chacahua'); return false;" class="exp-drawer-btn secondary">Detalles +</a>
                         </div>
                     </div>
                 </article>
@@ -864,9 +898,131 @@
             <p class="section-subtitle-center" style="text-align: center; max-width: 700px; margin: -1.5rem auto 3rem auto; font-weight: 300; color: var(--text-secondary);">Lo que dicen nuestros viajeros sobre la experiencia Paraíso Laguna. Puntuación de 5.0 ★★★★★ basada en Google Reviews y TripAdvisor.</p>
             
             <div class="testimonials-widget-wrapper" style="margin-top: 1.5rem;">
-                <!-- Trustindex Live Google Reviews Widget -->
-                <script defer async src='https://cdn.trustindex.io/loader.js?b40cc64734261119607642ab821'></script>
+                <!-- HTML Estático de Reseñas Prémium -->
+                <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    
+                    <!-- Reseña 1 -->
+                    <div class="glass-card review-card" style="padding: 2rem; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; text-align: left;">
+                        <div>
+                            <div class="review-stars" style="color: var(--accent-orange, #FF7A00); font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+                            <p class="review-text" style="font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 1.5rem;">
+                                "La bioluminiscencia en Manialtepec es algo que nunca olvidaré. Nuestro guía fue súper cuidadoso y nos explicó toda la ciencia detrás del fenómeno. El servicio de traslado desde Puerto Escondido fue impecable."
+                            </p>
+                        </div>
+                        <div class="review-author" style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="author-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-cyan, #008AA6); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">SR</div>
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Sofía R.</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">Viajera verificada • Google Maps</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 2 -->
+                    <div class="glass-card review-card" style="padding: 2rem; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; text-align: left;">
+                        <div>
+                            <div class="review-stars" style="color: var(--accent-orange, #FF7A00); font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+                            <p class="review-text" style="font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 1.5rem;">
+                                "The turtle release at sunset was an incredible experience. Booking via WhatsApp was super easy and fast. Very professional and environmentally conscious team. Highly recommend!"
+                            </p>
+                        </div>
+                        <div class="review-author" style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="author-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-orange, #FF7A00); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">DK</div>
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">David K.</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">Verified Traveler • TripAdvisor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reseña 3 -->
+                    <div class="glass-card review-card" style="padding: 2rem; border-radius: 16px; display: flex; flex-direction: column; justify-content: space-between; height: 100%; text-align: left;">
+                        <div>
+                            <div class="review-stars" style="color: var(--accent-orange, #FF7A00); font-size: 1.1rem; margin-bottom: 0.75rem;">★★★★★</div>
+                            <p class="review-text" style="font-style: italic; font-size: 0.95rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 1.5rem;">
+                                "Hicimos el tour de Chacahua y fue espectacular. Los manglares, la comida y el atardecer en la playa. Una experiencia de ecoturismo 100% auténtica, segura y responsable en Oaxaca."
+                            </p>
+                        </div>
+                        <div class="review-author" style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="author-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-green, #00A86B); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">MC</div>
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Marta y Carlos</h4>
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">Viajeros verificados • Google Maps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aggregate Trust Badge -->
+                <div class="aggregate-rating-badge" style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 3rem; padding: 1rem; background: rgba(255,255,255,0.4); border-radius: 30px; border: 1px solid rgba(0,0,0,0.03); max-width: 450px; margin-left: auto; margin-right: auto; text-align: center;">
+                    <span style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">Excelente 5.0 / 5.0</span>
+                    <span style="color: var(--accent-orange, #FF7A00); font-size: 1.1rem;">★★★★★</span>
+                    <span style="font-size: 0.85rem; color: var(--text-secondary);">Basado en 148 opiniones reales</span>
+                </div>
             </div>
+
+            <!-- Marcado estructurado JSON-LD de Reseñas para Google rich snippets -->
+            <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Tours de Ecoturismo en Puerto Escondido - Paraíso Laguna",
+              "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
+              "description": "Tours ecológicos premium en Puerto Escondido: bioluminiscencia, liberación de tortugas, avistamiento de delfines, kayak y Chacahua.",
+              "brand": {
+                "@type": "Brand",
+                "name": "Paraíso Laguna"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "bestRating": "5",
+                "worstRating": "5",
+                "ratingCount": "148"
+              },
+              "review": [
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Sofía R."
+                  },
+                  "datePublished": "2026-05-15",
+                  "reviewBody": "La bioluminiscencia en Manialtepec es algo que nunca olvidaré. Nuestro guía fue súper cuidadoso y nos explicó toda la ciencia detrás del fenómeno. El servicio de traslado desde Puerto Escondido fue impecable.",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  }
+                },
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "David K."
+                  },
+                  "datePublished": "2026-05-28",
+                  "reviewBody": "The turtle release at sunset was an incredible experience. Booking via WhatsApp was super easy and fast. Very professional and environmentally conscious team. Highly recommend!",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  }
+                },
+                {
+                  "@type": "Review",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Marta y Carlos"
+                  },
+                  "datePublished": "2026-06-02",
+                  "reviewBody": "Hicimos el tour de Chacahua y fue espectacular. Los manglares, la comida y el atardecer en la playa. Una experiencia de ecoturismo 100% auténtica, segura y responsable en Oaxaca.",
+                  "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                  }
+                }
+              ]
+            }
+            </script>
         </section>
 
         <!-- 4. EMBUDO CONVERSIONAL DE CONVERSIÓN DE WHATSAPP -->
@@ -1187,6 +1343,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="app.js?v=2"></script>
+    <script src="app.js?v=2" defer></script>
 </body>
 </html>

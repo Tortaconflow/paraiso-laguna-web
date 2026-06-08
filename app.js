@@ -393,26 +393,26 @@ window.waQuickChat = waQuickChat;
 // ==========================================================================
 const GALLERY_PHOTOS = [
     // Bioluminiscencia
-    { src: "tours/bioluminiscencia/Gemini_Generated_Image_8ujze38ujze38ujz.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Bioluminiscencia Mágica 🌌" },
+    { src: "tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Bioluminiscencia Mágica 🌌" },
     { src: "tours/bioluminiscencia/Gemini_Generated_Image_p1bmwsp1bmwsp1bm-1-1.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Destello Azul Neón ✨" },
     { src: "tours/bioluminiscencia/Gemini_Generated_Image_uun6pguun6pguun6-1.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Noche en Manialtepec 🌌" },
     { src: "tours/bioluminiscencia/Gemini_Generated_Image_x26k17x26k17x26k.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Sumérgete en la Luz ✨" },
     // Tortugas
     { src: "tours/tortugas/Gemini_Generated_Image_7edww87edww87edw.webp", tag: "turtles", tagTitle: "Ecológico", title: "Tortuga Rumbo al Mar 🐢" },
-    { src: "tours/tortugas/Gemini_Generated_Image_a5ely6a5ely6a5el.webp", tag: "turtles", tagTitle: "Ecológico", title: "Integración de Tortugas 🐢" },
+    { src: "tours/tortugas/integracion-tortugas-marinas-oaxaca.webp", tag: "turtles", tagTitle: "Ecológico", title: "Integración de Tortugas 🐢" },
     { src: "tours/tortugas/Gemini_Generated_Image_p7v9n5p7v9n5p7v9-1.webp", tag: "turtles", tagTitle: "Ecológico", title: "Crías al Océano 🐢" },
     { src: "tours/tortugas/i.webp", tag: "turtles", tagTitle: "Ecológico", title: "Campamento Tortuguero 🐢" },
     // Delfines y Ballenas
     { src: "tours/delfines-ballenas/unnamed-8.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Delfines en el Pacífico 🐬" },
-    { src: "tours/delfines-ballenas/unnamed-9.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Avistamiento de Delfines 🐬" },
+    { src: "tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Avistamiento de Delfines 🐬" },
     // Atardecer a Caballo
-    { src: "tours/atardecer-caballo/ES.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Atardecer a Caballo 🐎" },
+    { src: "tours/atardecer-caballo/atardecer-caballo-manialtepec.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Atardecer a Caballo 🐎" },
     { src: "tours/atardecer-caballo/Gemini_Generated_Image_9jy9er9jy9er9jy9.webp", tag: "adventures", tagTitle: "Aventura", title: "Cabalgata por la Playa 🐎" },
     { src: "tours/atardecer-caballo/Gemini_Generated_Image_9qcrdg9qcrdg9qcr.webp", tag: "adventures", tagTitle: "Aventura", title: "Caballos Nadadores 🐎" },
     { src: "tours/atardecer-caballo/Gemini_Generated_Image_phvuesphvuesphvu.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Sunset Dorado 🌅" },
     { src: "tours/atardecer-caballo/V-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Paisajes de Oaxaca 🌅" },
     // Kayak
-    { src: "tours/kayak/Gemini_Generated_Image_21x5na21x5na21x5.webp", tag: "adventures", tagTitle: "Aventura", title: "Kayak en los Manglares 🛶" },
+    { src: "tours/kayak/kayak-manglares-manialtepec.webp", tag: "adventures", tagTitle: "Aventura", title: "Kayak en los Manglares 🛶" },
     { src: "tours/kayak/Gemini_Generated_Image_9rkmzc9rkmzc9rkm.webp", tag: "adventures", tagTitle: "Aventura", title: "Exploración en Kayak 🛶" },
     { src: "tours/kayak/Gemini_Generated_Image_h86jomh86jomh86j.webp", tag: "adventures", tagTitle: "Aventura", title: "Manglares de Manialtepec 🛶" },
     { src: "tours/kayak/Gemini_Generated_Image_s1caums1caums1ca.webp", tag: "adventures", tagTitle: "Aventura", title: "Aventura en Kayak 🛶" },

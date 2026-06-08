@@ -1,0 +1,64 @@
+# ==============================================================================
+# REGLAS DE REDIRECCIÓN SEO 301 - PARAÍSO LAGUNA (MIGRACIÓN DESDE WORDPRESS)
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # --- 1. Redirecciones 301 de URLs antiguas a Nuevas Secciones (con Hash y NE) ---
+    RewriteRule ^galeria/?$ /#galeria [R=301,NE,NC,L]
+    RewriteRule ^galeria-2/?$ /#galeria [R=301,NE,NC,L]
+    RewriteRule ^contacto/?$ /#contacto [R=301,NE,NC,L]
+    RewriteRule ^contacto-2/?$ /#contacto [R=301,NE,NC,L]
+
+    # --- 2. Redirecciones de Tours y Servicios a Nuevas URLs ---
+    RewriteRule ^experiencias/?$ /puerto-escondido-tours/ [R=301,NC,L]
+    RewriteRule ^services/?$ /puerto-escondido-tours/ [R=301,NC,L]
+    RewriteRule ^tours/?$ /puerto-escondido-tours/ [R=301,NC,L]
+
+    # --- 3. Redirecciones de Páginas Informativas y Administrativas a Home ---
+    RewriteRule ^inicio/?$ / [R=301,NC,L]
+    RewriteRule ^about/?$ / [R=301,NC,L]
+    RewriteRule ^inicio-deutsch/?$ / [R=301,NC,L]
+    RewriteRule ^inicio-english/?$ / [R=301,NC,L]
+    RewriteRule ^inicio-francais/?$ / [R=301,NC,L]
+    RewriteRule ^shop/?$ / [R=301,NC,L]
+    RewriteRule ^checkout/?$ / [R=301,NC,L]
+    RewriteRule ^projects/?$ / [R=301,NC,L]
+    RewriteRule ^portfolio/?$ / [R=301,NC,L]
+    RewriteRule ^reserva-cita/?$ / [R=301,NC,L]
+    RewriteRule ^customer-dashboard/?$ / [R=301,NC,L]
+    RewriteRule ^customer-cabinet/?$ / [R=301,NC,L]
+
+    # --- 4. Redirecciones de Idioma Inglés (/en/*) a Equivalente Español ---
+    RewriteRule ^en/paseo-en-kayak/?$ /kayak-manglares-manialtepec/ [R=301,NC,L]
+    RewriteRule ^en/tirolesa/?$ /puerto-escondido-tours/ [R=301,NC,L]
+    RewriteRule ^en/tours/?$ /puerto-escondido-tours/ [R=301,NC,L]
+    RewriteRule ^en/contacto/?$ /#contacto [R=301,NE,NC,L]
+    RewriteRule ^en/tours-chacahua/?$ /tour-chacahua/ [R=301,NC,L]
+    RewriteRule ^en/bioluminiscencia/?$ /bioluminiscencia-oaxaca/ [R=301,NC,L]
+    RewriteRule ^en/liberacion-tortugas/?$ /liberacion-tortugas-oaxaca/ [R=301,NC,L]
+    
+    # Redireccionar cualquier otra ruta /en/* que no tenga equivalente a Home
+    RewriteRule ^en/(.*)$ / [R=301,NC,L]
+
+    # --- 5. Bloqueo de Rutas Técnicas de WordPress (Devolver 410 Gone) ---
+    RewriteRule ^wp-content/ - [G,NC,L]
+    RewriteRule ^wp-includes/ - [G,NC,L]
+    RewriteRule ^wp-admin/ - [G,NC,L]
+    RewriteRule ^wp-.*\.php$ - [G,NC,L]
+    
+    # Parámetros de Elementor
+    RewriteCond %{QUERY_STRING} ^elementor_library=.*$ [NC]
+    RewriteRule .* - [G,L]
+
+    # Feeds de WordPress
+    RewriteRule ^(.*)/feed/?$ - [G,NC,L]
+
+    # Formularios y Litespeed caché
+    RewriteRule ^form/ - [G,NC,L]
+    RewriteCond %{REQUEST_URI} litespeed-cache [NC]
+    RewriteRule .* - [G,L]
+
+</IfModule>

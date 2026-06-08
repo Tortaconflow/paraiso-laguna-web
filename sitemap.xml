@@ -5,13 +5,13 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <!--
       Sitemap para Paraíso Laguna - Arquitectura SILO Multi-Página
-      Actualizado: 2026-05-31
+      Actualizado: 2026-06-08
     -->
 
     <!-- ===== NIVEL 0: HOME ===== -->
     <url>
         <loc>https://paraisolaguna.com/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -19,37 +19,37 @@
     <!-- ===== NIVEL 1: TOURS TRANSACCIONALES (P1) ===== -->
     <url>
         <loc>https://paraisolaguna.com/bioluminiscencia-oaxaca/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.90</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/liberacion-tortugas-oaxaca/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.90</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/tour-chacahua/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.90</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/avistamiento-delfines-oaxaca/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/paseo-caballo-puerto-escondido/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/kayak-manglares-manialtepec/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
@@ -57,7 +57,7 @@
     <!-- ===== NIVEL 2: LANDING PAGES DE DESTINO ===== -->
     <url>
         <loc>https://paraisolaguna.com/puerto-escondido-tours/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
@@ -65,19 +65,19 @@
     <!-- ===== NIVEL 3: BLOG ===== -->
     <url>
         <loc>https://paraisolaguna.com/blog/</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.80</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/blog/guia-bioluminiscencia-manialtepec.html</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
     <url>
         <loc>https://paraisolaguna.com/blog/liberacion-tortugas-puerto-escondido.html</loc>
-        <lastmod>2026-05-31</lastmod>
+        <lastmod>2026-06-08</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
