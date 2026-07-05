@@ -2070,46 +2070,6 @@ footer {
     font-weight: 500;
 }
 
-.exp-drawer-cta {
-    margin-top: 0.5rem;
-    display: flex;
-    gap: 0.75rem;
-}
-
-.exp-drawer-btn {
-    flex: 1;
-    text-align: center;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.75rem 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-}
-
-.exp-drawer-btn.primary {
-    background: linear-gradient(135deg, var(--accent-orange), #ff9100);
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(255, 122, 0, 0.25);
-    border: none;
-}
-
-.exp-drawer-btn.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 122, 0, 0.45);
-}
-
-.exp-drawer-btn.secondary {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--border-glass);
-    color: #ffffff;
-}
-
-.exp-drawer-btn.secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--accent-cyan);
-    box-shadow: var(--glow-cyan);
-}
 
 /* --- FASE B: ELITE LOOKBOOK MASONRY 2x2 SPAN --- */
 .gallery-item.span-featured {
