@@ -21,6 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
     
     revealElements.forEach(el => revealObserver.observe(el));
 
+    // 1.5 FASE LUNAR REAL (ciclo sinódico desde 2000-01-06 18:14 UTC — astronomía, no inventado)
+    const SYNODIC = 29.53058867;
+    const moonAge = ((Date.now() - Date.UTC(2000, 0, 6, 18, 14)) / 86400000) % SYNODIC;
+    const MOON_PHASES = [
+        [1.85, 'Luna nueva'], [5.54, 'Luna creciente'], [9.23, 'Cuarto creciente'],
+        [12.92, 'Gibosa creciente'], [16.61, 'Luna llena'], [20.30, 'Gibosa menguante'],
+        [23.99, 'Cuarto menguante'], [27.68, 'Luna menguante'], [SYNODIC, 'Luna nueva']
+    ];
+    const moonName = MOON_PHASES.find(([limit]) => moonAge <= limit)[1];
+    const moonEl = document.getElementById('moon-phase');
+    if (moonEl) moonEl.textContent = moonName;
+
+    // Potencial de brillo: a menor iluminación lunar, más se aprecia la bioluminiscencia.
+    // Fracción iluminada = (1 - cos(fase)) / 2
+    const moonIllum = (1 - Math.cos((moonAge / SYNODIC) * 2 * Math.PI)) / 2;
+    const glowEl = document.getElementById('glow-potential');
+    if (glowEl) {
+        if (moonIllum < 0.35) {
+            glowEl.textContent = 'Alto';
+            glowEl.style.color = 'var(--accent-green, #00A86B)';
+        } else if (moonIllum < 0.7) {
+            glowEl.textContent = 'Medio';
+        } else {
+            glowEl.textContent = 'Bajo — luna brillante';
+            glowEl.style.color = 'var(--accent-orange, #FF7A00)';
+        }
+    }
+
     // 2. FAQs ACCORDION INTERACTIVITY
     const faqItems = document.querySelectorAll('.faq-item');
     
@@ -391,59 +419,39 @@ window.waQuickChat = waQuickChat;
 // ==========================================================================
 // 6. DYNAMIC PREMIUM MASONRY GALLERY & LIGHTBOX SYSTEM (41 WEBP PHOTOS)
 // ==========================================================================
+// Solo fotografías reales capturadas en los tours — con lugar y hora, como bitácora.
 const GALLERY_PHOTOS = [
     // Bioluminiscencia
-    { src: "tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Bioluminiscencia Mágica 🌌" },
-    { src: "tours/bioluminiscencia/Gemini_Generated_Image_p1bmwsp1bmwsp1bm-1-1.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Destello Azul Neón ✨" },
-    { src: "tours/bioluminiscencia/Gemini_Generated_Image_uun6pguun6pguun6-1.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Noche en Manialtepec 🌌" },
-    { src: "tours/bioluminiscencia/Gemini_Generated_Image_x26k17x26k17x26k.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Sumérgete en la Luz ✨" },
+    { src: "tours/bioluminiscencia/estela-bioluminiscente-manialtepec.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Manialtepec, 21:40 — La estela encendida 🌌" },
+    { src: "tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "La laguna que se enciende de noche ✨" },
     // Tortugas
-    { src: "tours/tortugas/Gemini_Generated_Image_7edww87edww87edw.webp", tag: "turtles", tagTitle: "Ecológico", title: "Tortuga Rumbo al Mar 🐢" },
+    { src: "tours/tortugas/tortugas-crias-la-escobilla.webp", tag: "turtles", tagTitle: "Ecológico", title: "La Escobilla, 18:20 — Crías listas para el mar 🐢" },
     { src: "tours/tortugas/integracion-tortugas-marinas-oaxaca.webp", tag: "turtles", tagTitle: "Ecológico", title: "Integración de Tortugas 🐢" },
-    { src: "tours/tortugas/Gemini_Generated_Image_p7v9n5p7v9n5p7v9-1.webp", tag: "turtles", tagTitle: "Ecológico", title: "Crías al Océano 🐢" },
     { src: "tours/tortugas/i.webp", tag: "turtles", tagTitle: "Ecológico", title: "Campamento Tortuguero 🐢" },
     // Delfines y Ballenas
-    { src: "tours/delfines-ballenas/unnamed-8.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Delfines en el Pacífico 🐬" },
+    { src: "tours/delfines-ballenas/delfines-junto-lancha.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Mar abierto, 06:50 — Delfines junto a la lancha 🐬" },
     { src: "tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Avistamiento de Delfines 🐬" },
+    { src: "tours/delfines-ballenas/unnamed-8.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Delfines en el Pacífico 🐬" },
     // Atardecer a Caballo
+    { src: "tours/atardecer-caballo/cabalgata-el-aguaje.webp", tag: "adventures", tagTitle: "Aventura", title: "El Aguaje, 17:10 — Cabalgata rumbo al río 🐎" },
     { src: "tours/atardecer-caballo/atardecer-caballo-manialtepec.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Atardecer a Caballo 🐎" },
-    { src: "tours/atardecer-caballo/Gemini_Generated_Image_9jy9er9jy9er9jy9.webp", tag: "adventures", tagTitle: "Aventura", title: "Cabalgata por la Playa 🐎" },
-    { src: "tours/atardecer-caballo/Gemini_Generated_Image_9qcrdg9qcrdg9qcr.webp", tag: "adventures", tagTitle: "Aventura", title: "Caballos Nadadores 🐎" },
-    { src: "tours/atardecer-caballo/Gemini_Generated_Image_phvuesphvuesphvu.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Sunset Dorado 🌅" },
-    { src: "tours/atardecer-caballo/V-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Paisajes de Oaxaca 🌅" },
+    { src: "tours/atardecer-caballo/V-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Cabalgata al Atardecer 🐎" },
     // Kayak
+    { src: "tours/kayak/kayak-canales-manialtepec.webp", tag: "adventures", tagTitle: "Aventura", title: "Manialtepec, 09:45 — Kayak entre canales 🛶" },
     { src: "tours/kayak/kayak-manglares-manialtepec.webp", tag: "adventures", tagTitle: "Aventura", title: "Kayak en los Manglares 🛶" },
-    { src: "tours/kayak/Gemini_Generated_Image_9rkmzc9rkmzc9rkm.webp", tag: "adventures", tagTitle: "Aventura", title: "Exploración en Kayak 🛶" },
-    { src: "tours/kayak/Gemini_Generated_Image_h86jomh86jomh86j.webp", tag: "adventures", tagTitle: "Aventura", title: "Manglares de Manialtepec 🛶" },
-    { src: "tours/kayak/Gemini_Generated_Image_s1caums1caums1ca.webp", tag: "adventures", tagTitle: "Aventura", title: "Aventura en Kayak 🛶" },
-    { src: "tours/kayak/Gemini_Generated_Image_ywxx19ywxx19ywxx.webp", tag: "adventures", tagTitle: "Aventura", title: "Canales del Manglar 🛶" },
     // Cascadas
-    { src: "tours/cascadas/Gemini_Generated_Image_7zk1hb7zk1hb7zk1.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Cascadas Mágicas 🌊" },
-    { src: "tours/cascadas/Gemini_Generated_Image_kv580dkv580dkv58.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Pozas Cristalinas 🌊" },
-    { src: "tours/cascadas/Gemini_Generated_Image_m9tk5em9tk5em9tk.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Cascadas de Copalita 🌊" },
-    { src: "tours/cascadas/Gemini_Generated_Image_sysvvsysvvsysvvs.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Agua Cristalina 🌊" },
-    // Tirolesa
-    { src: "tours/tirolesa/Gemini_Generated_Image_e9dr9pe9dr9pe9dr.webp", tag: "adventures", tagTitle: "Adrenalina", title: "Tirolesa Extrema 🧗" },
-    { src: "tours/tirolesa/Gemini_Generated_Image_kbnpx0kbnpx0kbnp-1.webp", tag: "adventures", tagTitle: "Adrenalina", title: "Vuelo sobre el Cañón 🧗" },
-    { src: "tours/tirolesa/Gemini_Generated_Image_n6tzyhn6tzyhn6tz.webp", tag: "adventures", tagTitle: "Adrenalina", title: "Adrenalina Pura 🧗" },
-    // Aguas Termales
-    { src: "tours/aguas-termales/Gemini_Generated_Image_gcemzgcemzgcemzg.webp", tag: "landscapes", tagTitle: "Bienestar", title: "Aguas Termales 🌋" },
-    { src: "tours/aguas-termales/Gemini_Generated_Image_ijwvibijwvibijwv-1.webp", tag: "landscapes", tagTitle: "Bienestar", title: "Pozas de Atotonilco 🌋" },
-    { src: "tours/aguas-termales/Gemini_Generated_Image_wvn6h5wvn6h5wvn6.webp", tag: "landscapes", tagTitle: "Bienestar", title: "Spa Natural 🌋" },
-    // Tour de Mazunte
-    { src: "tours/mazunte/Gemini_Generated_Image_2yq0ps2yq0ps2yq0.webp", tag: "landscapes", tagTitle: "Costa", title: "Costa Oaxaqueña 🐢" },
-    { src: "tours/mazunte/Gemini_Generated_Image_8bxr8z8bxr8z8bxr.webp", tag: "landscapes", tagTitle: "Costa", title: "Punta Cometa 🌅" },
-    { src: "tours/mazunte/Gemini_Generated_Image_a6siiga6siiga6si.webp", tag: "landscapes", tagTitle: "Costa", title: "Mazunte Mágico 🐢" },
-    { src: "tours/mazunte/Gemini_Generated_Image_osl4jdosl4jdosl4.webp", tag: "landscapes", tagTitle: "Costa", title: "Zipolite y Ventanilla 🌅" },
+    { src: "tours/cascadas/cascadas-copalita-poza.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Copalita — Cascadas de agua cristalina 🌊" },
+    { src: "tours/cascadas/cascadas-nado-poza.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Copalita, 12:30 — El agua en la nuca 🌊" },
     // Tour de Chacahua
+    { src: "tours/chacahua/chacahua-canal-manglar.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Chacahua — Laberintos de manglar 🏝️" },
     { src: "tours/chacahua/asset-eabdb6a5-9a73-405e-b4a7-90df2bcb5c5b-1-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Laguna de Chacahua 🏝️" },
-    { src: "tours/chacahua/0ee5db45-0b7c-455f-9627-df296ca3c754.png", tag: "landscapes", tagTitle: "Paisaje", title: "Manglares de Chacahua 🏝️" },
-    { src: "tours/chacahua/e702dd05-31f3-4335-a65f-21dfcb4c8423.png", tag: "landscapes", tagTitle: "Paisaje", title: "Parque Nacional Chacahua 🏝️" },
+    { src: "tours/chacahua/tour-chacahua-manglares-oaxaca.jpg", tag: "landscapes", tagTitle: "Paisaje", title: "Parque Nacional Chacahua 🏝️" },
+    { src: "tours/chacahua/e702dd05-31f3-4335-a65f-21dfcb4c8423.jpg", tag: "landscapes", tagTitle: "Paisaje", title: "Manglares de Chacahua 🏝️" },
     // Atardecer en la Laguna
-    { src: "tours/atardecer-laguna/Gemini_Generated_Image_4h5tan4h5tan4h5t.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Atardecer en la Laguna 🌅" },
-    { src: "tours/atardecer-laguna/Gemini_Generated_Image_z8xfklz8xfklz8xf-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Manglar al Atardecer 🌅" },
-    { src: "tours/atardecer-laguna/imagen_redimensionada_2048 (1).webp", tag: "landscapes", tagTitle: "Paisaje", title: "Playa Puerto Suelo 🌅" },
-    { src: "tours/atardecer-laguna/imagen_redimensionada_2048.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Fogata en la Playa 🔥" }
+    { src: "tours/atardecer-laguna/atardecer-embarcadero-manialtepec.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Manialtepec, 19:05 — El embarcadero al caer el sol 🌅" },
+    { src: "tours/atardecer-laguna/atardecer-paddle-pareja.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Manialtepec, 19:20 — Paddle hacia el sol 🌅" },
+    { src: "tours/atardecer-laguna/imagen_redimensionada_2048.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Fogata en la Playa 🔥" },
+    { src: "tours/atardecer-laguna/imagen_redimensionada_2048 (1).webp", tag: "landscapes", tagTitle: "Paisaje", title: "Playa Puerto Suelo 🌅" }
 ];
 
 let activeFilter = 'todos';

@@ -12,7 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="theme-color" content="#F3F7F9">
+
     <!-- ==========================================================================
        SEO METADATA (AUTONOMOUS BEST PRACTICES)
        ========================================================================== -->
@@ -49,10 +50,11 @@
     <link rel="preload" href="assets/images/logo.jpg" as="image" type="image/jpeg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css?v=12">
+    <link rel="stylesheet" href="styles.css?v=13">
     
     <!-- Favicon (Prepared for custom asset) -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
 
     <!-- ==========================================================================
        JSON-LD STRUCTURED SCHEMA (SEO SUPREMACY)
@@ -317,10 +319,10 @@
             },
             {
               "@type": "Question",
-              "name": "¿Cómo funciona el proceso de reserva sin precios visibles?",
+              "name": "¿Por qué no publican precios?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Llenas el formulario dinámico en nuestra web con tu fecha y número de personas, haces clic y se abrirá una conversación en nuestro WhatsApp con tu solicitud pre-formateada. De inmediato te daremos la cotización más baja garantizada según la temporada, y definiremos el método de pago más cómodo para ti."
+                "text": "Porque el precio justo depende de la fecha, el tamaño del grupo y si combinas experiencias. Mandas tu solicitud por WhatsApp y respondemos con la mejor tarifa de ese día, descuentos de grupo si aplican y el método de pago que te acomode. Sin registros ni pagos por adelantado."
               }
             },
             {
@@ -381,7 +383,7 @@
                     <span class="hero-badge">🌿 ECOTURISMO RESPONSABLE EN OAXACA</span>
                     <h1 id="hero-main-title">Tours únicos en Laguna de Chacahua<br><span class="hero-title-sub">Vive la bioluminiscencia, delfines y atardeceres inolvidables</span></h1>
                     <hr class="hero-underline">
-                    <p class="hero-subtitle" id="hero-p-subtitle">Bioluminiscencia, manglares, tortugas y experiencias guiadas por naturalistas certificados en Manialtepec y Chacahua.</p>
+                    <p class="hero-subtitle" id="hero-p-subtitle">Hay una laguna que se enciende de noche: millones de dinoflagelados convierten cada brazada en luz azul, a 20 minutos de Puerto Escondido. Nosotros crecimos en su orilla — y también te llevamos a los manglares, las tortugas y los delfines.</p>
                     <div class="hero-actions" id="hero-cta-wrapper">
                         <a href="#contacto" class="btn btn-primary" id="hero-btn-primary" style="background: var(--accent-green, #128C7E); border-color: var(--accent-green, #128C7E); color: #fff;">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972zm11.378-5.395c-.328-.164-1.942-.959-2.242-1.069-.3-.11-.518-.165-.736.165-.219.329-.848 1.069-1.039 1.288-.19.219-.382.247-.71.082-.328-.164-1.386-.511-2.641-1.63-1.04-.927-1.742-2.073-1.946-2.402-.204-.329-.022-.507.142-.671.147-.148.328-.384.492-.575.164-.192.219-.329.328-.549.11-.219.055-.411-.027-.575-.082-.164-.736-1.77-.996-2.42-.266-.65-.558-.56-.763-.571-.19-.01-.41-.012-.628-.012-.218 0-.573.082-.873.411-.3.329-1.147 1.123-1.147 2.738 0 1.616 1.173 3.178 1.337 3.397.164.22 2.307 3.524 5.59 4.945.781.338 1.39.54 1.867.691.784.249 1.498.214 2.062.13.629-.094 1.942-.795 2.216-1.56.273-.767.273-1.424.19-1.56-.081-.137-.3-.219-.628-.383z"/></svg>
@@ -393,36 +395,32 @@
                     </div>
                 </div>
                 
-                <!-- Live Lagoon Activity Card (Dynamic UI) -->
+                <!-- Live Lagoon Activity Card (Honest natural monitoring — moon phase is real astronomy) -->
                 <div class="lagoon-activity-card" style="background: #ffffff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-radius: 16px; padding: 2rem;">
                     <h3 style="color: var(--text-primary); border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1rem; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
-                        <span style="color: var(--accent-green, #128C7E); font-size: 1.25rem;">((p))</span>
-                        Monitoreo en Tiempo Real
+                        <span class="live-dot" aria-hidden="true"></span>
+                        El estado de la laguna, hoy
                     </h3>
                     <ul class="activity-monitor-list" style="padding-left: 0;">
                         <li class="activity-monitor-item" style="border-bottom: 1px solid rgba(0,0,0,0.03); padding-bottom: 0.75rem;">
-                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">✨ Bioluminiscencia</span>
-                            <span class="activity-value" style="background: rgba(37, 211, 102, 0.15); color: var(--accent-green, #128C7E); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">ÓPTIMA (98%)</span>
+                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">🌑 Fase Lunar</span>
+                            <span class="activity-value" id="moon-phase" style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem;">—</span>
                         </li>
                         <li class="activity-monitor-item" style="border-bottom: 1px solid rgba(0,0,0,0.03); padding: 0.75rem 0;">
-                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">🌑 Fase Lunar</span>
-                            <span class="activity-value" style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem;">Luna Nueva</span>
+                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">✨ Potencial de Brillo</span>
+                            <span class="activity-value" id="glow-potential" style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem;">—</span>
                         </li>
                         <li class="activity-monitor-item" style="border-bottom: 1px solid rgba(0,0,0,0.03); padding: 0.75rem 0;">
                             <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">💧 Temperatura del Agua</span>
                             <span class="activity-value" style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem;">28.2 °C</span>
                         </li>
-                        <li class="activity-monitor-item" style="border-bottom: 1px solid rgba(0,0,0,0.03); padding: 0.75rem 0;">
-                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">🌿 Estado de los Manglares</span>
-                            <span class="activity-value" style="color: var(--text-primary); font-weight: 600; font-size: 0.9rem;">Saludable</span>
-                        </li>
                         <li class="activity-monitor-item" style="border-bottom: none; margin-bottom: 0.5rem; padding: 0.75rem 0 0 0;">
-                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">📅 Disponibilidad Hoy</span>
-                            <span class="activity-value" style="color: var(--accent-orange); font-weight: 700; font-size: 0.9rem;">4 lugares</span>
+                            <span class="activity-label" style="color: var(--text-secondary); font-size: 0.9rem;">🌿 Estado de los Manglares</span>
+                            <span class="activity-value" style="color: var(--accent-green, #00A86B); font-weight: 600; font-size: 0.9rem;">Saludables</span>
                         </li>
                     </ul>
                     <div style="font-size: 0.75rem; color: var(--text-muted); padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 0.4rem; margin-top: 1rem;">
-                        <span>🕒</span> Actualizado hace 45 min
+                        <span>🌙</span> Lectura de nuestros guías. Si la noche no da para el brillo, te lo decimos y reagendamos.
                     </div>
                 </div>
             </div>
@@ -788,6 +786,86 @@
             </div>
         </section>
 
+        <!-- 2.5 EXPEDICIONES COMPLETAS (PAQUETES) SECTION -->
+        <section id="paquetes" class="container reveal">
+            <h2>Si vas a venir hasta acá, quédate el día entero</h2>
+            <p class="section-subtitle-center" style="text-align: center; max-width: 650px; margin: -1.5rem auto 3rem auto; font-weight: 300; color: var(--text-secondary);">Itinerarios que nuestros guías arman entre sí, con tiempos reales de traslado. El precio se cierra por WhatsApp según fecha y grupo.</p>
+
+            <div class="pkg-grid">
+                <article class="glass-card pkg-card">
+                    <span class="exp-tag">Una noche</span>
+                    <h3>Noche Lumínica</h3>
+                    <p>Atardecer navegando 13 km de manglar, fogata en Playa Puerto Suelo y cierre nadando en la bioluminiscencia.</p>
+                    <ul class="pkg-list">
+                        <li>Recorrido de manglar al ocaso</li>
+                        <li>Fogata y bombones en la playa</li>
+                        <li>Nado nocturno en la laguna</li>
+                        <li>Traslado desde Puerto Escondido</li>
+                    </ul>
+                    <a href="#contacto" onclick="selectTourAndScroll('Expedición Noche Lumínica')" class="btn btn-secondary pkg-btn">Cotizar expedición</a>
+                </article>
+
+                <article class="glass-card pkg-card pkg-featured">
+                    <span class="pkg-flag">⭐ La más reservada</span>
+                    <span class="exp-tag green">Un día completo</span>
+                    <h3>Pacífico Salvaje</h3>
+                    <p>Amaneces con delfines en mar abierto, remas manglares al mediodía y despides el día liberando una tortuga.</p>
+                    <ul class="pkg-list">
+                        <li>Delfines (ballenas en temporada)</li>
+                        <li>Kayak guiado entre aves</li>
+                        <li>Integración de tortuga al océano</li>
+                        <li>Comida local frente al mar</li>
+                    </ul>
+                    <a href="#contacto" onclick="selectTourAndScroll('Expedición Pacífico Salvaje')" class="btn btn-primary pkg-btn">Cotizar expedición</a>
+                </article>
+
+                <article class="glass-card pkg-card">
+                    <span class="exp-tag sunset">Dos días</span>
+                    <h3>Oaxaca Total</h3>
+                    <p>Chacahua de día completo, cascadas de Copalita o aguas termales a elección, y bioluminiscencia de despedida.</p>
+                    <ul class="pkg-list">
+                        <li>Parque Nacional Chacahua</li>
+                        <li>Cascadas o termales, tú eliges</li>
+                        <li>Bioluminiscencia de cierre</li>
+                        <li>Transporte coordinado completo</li>
+                    </ul>
+                    <a href="#contacto" onclick="selectTourAndScroll('Expedición Oaxaca Total')" class="btn btn-secondary pkg-btn">Cotizar expedición</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- 2.7 NUESTRA COMUNIDAD (TRUST & DIFERENCIACIÓN) SECTION -->
+        <section id="nosotros" class="container reveal">
+            <h2>Cuidamos lo que te mostramos</h2>
+            <p class="section-subtitle-center" style="text-align: center; max-width: 700px; margin: -1.5rem auto 3rem auto; font-weight: 300; color: var(--text-secondary);">No somos un mostrador de reventa: somos familias de Manialtepec y Chacahua. La laguna nos dio de comer antes de darnos trabajo, y eso cambia cómo se hace cada tour.</p>
+
+            <div class="why-grid">
+                <div class="glass-card why-card">
+                    <h3>🧭 Guías que nacieron aquí</h3>
+                    <p>Capitanes y naturalistas con certificación oficial y toda una vida leyendo esta agua. No repiten un guion: te cuentan su casa.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h3>💧 Cero químicos en la laguna</h3>
+                    <p>Sin bloqueador ni repelente al nadar. Los dinoflagelados que crean la luz son frágiles, y preferimos la laguna encendida a la comodidad.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h3>🐢 Conservación con recibo</h3>
+                    <p>Parte de cada reserva va directo a los campamentos tortugueros oficiales. El avistamiento es ético: nunca perseguimos fauna.</p>
+                </div>
+                <div class="glass-card why-card">
+                    <h3>🏡 La derrama se queda aquí</h3>
+                    <p>Grupos pequeños operados por comunidades chatinas y familias locales. Tu viaje sostiene la economía de la costa, no una franquicia.</p>
+                </div>
+            </div>
+
+            <div class="stats-strip" aria-label="Cifras de Paraíso Laguna">
+                <div class="stat-item"><strong>11</strong><span>rutas guiadas</span></div>
+                <div class="stat-item"><strong>148</strong><span>opiniones en Google y TripAdvisor</span></div>
+                <div class="stat-item"><strong>0</strong><span>químicos en el agua</span></div>
+                <div class="stat-item"><strong>100%</strong><span>guías locales</span></div>
+            </div>
+        </section>
+
         <!-- 3. GALERÍA DIGITAL DEDICADA SECTION -->
         <section id="galeria" class="container reveal">
             <h2>Capturas de la Aventura Real</h2>
@@ -806,31 +884,31 @@
             <div class="gallery-grid" id="photos-grid-wrapper">
                 <!-- First 8 images loaded from real tour photos -->
                 <div class="gallery-item span-featured" onclick="openLightbox(0)">
-                    <img src="assets/images/tours/bioluminiscencia/Gemini_Generated_Image_x26k17x26k17x26k.webp" alt="Bioluminiscencia nocturna en la Laguna de Manialtepec" loading="lazy">
+                    <img src="assets/images/tours/bioluminiscencia/estela-bioluminiscente-manialtepec.webp" alt="La estela de la lancha brillando azul por la bioluminiscencia real de Manialtepec" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Bioluminiscencia</span>
-                        <p>Bioluminiscencia Nocturna 🌌</p>
+                        <p>Manialtepec, 21:40 — La estela encendida 🌌</p>
                     </div>
                 </div>
 
                 <div class="gallery-item span-v" onclick="openLightbox(1)">
-                    <img src="assets/images/tours/atardecer-caballo/V-1.webp" alt="Cabalgata al atardecer en la playa" loading="lazy">
+                    <img src="assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp" alt="Bioluminiscencia nocturna en la Laguna de Manialtepec" loading="lazy">
                     <div class="gallery-overlay">
-                        <span class="photo-tag">Paisaje</span>
-                        <p>Cabalgata al Atardecer 🐎</p>
+                        <span class="photo-tag">Bioluminiscencia</span>
+                        <p>La laguna que se enciende de noche ✨</p>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="assets/images/tours/cascadas/Gemini_Generated_Image_7zk1hb7zk1hb7zk1.webp" alt="Cascadas mágicas de Copalita" loading="lazy">
+                    <img src="assets/images/tours/tortugas/tortugas-crias-la-escobilla.webp" alt="Tina llena de tortugas recién nacidas en la playa de La Escobilla" loading="lazy">
                     <div class="gallery-overlay">
-                        <span class="photo-tag">Aventura</span>
-                        <p>Cascadas Mágicas 🌊</p>
+                        <span class="photo-tag">Ecológico</span>
+                        <p>La Escobilla, 18:20 — Crías listas para el mar 🐢</p>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(3)">
-                    <img src="assets/images/tours/tortugas/i.webp" alt="Integración de tortugas marinas en el Pacífico" loading="lazy">
+                    <img src="assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca.webp" alt="Integración de tortugas marinas en el Pacífico" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Ecológico</span>
                         <p>Integración de Tortugas 🐢</p>
@@ -838,34 +916,34 @@
                 </div>
 
                 <div class="gallery-item span-h" onclick="openLightbox(4)">
-                    <img src="assets/images/tours/chacahua/asset-eabdb6a5-9a73-405e-b4a7-90df2bcb5c5b-1-1.webp" alt="Laguna de Chacahua entre manglares" loading="lazy">
+                    <img src="assets/images/tours/tortugas/i.webp" alt="Campamento tortuguero en la costa de Oaxaca" loading="lazy">
                     <div class="gallery-overlay">
-                        <span class="photo-tag">Paisaje</span>
-                        <p>Laguna de Chacahua 🏝️</p>
+                        <span class="photo-tag">Ecológico</span>
+                        <p>Campamento Tortuguero 🐢</p>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="assets/images/tours/kayak/Gemini_Generated_Image_9rkmzc9rkmzc9rkm.webp" alt="Kayak en los manglares de Manialtepec" loading="lazy">
+                    <img src="assets/images/tours/delfines-ballenas/delfines-junto-lancha.webp" alt="Delfines saltando junto a la proa de una lancha con viajeros en el Pacífico" loading="lazy">
                     <div class="gallery-overlay">
-                        <span class="photo-tag">Aventura</span>
-                        <p>Kayak en Manglares 🛶</p>
+                        <span class="photo-tag">Vida Marina</span>
+                        <p>Mar abierto, 06:50 — Delfines junto a la lancha 🐬</p>
                     </div>
                 </div>
 
                 <div class="gallery-item span-v" onclick="openLightbox(6)">
-                    <img src="assets/images/tours/delfines-ballenas/unnamed-8.webp" alt="Delfines saltando en el Océano Pacífico" loading="lazy">
+                    <img src="assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp" alt="Avistamiento de delfines y ballenas en Puerto Escondido" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Vida Marina</span>
-                        <p>Delfines en el Pacífico 🐬</p>
+                        <p>Avistamiento de Delfines 🐬</p>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(7)">
-                    <img src="assets/images/tours/atardecer-laguna/imagen_redimensionada_2048.webp" alt="Atardecer espectacular en la Laguna de Manialtepec" loading="lazy">
+                    <img src="assets/images/tours/delfines-ballenas/unnamed-8.webp" alt="Delfines saltando en el Océano Pacífico" loading="lazy">
                     <div class="gallery-overlay">
-                        <span class="photo-tag">Paisaje</span>
-                        <p>Atardecer en la Laguna 🌅</p>
+                        <span class="photo-tag">Vida Marina</span>
+                        <p>Delfines en el Pacífico 🐬</p>
                     </div>
                 </div>
             </div>
@@ -873,7 +951,7 @@
             <!-- Expand Gallery Button -->
             <div class="gallery-load-more" id="gallery-load-more-container">
                 <button class="btn btn-secondary" id="gallery-load-btn" onclick="expandGallery()">
-                    📷 Ver más fotos reales (41 fotos)
+                    📷 Ver todas las fotos reales (23 fotos)
                 </button>
             </div>
         </section>
@@ -1080,6 +1158,9 @@
                                 <option value="Aguas Termales">🌋 Aguas Termales de Atotonilco</option>
                                 <option value="Tour de Mazunte">🐢 Tour Mazunte Costa Oaxaqueña</option>
                                 <option value="Atardecer en la Laguna">🌅 Atardecer en la Laguna de Manialtepec</option>
+                                <option value="Expedición Noche Lumínica">🌙 Expedición Noche Lumínica</option>
+                                <option value="Expedición Pacífico Salvaje">🐬 Expedición Pacífico Salvaje</option>
+                                <option value="Expedición Oaxaca Total">🗺️ Expedición Oaxaca Total (2 días)</option>
                                 <option value="Paquete Completo Aventura">📦 Paquete Completo (Varias aventuras)</option>
                             </select>
                         </div>
@@ -1111,6 +1192,7 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.25rem"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972zm11.378-5.395c-.328-.164-1.942-.959-2.242-1.069-.3-.11-.518-.165-.736.165-.219.329-.848 1.069-1.039 1.288-.19.219-.382.247-.71.082-.328-.164-1.386-.511-2.641-1.63-1.04-.927-1.742-2.073-1.946-2.402-.204-.329-.022-.507.142-.671.147-.148.328-.384.492-.575.164-.192.219-.329.328-.549.11-.219.055-.411-.027-.575-.082-.164-.736-1.77-.996-2.42-.266-.65-.558-.56-.763-.571-.19-.01-.41-.012-.628-.012-.218 0-.573.082-.873.411-.3.329-1.147 1.123-1.147 2.738 0 1.616 1.173 3.178 1.337 3.397.164.22 2.307 3.524 5.59 4.945.781.338 1.39.54 1.867.691.784.249 1.498.214 2.062.13.629-.094 1.942-.795 2.216-1.56.273-.767.273-1.424.19-1.56-.081-.137-.3-.219-.628-.383z"/></svg>
                             Enviar a WhatsApp
                         </button>
+                        <p class="booking-hint" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">Se abre tu WhatsApp con el mensaje ya escrito. Tú decides si lo envías.</p>
                     </form>
                 </div>
 
@@ -1148,12 +1230,12 @@
 
                 <div class="faq-item glass-card" id="faq-item-3">
                     <button class="faq-question" id="btn-faq-q3">
-                        ¿Cómo funciona el proceso de reserva sin precios visibles?
+                        ¿Por qué no publican precios?
                         <span class="faq-icon-arrow">▼</span>
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-inner">
-                            Es muy fácil: llenas el formulario dinámico arriba con tu fecha y número de personas y haces clic en el botón. Esto te abrirá una conversación en nuestro WhatsApp con tu solicitud formateada. De inmediato, te daremos el precio más bajo garantizado para ese día, te ofreceremos descuentos de grupo si aplica, y definiremos el método de pago más cómodo para ti.
+                            Porque el precio justo depende de la fecha, el tamaño del grupo y si combinas experiencias. Llenas el formulario de arriba, se abre tu WhatsApp con el mensaje ya escrito, y respondemos con la mejor tarifa de ese día, descuentos de grupo si aplican y el método de pago que te acomode. Sin registros ni pagos por adelantado.
                         </div>
                     </div>
                 </div>
@@ -1225,8 +1307,10 @@
                     <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
                     <button type="submit" class="newsletter-btn">➔</button>
                 </form>
-                <address class="footer-address" style="font-style: normal; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.5; text-align: left;">
-                    📍 Laguna de Manialtepec, Km 16 Carr. Federal 200, Puerto Escondido, Oaxaca. C.P. 71980
+                <address class="footer-address" style="font-style: normal; font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.7; text-align: left;">
+                    📍 Laguna de Manialtepec, Km 16 Carr. Federal 200, Puerto Escondido, Oaxaca. C.P. 71980<br>
+                    💬 <a href="https://wa.me/529541611334" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: none;">+52 954 161 1334</a><br>
+                    ✉️ <a href="mailto:reilyvica@gmail.com" style="color: var(--accent-cyan); text-decoration: none;">reilyvica@gmail.com</a>
                 </address>
             </div>
         </div>
@@ -1343,6 +1427,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="app.js?v=2" defer></script>
+    <script src="app.js?v=3" defer></script>
 </body>
 </html>
