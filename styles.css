@@ -2677,3 +2677,38 @@ textarea:focus-visible {
         gap: 0.85rem 1.25rem;
     }
 }
+
+/* --- Sticky Mobile Booking Bar: un solo CTA claro en el pulgar --- */
+.mobile-sticky-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        padding: 0.95rem 1rem calc(0.95rem + env(safe-area-inset-bottom, 0px)) 1rem;
+        background: linear-gradient(135deg, #25D366, #128C7E);
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        text-decoration: none;
+        box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Un solo CTA persistente en móvil: se retira la burbuja redonda para no duplicar */
+    .wa-widget-container {
+        display: none;
+    }
+
+    body {
+        padding-bottom: 4.5rem;
+    }
+}
