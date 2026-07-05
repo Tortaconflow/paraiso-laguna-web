@@ -1735,7 +1735,7 @@ footer {
 
 .post-header h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
-    color: #fff;
+    color: var(--text-primary);
     margin-top: 0.5rem;
     margin-bottom: 1.25rem;
     line-height: 1.2;
@@ -1786,19 +1786,19 @@ footer {
 
 .post-content h2 {
     font-size: 1.85rem;
-    color: #fff;
+    color: var(--text-primary);
     text-align: left;
     margin-top: 3.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.01em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-glass);
     padding-bottom: 0.5rem;
 }
 
 .post-content h3 {
     font-size: 1.4rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -1815,20 +1815,20 @@ footer {
 }
 
 .post-content strong {
-    color: #fff;
-    font-weight: 600;
+    color: var(--text-primary);
+    font-weight: 700;
 }
 
 /* Callouts & Glassmorphic Highlights */
 .post-highlight-box {
-    background: rgba(9, 35, 47, 0.55);
+    background: var(--bg-surface);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(29, 112, 184, 0.25);
     border-radius: var(--radius-md);
     padding: 2.25rem;
     margin: 3rem 0;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), var(--bg-surface-glow);
+    box-shadow: var(--shadow-premium);
 }
 
 .post-highlight-box h3, .post-highlight-box h4 {
@@ -1875,7 +1875,7 @@ footer {
 
 .post-footer-cta h3 {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
 }
