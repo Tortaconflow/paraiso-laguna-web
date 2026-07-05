@@ -170,8 +170,9 @@ a {
     box-shadow: var(--glow-cyan);
 }
 
-/* 4. HEADER / NAVIGATION */
-header {
+/* 4. HEADER / NAVIGATION (scoped al navbar: las páginas de blog/tours
+   tienen un segundo <header class="post-header"> que NO debe quedar fijo) */
+#main-header {
     position: fixed;
     top: 0;
     left: 0;
