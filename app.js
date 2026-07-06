@@ -421,37 +421,47 @@ window.waQuickChat = waQuickChat;
 // ==========================================================================
 // Solo fotografías reales capturadas en los tours — con lugar y hora, como bitácora.
 const GALLERY_PHOTOS = [
-    // Bioluminiscencia
-    { src: "tours/bioluminiscencia/estela-bioluminiscente-manialtepec.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Manialtepec, 21:40 — La estela encendida 🌌" },
-    { src: "tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "La laguna que se enciende de noche ✨" },
-    // Tortugas
-    { src: "tours/tortugas/tortugas-crias-la-escobilla.webp", tag: "turtles", tagTitle: "Ecológico", title: "La Escobilla, 18:20 — Crías listas para el mar 🐢" },
-    { src: "tours/tortugas/integracion-tortugas-marinas-oaxaca.webp", tag: "turtles", tagTitle: "Ecológico", title: "Integración de Tortugas 🐢" },
-    { src: "tours/tortugas/i.webp", tag: "turtles", tagTitle: "Ecológico", title: "Campamento Tortuguero 🐢" },
-    // Delfines y Ballenas
+    // Bioluminiscencia (reales, de guías y viajeros)
+    { src: "tours/bioluminiscencia/mano-brillo-real-1.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "El agua responde con luz ✨" },
+    { src: "tours/bioluminiscencia/estela-lancha-brillo.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "La estela de la lancha, encendida 🌌" },
+    { src: "tours/bioluminiscencia/grupo-letrero-bioluminiscencia.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Antes de zarpar a la laguna 🌙" },
+    { src: "tours/bioluminiscencia/mano-brillo-real-2.webp", tag: "biolum", tagTitle: "Bioluminiscencia", title: "Nadie sale igual de esta noche ✨" },
+    // Tortugas — liberación real
+    { src: "tours/tortugas/crias-caminando-amanecer.webp", tag: "turtles", tagTitle: "Ecológico", title: "Rumbo al mar, solas 🐢" },
+    { src: "tours/tortugas/cria-en-concha-coco.webp", tag: "turtles", tagTitle: "Ecológico", title: "Una cría, en la palma de la mano 🐢" },
+    { src: "tours/tortugas/cubeta-crias-verde.webp", tag: "turtles", tagTitle: "Ecológico", title: "Listas para su primera nadada 🐢" },
+    { src: "tours/tortugas/grupo-liberacion-playa.webp", tag: "turtles", tagTitle: "Ecológico", title: "Todos juntos, al atardecer 🐢" },
+    { src: "tours/tortugas/crias-laud-canasta-1.webp", tag: "turtles", tagTitle: "Ecológico", title: "Tortugas laúd recién nacidas 🐢" },
+    // Delfines y Ballenas — dron real
+    { src: "tours/delfines-ballenas/ballenas-aereo-1.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Dos ballenas, vistas desde arriba 🐋" },
+    { src: "tours/delfines-ballenas/ballenas-aereo-soplo.webp", tag: "turtles", tagTitle: "Vida Marina", title: "El soplo antes de sumergirse 🐋" },
     { src: "tours/delfines-ballenas/delfines-junto-lancha.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Mar abierto, 06:50 — Delfines junto a la lancha 🐬" },
-    { src: "tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Avistamiento de Delfines 🐬" },
-    { src: "tours/delfines-ballenas/unnamed-8.webp", tag: "turtles", tagTitle: "Vida Marina", title: "Delfines en el Pacífico 🐬" },
     // Atardecer a Caballo
+    { src: "tours/atardecer-caballo/cruzando-rio-dos-jinetes.webp", tag: "adventures", tagTitle: "Aventura", title: "Cruzando el río a caballo 🐎" },
+    { src: "tours/atardecer-caballo/jinete-playa-rio-montanas.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Donde el río se junta con la playa 🐎" },
+    { src: "tours/atardecer-caballo/dos-mujeres-a-caballo.webp", tag: "adventures", tagTitle: "Aventura", title: "Cabalgando entre palmeras 🐎" },
     { src: "tours/atardecer-caballo/cabalgata-el-aguaje.webp", tag: "adventures", tagTitle: "Aventura", title: "El Aguaje, 17:10 — Cabalgata rumbo al río 🐎" },
-    { src: "tours/atardecer-caballo/atardecer-caballo-manialtepec.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Atardecer a Caballo 🐎" },
-    { src: "tours/atardecer-caballo/V-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Cabalgata al Atardecer 🐎" },
-    // Kayak
+    // Kayak y manglares
+    { src: "tours/kayak/kayak-silueta-amanecer.webp", tag: "adventures", tagTitle: "Aventura", title: "Kayak al amanecer, en silencio 🛶" },
+    { src: "tours/kayak/kayak-entrando-tunel-manglar.webp", tag: "adventures", tagTitle: "Aventura", title: "Entrando al túnel de manglar 🛶" },
+    { src: "tours/kayak/kayak-resplandor-sol.webp", tag: "adventures", tagTitle: "Aventura", title: "De frente al sol 🛶" },
+    { src: "tours/kayak/espatulas-rosadas-volando.webp", tag: "adventures", tagTitle: "Aventura", title: "Espátulas rosadas sobre el manglar 🦩" },
     { src: "tours/kayak/kayak-canales-manialtepec.webp", tag: "adventures", tagTitle: "Aventura", title: "Manialtepec, 09:45 — Kayak entre canales 🛶" },
-    { src: "tours/kayak/kayak-manglares-manialtepec.webp", tag: "adventures", tagTitle: "Aventura", title: "Kayak en los Manglares 🛶" },
-    // Cascadas
-    { src: "tours/cascadas/cascadas-copalita-poza.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Copalita — Cascadas de agua cristalina 🌊" },
-    { src: "tours/cascadas/cascadas-nado-poza.webp", tag: "adventures", tagTitle: "Naturaleza", title: "Copalita, 12:30 — El agua en la nuca 🌊" },
+    // Aguas Termales
+    { src: "tours/aguas-termales/poza-forma-corazon.webp", tag: "landscapes", tagTitle: "Bienestar", title: "Una poza natural en forma de corazón ♥️" },
+    { src: "tours/aguas-termales/poza-redonda.webp", tag: "landscapes", tagTitle: "Bienestar", title: "Aguas termales, entre la selva 🌿" },
     // Tour de Chacahua
+    { src: "tours/chacahua/cocodrilo-pasto.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Un cocodrilo tomando el sol 🐊" },
+    { src: "tours/chacahua/dos-cocodrilos-manglar.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Chacahua, entre los manglares 🐊" },
     { src: "tours/chacahua/chacahua-canal-manglar.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Chacahua — Laberintos de manglar 🏝️" },
-    { src: "tours/chacahua/asset-eabdb6a5-9a73-405e-b4a7-90df2bcb5c5b-1-1.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Laguna de Chacahua 🏝️" },
-    { src: "tours/chacahua/tour-chacahua-manglares-oaxaca.jpg", tag: "landscapes", tagTitle: "Paisaje", title: "Parque Nacional Chacahua 🏝️" },
-    { src: "tours/chacahua/e702dd05-31f3-4335-a65f-21dfcb4c8423.jpg", tag: "landscapes", tagTitle: "Paisaje", title: "Manglares de Chacahua 🏝️" },
+    // Ruta Mazunte / Santuario La Ventanilla
+    { src: "tours/mazunte/letrero-punta-cometa.webp", tag: "landscapes", tagTitle: "Costa", title: "Llegando a Punta Cometa 🌅" },
+    { src: "tours/mazunte/mono-arana-santuario.webp", tag: "turtles", tagTitle: "Vida Silvestre", title: "Mono araña en La Ventanilla 🐒" },
+    { src: "tours/mazunte/alimentando-venado-1.webp", tag: "turtles", tagTitle: "Vida Silvestre", title: "Cara a cara con un venado cola blanca 🦌" },
+    { src: "tours/mazunte/degustacion-mezcal-chocolate.webp", tag: "landscapes", tagTitle: "Costa", title: "Mezcal y chocolate de la región 🍫" },
     // Atardecer en la Laguna
     { src: "tours/atardecer-laguna/atardecer-embarcadero-manialtepec.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Manialtepec, 19:05 — El embarcadero al caer el sol 🌅" },
-    { src: "tours/atardecer-laguna/atardecer-paddle-pareja.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Manialtepec, 19:20 — Paddle hacia el sol 🌅" },
-    { src: "tours/atardecer-laguna/imagen_redimensionada_2048.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Fogata en la Playa 🔥" },
-    { src: "tours/atardecer-laguna/imagen_redimensionada_2048 (1).webp", tag: "landscapes", tagTitle: "Paisaje", title: "Playa Puerto Suelo 🌅" }
+    { src: "tours/atardecer-laguna/imagen_redimensionada_2048.webp", tag: "landscapes", tagTitle: "Paisaje", title: "Fogata en la Playa 🔥" }
 ];
 
 let activeFilter = 'todos';
