@@ -2441,7 +2441,8 @@ footer {
         height: 420px !important;
         min-height: 420px;
         padding: 1.5rem !important;
-        border-radius: var(--radius-md);
+        /* radius debe igualar a .exp-img-container (var(--radius-lg)) para que la
+           esquina de la foto no se asome fuera del recorte de la tarjeta en movil */
     }
     
     /* Tighter padding on quiz */
