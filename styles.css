@@ -2713,3 +2713,14 @@ textarea:focus-visible {
         padding-bottom: 4.5rem;
     }
 }
+
+/* --- Partículas de bioluminiscencia ambiental en el Hero (sincronizadas con la fase lunar real) --- */
+.hero-bio-canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}

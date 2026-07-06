@@ -2,6 +2,131 @@
    INTERACTIVE LOGIC & WHATSAPP CONVERSION FLOW - PARAÍSO LAGUNA
    ========================================================================== */
 
+/* ==========================================================================
+   HERO: partículas de bioluminiscencia ambiental, sincronizadas con la fase
+   lunar real (mismo cálculo astronómico que el widget "Potencial de Brillo").
+   Puramente ambiental — sin seguir cursor ni touch, igual en móvil y desktop.
+   ========================================================================== */
+(function initHeroBioParticles() {
+    const canvas = document.getElementById('hero-bio-canvas');
+    const hero = document.getElementById('inicio');
+    if (!canvas || !hero) return;
+
+    const ctx = canvas.getContext('2d');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    let particles = [];
+    let running = false;
+    let rafId = null;
+    let glowSprite = null;
+
+    function buildGlowSprite() {
+        const size = 48;
+        const off = document.createElement('canvas');
+        off.width = size;
+        off.height = size;
+        const octx = off.getContext('2d');
+        const grad = octx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+        grad.addColorStop(0, 'rgba(160, 235, 255, 0.95)');
+        grad.addColorStop(0.4, 'rgba(90, 205, 230, 0.5)');
+        grad.addColorStop(1, 'rgba(70, 180, 220, 0)');
+        octx.fillStyle = grad;
+        octx.fillRect(0, 0, size, size);
+        return off;
+    }
+
+    function resizeCanvas() {
+        const rect = hero.getBoundingClientRect();
+        canvas.width = Math.max(1, Math.round(rect.width));
+        canvas.height = Math.max(1, Math.round(rect.height));
+    }
+
+    // Misma fórmula astronómica que el widget "El estado de la laguna, hoy"
+    function moonGlowFactor() {
+        const SYNODIC = 29.53058867;
+        const age = ((Date.now() - Date.UTC(2000, 0, 6, 18, 14)) / 86400000) % SYNODIC;
+        const illum = (1 - Math.cos((age / SYNODIC) * 2 * Math.PI)) / 2; // 0 = luna nueva, 1 = luna llena
+        return 1 - illum; // a menor luz lunar, más se aprecia la bioluminiscencia
+    }
+
+    function createParticles() {
+        const glowFactor = moonGlowFactor();
+        const isMobile = window.innerWidth < 768;
+        const baseCount = isMobile ? 14 : 32;
+        const count = Math.round(baseCount * (0.55 + glowFactor * 0.45));
+        particles = Array.from({ length: count }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: (isMobile ? 5 : 7) + Math.random() * (isMobile ? 6 : 9),
+            baseAlpha: (0.22 + Math.random() * 0.4) * (0.6 + glowFactor * 0.4),
+            phase: Math.random() * Math.PI * 2,
+            speed: 0.12 + Math.random() * 0.22,
+            drift: (Math.random() - 0.5) * 0.12
+        }));
+    }
+
+    function draw(time) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const p of particles) {
+            p.y -= p.speed;
+            p.x += p.drift;
+            if (p.y < -20) { p.y = canvas.height + 20; p.x = Math.random() * canvas.width; }
+            if (p.x < -20) p.x = canvas.width + 20;
+            if (p.x > canvas.width + 20) p.x = -20;
+
+            const twinkle = 0.75 + Math.sin(time / 900 + p.phase) * 0.25;
+            ctx.globalAlpha = p.baseAlpha * twinkle;
+            const s = p.r * 2;
+            ctx.drawImage(glowSprite, p.x - p.r, p.y - p.r, s, s);
+        }
+        ctx.globalAlpha = 1;
+        if (running) rafId = requestAnimationFrame(draw);
+    }
+
+    function start() {
+        if (running || prefersReducedMotion) return;
+        running = true;
+        rafId = requestAnimationFrame(draw);
+    }
+
+    function stop() {
+        running = false;
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+    }
+
+    glowSprite = buildGlowSprite();
+    resizeCanvas();
+    createParticles();
+
+    if (prefersReducedMotion) {
+        draw(0); // una sola pasada estática, sin animación
+        return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => (entry.isIntersecting ? start() : stop()));
+    }, { threshold: 0.05 });
+    io.observe(hero);
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            stop();
+        } else if (hero.getBoundingClientRect().bottom > 0) {
+            start();
+        }
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            resizeCanvas();
+            createParticles();
+        }, 200);
+    });
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. SCROLL REVEAL ANIMATIONS (Intersection Observer)
     const revealElements = document.querySelectorAll('.reveal');
