@@ -2724,3 +2724,122 @@ textarea:focus-visible {
     pointer-events: none;
     mix-blend-mode: screen;
 }
+
+/* ==========================================================================
+   TOUR HERO (páginas individuales de cada tour) — mismo lenguaje visual
+   editorial full-bleed que el Hero del home, escalado para página interior.
+   ========================================================================== */
+.tour-hero {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    /* el header fijo ya lo despeja .blog-post-container (margin-top:8rem);
+       aquí solo se necesita respiro interno para el contenido */
+    padding: 2.5rem 2rem;
+    margin: 0 -1.5rem 3rem -1.5rem;
+    border-radius: var(--radius-lg);
+}
+
+.tour-hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.tour-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour-hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(180deg, rgba(4, 14, 20, 0.1) 0%, rgba(4, 14, 20, 0.4) 60%, rgba(4, 14, 20, 0.85) 100%),
+        linear-gradient(90deg, rgba(4, 14, 20, 0.6) 0%, rgba(4, 14, 20, 0.2) 55%, rgba(4, 14, 20, 0.02) 85%);
+}
+
+.tour-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+}
+
+.tour-hero-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 1rem;
+}
+
+.tour-hero-inner h1 {
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.tour-hero-lead {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 62ch;
+    margin-bottom: 1.75rem;
+}
+
+.tour-hero-lead strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.tour-hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tour-hero-facts div strong {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-cyan);
+    margin-bottom: 0.25rem;
+}
+
+.tour-hero-facts div span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.tour-hero-includes {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.88rem;
+    margin-bottom: 1.75rem;
+    max-width: 60ch;
+}
+
+@media (max-width: 768px) {
+    .tour-hero {
+        min-height: auto;
+        padding: 2rem 1.25rem;
+        margin: 0 -1rem 2rem -1rem;
+        border-radius: 0;
+    }
+}
