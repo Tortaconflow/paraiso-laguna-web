@@ -1,5 +1,5 @@
-/* ==========================================================================
-   CSS DESIGN SYSTEM & PREMIUM AESTHETICS - PARAÍSO LAGUNA
+﻿/* ==========================================================================
+   CSS DESIGN SYSTEM & PREMIUM AESTHETICS - PARAÃSO LAGUNA
    ========================================================================== */
 
 /* 1. IMPORTS & VARIABLES */
@@ -170,7 +170,7 @@ a {
     box-shadow: var(--glow-cyan);
 }
 
-/* 4. HEADER / NAVIGATION (scoped al navbar: las páginas de blog/tours
+/* 4. HEADER / NAVIGATION (scoped al navbar: las pÃ¡ginas de blog/tours
    tienen un segundo <header class="post-header"> que NO debe quedar fijo) */
 #main-header {
     position: fixed;
@@ -232,7 +232,7 @@ nav a:hover {
     color: var(--accent-cyan);
 }
 
-/* 5. HERO SECTION — full-bleed editorial, la fotografía es la protagonista */
+/* 5. HERO SECTION â€” full-bleed editorial, la fotografÃ­a es la protagonista */
 .hero {
     position: relative;
     width: 100%;
@@ -378,7 +378,7 @@ nav a:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Live Lagoon Widget — floating, compact, real data */
+/* Live Lagoon Widget â€” floating, compact, real data */
 .hero-live-widget {
     position: absolute;
     z-index: 2;
@@ -1342,7 +1342,7 @@ footer {
 }
 
 .wa-chat-chip::after {
-    content: '➔';
+    content: 'âž”';
     font-size: 0.75rem;
     color: var(--accent-cyan);
     opacity: 0.7;
@@ -1626,7 +1626,7 @@ footer {
 }
 
 /* ==========================================================================
-   40. SECCIÓN DE BLOG PREMIUM & ESTILOS DE LECTURA (SEO/GEO)
+   40. SECCIÃ“N DE BLOG PREMIUM & ESTILOS DE LECTURA (SEO/GEO)
    ========================================================================== */
 
 /* Blog Layout & Catalog Grid */
@@ -2456,7 +2456,7 @@ footer {
 
 
 /* ==========================================================================
-   INTEGRACIÓN VERSIÓN B: EXPEDICIONES (PAQUETES) & NUESTRA COMUNIDAD
+   INTEGRACIÃ“N VERSIÃ“N B: EXPEDICIONES (PAQUETES) & NUESTRA COMUNIDAD
    ========================================================================== */
 
 /* --- Expediciones completas (paquetes) --- */
@@ -2529,7 +2529,7 @@ footer {
 }
 
 .pkg-list li::before {
-    content: "✔";
+    content: "âœ”";
     position: absolute;
     left: 0;
     color: var(--accent-green);
@@ -2608,7 +2608,7 @@ footer {
     }
 }
 
-/* --- Pulido: punto "en vivo" del monitoreo (de la versión B) --- */
+/* --- Pulido: punto "en vivo" del monitoreo (de la versiÃ³n B) --- */
 .live-dot {
     display: inline-block;
     width: 0.6rem;
@@ -2639,7 +2639,7 @@ textarea:focus-visible {
     .live-dot { animation: none; }
 }
 
-/* --- Trust bar: garantías visibles antes de que el usuario pregunte --- */
+/* --- Trust bar: garantÃ­as visibles antes de que el usuario pregunte --- */
 .trust-bar {
     list-style: none;
     display: flex;
@@ -2704,7 +2704,7 @@ textarea:focus-visible {
         box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.18);
     }
 
-    /* Un solo CTA persistente en móvil: se retira la burbuja redonda para no duplicar */
+    /* Un solo CTA persistente en mÃ³vil: se retira la burbuja redonda para no duplicar */
     .wa-widget-container {
         display: none;
     }
@@ -2714,7 +2714,7 @@ textarea:focus-visible {
     }
 }
 
-/* --- Partículas de bioluminiscencia ambiental en el Hero (sincronizadas con la fase lunar real) --- */
+/* --- PartÃ­culas de bioluminiscencia ambiental en el Hero (sincronizadas con la fase lunar real) --- */
 .hero-bio-canvas {
     position: absolute;
     inset: 0;
@@ -2726,8 +2726,8 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   TOUR HERO (páginas individuales de cada tour) — mismo lenguaje visual
-   editorial full-bleed que el Hero del home, escalado para página interior.
+   TOUR HERO (pÃ¡ginas individuales de cada tour) â€” mismo lenguaje visual
+   editorial full-bleed que el Hero del home, escalado para pÃ¡gina interior.
    ========================================================================== */
 .tour-hero {
     position: relative;
@@ -2738,7 +2738,7 @@ textarea:focus-visible {
     justify-content: flex-end;
     overflow: hidden;
     /* el header fijo ya lo despeja .blog-post-container (margin-top:8rem);
-       aquí solo se necesita respiro interno para el contenido */
+       aquÃ­ solo se necesita respiro interno para el contenido */
     padding: 2.5rem 2rem;
     margin: 0 -1.5rem 3rem -1.5rem;
     border-radius: var(--radius-lg);
@@ -2842,4 +2842,88 @@ textarea:focus-visible {
         margin: 0 -1rem 2rem -1rem;
         border-radius: 0;
     }
+}
+
+
+/* ==========================================================================
+   LANGUAGE SWITCHER STYLES (ES | EN | FR)
+   ========================================================================== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(9, 30, 41, 0.05);
+    border: 1px solid var(--border-glass);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.lang-btn {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+    display: inline-block;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.lang-btn:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.lang-btn.active {
+    background: var(--accent-cyan);
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 138, 166, 0.25);
+}
+
+.drawer-lang-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-lang-title {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.drawer-lang-switcher {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 4px;
+    gap: 4px;
+}
+
+.drawer-lang-switcher .lang-btn {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.drawer-lang-switcher .lang-btn:hover {
+    color: #ffffff;
+}
+
+.drawer-lang-switcher .lang-btn.active {
+    background: var(--accent-cyan);
+    color: #ffffff !important;
 }

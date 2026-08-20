@@ -1,6 +1,5 @@
-// Suite de verificación UI — Paraíso Laguna
-// Ejecutar con: npx playwright test (requiere @playwright/test y un servidor
-// estático sirviendo la raíz del proyecto en http://localhost:3000)
+﻿// Suite de verificación UI — Paraíso Laguna
+// Ejecutar con: npx playwright test
 
 const { test, expect } = require('@playwright/test');
 
@@ -71,7 +70,7 @@ for (const vp of viewports) {
             const popupPromise = context.waitForEvent('page');
             await page.locator('#whatsapp-booking-form button[type="submit"]').click();
             const popup = await popupPromise;
-            expect(popup.url()).toContain('api.whatsapp.com/send?phone=529541611334');
+            await expect(popup).toHaveURL(/api\.whatsapp\.com\/send\?phone=529541611334/);
         });
 
         test('sin errores de consola al cargar', async ({ page }) => {

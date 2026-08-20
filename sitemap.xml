@@ -1,84 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <!--
-      Sitemap para Paraíso Laguna - Arquitectura SILO Multi-Página
-      Actualizado: 2026-06-08
-    -->
-
-    <!-- ===== NIVEL 0: HOME ===== -->
-    <url>
-        <loc>https://paraisolaguna.com/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <!-- ===== NIVEL 1: TOURS TRANSACCIONALES (P1) ===== -->
-    <url>
-        <loc>https://paraisolaguna.com/bioluminiscencia-oaxaca/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.90</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/liberacion-tortugas-oaxaca/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.90</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/tour-chacahua/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.90</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/avistamiento-delfines-oaxaca/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/paseo-caballo-puerto-escondido/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/kayak-manglares-manialtepec/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-
-    <!-- ===== NIVEL 2: LANDING PAGES DE DESTINO ===== -->
-    <url>
-        <loc>https://paraisolaguna.com/puerto-escondido-tours/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.90</priority>
-    </url>
-
-    <!-- ===== NIVEL 3: BLOG ===== -->
-    <url>
-        <loc>https://paraisolaguna.com/blog/</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.80</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/blog/guia-bioluminiscencia-manialtepec.html</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
-    </url>
-    <url>
-        <loc>https://paraisolaguna.com/blog/liberacion-tortugas-puerto-escondido.html</loc>
-        <lastmod>2026-06-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.75</priority>
-    </url>
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://paraisolaguna.com/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/bioluminiscencia-oaxaca/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/bioluminiscencia-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/bioluminescence-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/bioluminiscencia-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/bioluminiscencia-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/bioluminescence-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/bioluminiscencia-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/bioluminescence-oaxaca/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/bioluminiscencia-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/bioluminescence-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/bioluminiscencia-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/liberacion-tortugas-oaxaca/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/liberacion-tortugas-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/turtle-release-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/liberation-tortues-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/liberacion-tortugas-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/turtle-release-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/liberacion-tortugas-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/turtle-release-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/liberation-tortues-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/liberacion-tortugas-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/liberation-tortues-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/liberacion-tortugas-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/turtle-release-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/liberation-tortues-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/liberacion-tortugas-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/avistamiento-delfines-oaxaca/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/avistamiento-delfines-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/dolphin-whale-watching-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/dauphins-baleines-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/avistamiento-delfines-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/dolphin-whale-watching-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/avistamiento-delfines-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/dolphin-whale-watching-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/dauphins-baleines-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/avistamiento-delfines-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/dauphins-baleines-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/avistamiento-delfines-oaxaca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/dolphin-whale-watching-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/dauphins-baleines-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/avistamiento-delfines-oaxaca/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/paseo-caballo-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/paseo-caballo-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/sunset-horseback-riding-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/paseo-caballo-puerto-escondido/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/sunset-horseback-riding-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/paseo-caballo-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/sunset-horseback-riding-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/paseo-caballo-puerto-escondido/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/paseo-caballo-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/sunset-horseback-riding-puerto-escondido/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/paseo-caballo-puerto-escondido/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/kayak-manglares-manialtepec/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/kayak-manglares-manialtepec/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/kayak-manialtepec-lagoon/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/kayak-lagune-manialtepec/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/kayak-manglares-manialtepec/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/kayak-manialtepec-lagoon/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/kayak-manglares-manialtepec/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/kayak-manialtepec-lagoon/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/kayak-lagune-manialtepec/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/kayak-manglares-manialtepec/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/kayak-lagune-manialtepec/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/kayak-manglares-manialtepec/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/kayak-manialtepec-lagoon/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/kayak-lagune-manialtepec/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/kayak-manglares-manialtepec/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/tour-chacahua/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/tour-chacahua/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/chacahua-national-park-tour/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/parc-national-chacahua-tour/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/tour-chacahua/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/chacahua-national-park-tour/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/tour-chacahua/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/chacahua-national-park-tour/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/parc-national-chacahua-tour/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/tour-chacahua/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/parc-national-chacahua-tour/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/tour-chacahua/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/chacahua-national-park-tour/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/parc-national-chacahua-tour/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/tour-chacahua/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/puerto-escondido-tours/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/puerto-escondido-tours/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/puerto-escondido-tours/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/puerto-escondido-excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/puerto-escondido-tours/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/puerto-escondido-tours/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/puerto-escondido-tours/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/puerto-escondido-tours/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/puerto-escondido-excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/puerto-escondido-tours/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/puerto-escondido-excursions/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/puerto-escondido-tours/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/puerto-escondido-tours/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/puerto-escondido-excursions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/puerto-escondido-tours/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/que-hacer-en-puerto-escondido-de-noche/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/cuando-ir-a-la-bioluminiscencia-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/donde-liberar-tortugas-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/temporada-ballenas-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/guia-chacahua-desde-puerto-escondido/</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

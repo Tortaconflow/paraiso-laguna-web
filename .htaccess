@@ -1,4 +1,4 @@
-# ==============================================================================
+﻿# ==============================================================================
 # REGLAS DE REDIRECCIÓN SEO 301 - PARAÍSO LAGUNA (MIGRACIÓN DESDE WORDPRESS)
 # ==============================================================================
 
@@ -21,8 +21,8 @@
     RewriteRule ^inicio/?$ / [R=301,NC,L]
     RewriteRule ^about/?$ / [R=301,NC,L]
     RewriteRule ^inicio-deutsch/?$ / [R=301,NC,L]
-    RewriteRule ^inicio-english/?$ / [R=301,NC,L]
-    RewriteRule ^inicio-francais/?$ / [R=301,NC,L]
+    RewriteRule ^inicio-english/?$ /en/ [R=301,NC,L]
+    RewriteRule ^inicio-francais/?$ /fr/ [R=301,NC,L]
     RewriteRule ^shop/?$ / [R=301,NC,L]
     RewriteRule ^checkout/?$ / [R=301,NC,L]
     RewriteRule ^projects/?$ / [R=301,NC,L]
@@ -31,19 +31,7 @@
     RewriteRule ^customer-dashboard/?$ / [R=301,NC,L]
     RewriteRule ^customer-cabinet/?$ / [R=301,NC,L]
 
-    # --- 4. Redirecciones de Idioma Inglés (/en/*) a Equivalente Español ---
-    RewriteRule ^en/paseo-en-kayak/?$ /kayak-manglares-manialtepec/ [R=301,NC,L]
-    RewriteRule ^en/tirolesa/?$ /puerto-escondido-tours/ [R=301,NC,L]
-    RewriteRule ^en/tours/?$ /puerto-escondido-tours/ [R=301,NC,L]
-    RewriteRule ^en/contacto/?$ /#contacto [R=301,NE,NC,L]
-    RewriteRule ^en/tours-chacahua/?$ /tour-chacahua/ [R=301,NC,L]
-    RewriteRule ^en/bioluminiscencia/?$ /bioluminiscencia-oaxaca/ [R=301,NC,L]
-    RewriteRule ^en/liberacion-tortugas/?$ /liberacion-tortugas-oaxaca/ [R=301,NC,L]
-    
-    # Redireccionar cualquier otra ruta /en/* que no tenga equivalente a Home
-    RewriteRule ^en/(.*)$ / [R=301,NC,L]
-
-    # --- 5. Bloqueo de Rutas Técnicas de WordPress (Devolver 410 Gone) ---
+    # --- 4. Bloqueo de Rutas Técnicas de WordPress (Devolver 410 Gone) ---
     RewriteRule ^wp-content/ - [G,NC,L]
     RewriteRule ^wp-includes/ - [G,NC,L]
     RewriteRule ^wp-admin/ - [G,NC,L]
