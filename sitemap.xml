@@ -243,37 +243,19 @@
   </url>
   <url>
     <loc>https://paraisolaguna.com/blog/</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/blog/guia-bioluminiscencia-manialtepec.html</loc>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://paraisolaguna.com/blog/que-hacer-en-puerto-escondido-de-noche/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://paraisolaguna.com/blog/cuando-ir-a-la-bioluminiscencia-puerto-escondido/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://paraisolaguna.com/blog/donde-liberar-tortugas-puerto-escondido/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://paraisolaguna.com/blog/temporada-ballenas-puerto-escondido/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://paraisolaguna.com/blog/guia-chacahua-desde-puerto-escondido/</loc>
-    <lastmod>2026-08-20</lastmod>
+    <loc>https://paraisolaguna.com/blog/liberacion-tortugas-puerto-escondido.html</loc>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
