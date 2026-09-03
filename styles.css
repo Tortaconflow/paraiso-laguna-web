@@ -3531,3 +3531,186 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
         padding-bottom: 5.5rem !important;
     }
 }
+
+
+/* ==========================================================================
+   FULL-DAY EXPEDITIONS & MOUNTAIN JEWELS (TOURS 7 - 11 ELEVATED LUXURY)
+   ========================================================================== */
+.secondary-experiences-title {
+    position: relative;
+    padding-top: 1rem;
+}
+
+.exp-tier-label {
+    display: inline-block;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent-gold, #D9B84A);
+    margin-bottom: 0.6rem;
+}
+
+.secondary-experiences-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+    margin-top: 2rem;
+}
+
+.sec-exp-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 !important;
+    border-radius: var(--radius-lg, 18px);
+    overflow: hidden;
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid rgba(0, 138, 166, 0.16);
+    box-shadow: 0 10px 30px rgba(5, 19, 26, 0.06);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.sec-exp-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 20px 45px rgba(0, 138, 166, 0.18);
+}
+
+.sec-card-media {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #04121a;
+}
+
+.sec-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sec-exp-card:hover .sec-card-img {
+    transform: scale(1.08);
+}
+
+.sec-card-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(4, 18, 26, 0.75) 100%);
+}
+
+.sec-card-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    padding: 0.35rem 0.85rem;
+    border-radius: 30px;
+    background: rgba(3, 15, 22, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.sec-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.75rem;
+    text-align: left;
+}
+
+.sec-card-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-cyan);
+    margin-bottom: 0.35rem;
+}
+
+.sec-card-header h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.25;
+}
+
+.sec-card-body p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.sec-card-route {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.6rem 0.85rem;
+    margin-bottom: 1.25rem;
+    background: rgba(0, 138, 166, 0.05);
+    border-left: 2px solid var(--accent-cyan);
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sec-card-route span {
+    color: var(--text-secondary);
+}
+
+.sec-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sec-card-more {
+    color: var(--accent-cyan);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: transform 0.25s ease;
+}
+
+.sec-exp-card:hover .sec-card-more {
+    transform: translateX(4px);
+    color: var(--accent-orange);
+}
+
+@media (max-width: 768px) {
+    .secondary-experiences-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .sec-card-media {
+        height: 190px;
+    }
+
+    .sec-card-body {
+        padding: 1.35rem;
+    }
+}
