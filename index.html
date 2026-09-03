@@ -50,7 +50,7 @@
     <link rel="preload" href="/assets/images/logo.jpg" as="image" type="image/jpeg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=8">
+    <link rel="stylesheet" href="/styles.css?v=9">
     
     <!-- Favicon (Prepared for custom asset) -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -673,61 +673,117 @@
             </div>
 
             <!-- Otras Aventuras Imperdibles Grid -->
-            <div class="secondary-experiences-title" style="margin-top: 5rem; margin-bottom: 2.5rem; text-align: center;">
-                <h3>Otras Aventuras Imperdibles</h3>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0.5rem auto 0 auto; font-weight: 300; font-size: 0.95rem;">Explora más rincones mágicos, cascadas de agua cristalina y actividades llenas de adrenalina en la costa de Oaxaca.</p>
+            <div class="secondary-experiences-title" style="margin-top: 5.5rem; margin-bottom: 2.5rem; text-align: center;">
+                <span class="exp-tier-label" style="display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold, #D9B84A); margin-bottom: 0.5rem;">✧ EXPEDICIONES DE DÍA COMPLETO & SIERRA</span>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 600;">Joyas Ocultas de la Costa & la Montaña</h3>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0.5rem auto 0 auto; font-weight: 300; font-size: 1rem; line-height: 1.6;">Rutas diseñadas para exploradores que desean ir más allá: cascadas en la selva, pozas termales minerales, vuelos en tirolesa y la costa bohemia de Oaxaca.</p>
             </div>
             
-            <div class="secondary-experiences-grid" id="secondary-tours-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div class="secondary-experiences-grid" id="secondary-tours-wrapper">
                 
                 <!-- Tour 7: Cascadas Mágicas -->
-                <div class="glass-card sec-exp-card" id="tour-card-cascadas" onclick="openTourModal('cascadas')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌊</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Cascadas Mágicas</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-cascadas" onclick="openTourModal('cascadas')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/cascadas/cascadas-copalita-poza.webp" alt="Cascadas Mágicas de Copalita en San Juan Lachao" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Horas · Día Completo</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Viaje de 3.5 hrs al sur de Puerto Escondido. Cascadas de Copalita con aguas cristalinas y vegetación exuberante.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Ver detalles ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Sierra & Selva</span>
+                            <h4>Cascadas Mágicas de Copalita</h4>
+                        </div>
+                        <p>Viaje escénico hacia la comunidad chatina de San Juan Lachao. Nada en pozas naturales de agua dulce cristalina rodeadas de vegetación virgen.</p>
+                        <div class="sec-card-route">
+                            <span>Sierra Chatina</span> ➔ <span>Caminata</span> ➔ <span>Pozas de Selva</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Ver itinerario completo ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 8: Tirolesa -->
-                <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🧗</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Tirolesa</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/tirolesa/Gemini_Generated_Image_e9dr9pe9dr9pe9dr.webp" alt="Circuito de Tirolesas en la Sierra de Lachao" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Horas · Adrenalina</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Emociones fuertes en San Juan Lachao, 90 min al norte de Puerto Escondido. Caminata, cascada y 5 tirolesas.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Ver detalles ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Aventura Extrema</span>
+                            <h4>Tirolesa en los Cañones</h4>
+                        </div>
+                        <p>5 líneas de tirolesa sobrevolando las copas de la selva y cañones profundos, complementado con caminata de montaña y pozas para nadar.</p>
+                        <div class="sec-card-route">
+                            <span>Vuelo Aéreo</span> ➔ <span>5 Tirolesas</span> ➔ <span>Pozas de Montaña</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Ver itinerario completo ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 9: Aguas Termales -->
-                <div class="glass-card sec-exp-card" id="tour-card-termales" onclick="openTourModal('termales')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌋</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Aguas Termales</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-termales" onclick="openTourModal('termales')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/aguas-termales/poza-rectangular.webp" alt="Pozas termales minerales de Atotonilco" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Horas · Spa Natural</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Pozas termales de Atotonilco, propiedades relajantes. Un spa al aire libre con sonidos de la naturaleza.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Ver detalles ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Bienestar & Termal</span>
+                            <h4>Aguas Termales de Atotonilco</h4>
+                        </div>
+                        <p>Travesía a caballo por senderos de montaña hasta un santuario de aguas termales sulfurosas. Relajación y desconexión absoluta.</p>
+                        <div class="sec-card-route">
+                            <span>Cabalgata</span> ➔ <span>Pozas Termales</span> ➔ <span>Spa Libre</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Ver itinerario completo ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 10: Tour de Mazunte -->
-                <div class="glass-card sec-exp-card" id="tour-card-mazunte" onclick="openTourModal('mazunte')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🐢</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Tour de Mazunte</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-mazunte" onclick="openTourModal('mazunte')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/mazunte/letrero-punta-cometa.webp" alt="Punta Cometa y Costa Oaxaqueña" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 9 Horas · Gran Ruta</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Descubre Mazunte, Zipolite, Ventanilla y Punta Cometa. Playas, miradores y atardeceres espectaculares.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Ver detalles ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Costa & Cultura</span>
+                            <h4>Travesía Mazunte & Punta Cometa</h4>
+                        </div>
+                        <p>4 maravillas en 1 día: santuario ecológico La Ventanilla, ambiente bohemio de Mazunte y Zipolite, y el atardecer legendario en Punta Cometa.</p>
+                        <div class="sec-card-route">
+                            <span>Ventanilla</span> ➔ <span>Mazunte</span> ➔ <span>Punta Cometa</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Ver itinerario completo ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 11: Atardecer en la Laguna -->
-                <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌅</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Atardecer en la Laguna</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/chacahua-oaxaca-sunsets.jpg" alt="Atardecer en Playa Puerto Suelo y fogata" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 5-6 Horas · Tarde & Noche</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Recorrido de 13 km de manglar, Playa Puerto Suelo, fogata en la playa, bombones y bioluminiscencia.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Ver detalles ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Manglar & Bioluminiscencia</span>
+                            <h4>Atardecer, Fogata & Bioluminiscencia</h4>
+                        </div>
+                        <p>13 km navegando manglares al crepúsculo, fogata con bombones en la solitaria Playa Puerto Suelo y nado nocturno entre millones de dinoflagelados.</p>
+                        <div class="sec-card-route">
+                            <span>13 km Manglar</span> ➔ <span>Fogata Playa</span> ➔ <span>Bioluminiscencia</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Ver itinerario completo ➔</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1390,6 +1446,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=8" defer></script>
+    <script src="/app.js?v=9" defer></script>
 </body>
 </html>

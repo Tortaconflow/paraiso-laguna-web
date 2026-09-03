@@ -50,7 +50,7 @@
     <link rel="preload" href="/assets/images/logo.jpg" as="image" type="image/jpeg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=8">
+    <link rel="stylesheet" href="/styles.css?v=9">
     
     <!-- Favicon (Prepared for custom asset) -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -678,61 +678,117 @@
             </div>
 
             <!-- Otras Aventuras Imperdibles Grid -->
-            <div class="secondary-experiences-title" style="margin-top: 5rem; margin-bottom: 2.5rem; text-align: center;">
-                <h3>More Unmissable Adventures</h3>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0.5rem auto 0 auto; font-weight: 300; font-size: 0.95rem;">Explore hidden natural wonders, crystal-clear waterfalls, and thrilling eco-adventures along the Oaxaca coast.</p>
+            <div class="secondary-experiences-title" style="margin-top: 5.5rem; margin-bottom: 2.5rem; text-align: center;">
+                <span class="exp-tier-label" style="display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold, #D9B84A); margin-bottom: 0.5rem;">✧ FULL-DAY EXPEDITIONS & MOUNTAIN JEWELS</span>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 600;">Hidden Wonders of the Oaxaca Coast & Sierra</h3>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0.5rem auto 0 auto; font-weight: 300; font-size: 1rem; line-height: 1.6;">Curated routes for travelers seeking deeper immersion: secret jungle waterfalls, therapeutic thermal mineral springs, canyon ziplining, and the bohemian coast.</p>
             </div>
             
-            <div class="secondary-experiences-grid" id="secondary-tours-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div class="secondary-experiences-grid" id="secondary-tours-wrapper">
                 
                 <!-- Tour 7: Cascadas Mágicas -->
-                <div class="glass-card sec-exp-card" id="tour-card-cascadas" onclick="openTourModal('cascadas')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌊</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Cascadas Mágicas</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-cascadas" onclick="openTourModal('cascadas')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/cascadas/cascadas-copalita-poza.webp" alt="Copalita Magic Waterfalls in San Juan Lachao" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Hours · Full Day</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Scenic mountain trip to swim in pristine natural pools surrounded by lush jungle.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">View Details ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Sierra & Jungle</span>
+                            <h4>Copalita Magic Waterfalls</h4>
+                        </div>
+                        <p>Scenic drive into the indigenous Chatino mountains of San Juan Lachao. Swim in pristine emerald natural pools surrounded by virgin jungle.</p>
+                        <div class="sec-card-route">
+                            <span>Chatino Sierra</span> ➔ <span>Hike</span> ➔ <span>Jungle Pools</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">View Full Itinerary ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 8: Tirolesa -->
-                <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🧗</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Tirolesa</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/tirolesa/Gemini_Generated_Image_e9dr9pe9dr9pe9dr.webp" alt="Extreme Zipline Circuit in Lachao" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Hours · Adrenaline</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Thrilling 5-zipline circuit over deep canyons, river hiking, and refreshing swimming.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">View Details ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Extreme Adventure</span>
+                            <h4>Canyon Zipline Circuit</h4>
+                        </div>
+                        <p>5 exhilarating zipline lines soaring above dense forest canopies and deep mountain canyons, followed by river hiking and swimming.</p>
+                        <div class="sec-card-route">
+                            <span>Aerial Flight</span> ➔ <span>5 Ziplines</span> ➔ <span>River Swim</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">View Full Itinerary ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 9: Aguas Termales -->
-                <div class="glass-card sec-exp-card" id="tour-card-termales" onclick="openTourModal('termales')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌋</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Aguas Termales</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-termales" onclick="openTourModal('termales')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/aguas-termales/poza-rectangular.webp" alt="Atotonilco Thermal Mineral Pools" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Hours · Natural Spa</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Natural thermal mineral pools tucked in the jungle. A rejuvenating outdoor spa.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">View Details ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Wellness & Thermal</span>
+                            <h4>Atotonilco Hot Springs & Ride</h4>
+                        </div>
+                        <p>Horseback trek along mountain trails to a secluded volcanic mineral hot spring sanctuary. Total relaxation and natural renewal.</p>
+                        <div class="sec-card-route">
+                            <span>Horseback</span> ➔ <span>Thermal Pools</span> ➔ <span>Open Spa</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">View Full Itinerary ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 10: Tour de Mazunte -->
-                <div class="glass-card sec-exp-card" id="tour-card-mazunte" onclick="openTourModal('mazunte')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🐢</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Tour de Mazunte</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-mazunte" onclick="openTourModal('mazunte')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/mazunte/letrero-punta-cometa.webp" alt="Punta Cometa and Oaxaca Coast" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 9 Hours · Coast Discovery</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Discover Mazunte, Zipolite, crocodile sanctuary, and sunset at Punta Cometa cliffs.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">View Details ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Coast & Culture</span>
+                            <h4>Mazunte & Punta Cometa Trail</h4>
+                        </div>
+                        <p>4 wonders in 1 day: La Ventanilla crocodile sanctuary, bohemian Mazunte & Zipolite beaches, and legendary sunset from Punta Cometa cliffs.</p>
+                        <div class="sec-card-route">
+                            <span>Ventanilla</span> ➔ <span>Mazunte</span> ➔ <span>Punta Cometa</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">View Full Itinerary ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 11: Atardecer en la Laguna -->
-                <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌅</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Atardecer en la Laguna</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/chacahua-oaxaca-sunsets.jpg" alt="Lagoon Sunset, Bonfire and Bioluminescence" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 5-6 Hours · Sunset & Night</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">13 km mangrove boat cruise, sunset bonfire at Puerto Suelo beach, and bioluminescence.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">View Details ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Mangroves & Bioluminescence</span>
+                            <h4>Sunset Cruise, Bonfire & Glow</h4>
+                        </div>
+                        <p>Cruise 13 km of mangroves at dusk, enjoy a beach bonfire with roasted marshmallows at virgin Puerto Suelo, and swim in glowing waters.</p>
+                        <div class="sec-card-route">
+                            <span>13 km Cruise</span> ➔ <span>Beach Bonfire</span> ➔ <span>Glow Swim</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">View Full Itinerary ➔</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1395,6 +1451,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=8" defer></script>
+    <script src="/app.js?v=9" defer></script>
 </body>
 </html>

@@ -50,7 +50,7 @@
     <link rel="preload" href="/assets/images/logo.jpg" as="image" type="image/jpeg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=8">
+    <link rel="stylesheet" href="/styles.css?v=9">
     
     <!-- Favicon (Prepared for custom asset) -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -678,61 +678,117 @@
             </div>
 
             <!-- Otras Aventuras Imperdibles Grid -->
-            <div class="secondary-experiences-title" style="margin-top: 5rem; margin-bottom: 2.5rem; text-align: center;">
-                <h3>Autres Aventures Incontournables</h3>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0.5rem auto 0 auto; font-weight: 300; font-size: 0.95rem;">Découvrez des joyaux naturels cachés, des cascades cristallines et des aventures écotouristiques le long de la côte d'Oaxaca.</p>
+            <div class="secondary-experiences-title" style="margin-top: 5.5rem; margin-bottom: 2.5rem; text-align: center;">
+                <span class="exp-tier-label" style="display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent-gold, #D9B84A); margin-bottom: 0.5rem;">✧ EXPÉDITIONS D'UNE JOURNÉE COMPLÈTE & MONTAGNE</span>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 600;">Joyaux Cachés de la Côte & de la Sierra d'Oaxaca</h3>
+                <p style="color: var(--text-secondary); max-width: 680px; margin: 0.5rem auto 0 auto; font-weight: 300; font-size: 1rem; line-height: 1.6;">Itinéraires exclusifs pour les voyageurs en quête d'immersion totale : cascades secrètes dans la jungle, sources thermales minérales et côte bohème.</p>
             </div>
             
-            <div class="secondary-experiences-grid" id="secondary-tours-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div class="secondary-experiences-grid" id="secondary-tours-wrapper">
                 
                 <!-- Tour 7: Cascadas Mágicas -->
-                <div class="glass-card sec-exp-card" id="tour-card-cascadas" onclick="openTourModal('cascadas')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌊</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Cascadas Mágicas</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-cascadas" onclick="openTourModal('cascadas')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/cascadas/cascadas-copalita-poza.webp" alt="Cascades Magiques de Copalita à San Juan Lachao" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Heures · Journée</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Baignade dans des piscines naturelles d'eau cristalline au cœur de la jungle luxuriante.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Voir détails ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Sierra & Jungle</span>
+                            <h4>Cascades Magiques de Copalita</h4>
+                        </div>
+                        <p>Route scénique vers la communauté chatina de San Juan Lachao. Baignade dans des piscines naturelles d'eau cristalline entourées de jungle tropicale.</p>
+                        <div class="sec-card-route">
+                            <span>Sierra Chatina</span> ➔ <span>Randonnée</span> ➔ <span>Piscines Jungle</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Voir l'itinéraire complet ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 8: Tirolesa -->
-                <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🧗</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Tirolesa</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/tirolesa/Gemini_Generated_Image_e9dr9pe9dr9pe9dr.webp" alt="Circuit de Tyroliennes dans les Canyons" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Heures · Adrénaline</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Circuit de 5 tyroliennes géantes au-dessus des canyons, randonnée et cascades.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Voir détails ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Aventure Extrême</span>
+                            <h4>Tyroliennes des Canyons</h4>
+                        </div>
+                        <p>5 tyroliennes survolant la canopée et les gorges montagneuses profondes, combinées à une marche en forêt et une baignade revigorante.</p>
+                        <div class="sec-card-route">
+                            <span>Vol Aérien</span> ➔ <span>5 Tyroliennes</span> ➔ <span>Baignade Rivière</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Voir l'itinéraire complet ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 9: Aguas Termales -->
-                <div class="glass-card sec-exp-card" id="tour-card-termales" onclick="openTourModal('termales')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌋</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Aguas Termales</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-termales" onclick="openTourModal('termales')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/aguas-termales/poza-rectangular.webp" alt="Sources thermales minérales d'Atotonilco" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 7 Heures · Spa Naturel</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Bassins d'eaux chaudes minérales aux propriétés relaxantes en pleine nature.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Voir détails ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Bien-être & Eaux Chaudes</span>
+                            <h4>Sources Thermales d'Atotonilco</h4>
+                        </div>
+                        <p>Balade à cheval sur des sentiers montagneux jusqu'à des bassins d'eaux thermales sulfureuses en plein air. Détente totale.</p>
+                        <div class="sec-card-route">
+                            <span>Balade Cheval</span> ➔ <span>Bassins Chauds</span> ➔ <span>Spa Libre</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Voir l'itinéraire complet ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 10: Tour de Mazunte -->
-                <div class="glass-card sec-exp-card" id="tour-card-mazunte" onclick="openTourModal('mazunte')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🐢</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Tour de Mazunte</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-mazunte" onclick="openTourModal('mazunte')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/tours/mazunte/letrero-punta-cometa.webp" alt="Punta Cometa et la Côte Sauvage d'Oaxaca" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 9 Heures · Grande Traversée</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Découvrez Mazunte, Zipolite, la réserve de crocodiles et le coucher de soleil à Punta Cometa.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Voir détails ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Côte & Culture</span>
+                            <h4>Traversée Mazunte & Punta Cometa</h4>
+                        </div>
+                        <p>4 escales incontournables : réserve de crocodiles de La Ventanilla, plages mythiques de Mazunte et Zipolite, et coucher de soleil à Punta Cometa.</p>
+                        <div class="sec-card-route">
+                            <span>Ventanilla</span> ➔ <span>Mazunte</span> ➔ <span>Punta Cometa</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Voir l'itinéraire complet ➔</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tour 11: Atardecer en la Laguna -->
-                <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')" style="padding: 2rem; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="sec-card-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
-                        <span class="sec-card-icon" style="font-size: 1.5rem;">🌅</span>
-                        <h4 style="font-size: 1.2rem; color: var(--text-primary); margin: 0;">Atardecer en la Laguna</h4>
+                <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')">
+                    <div class="sec-card-media">
+                        <img src="/assets/images/chacahua-oaxaca-sunsets.jpg" alt="Coucher de soleil dans les mangroves et feu de camp" class="sec-card-img" loading="lazy">
+                        <div class="sec-card-badge">🕒 5-6 Heures · Soirée Magique</div>
                     </div>
-                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">13 km de navigation dans les mangroves, feu de camp sur la plage de Puerto Suelo et bioluminescence.</p>
-                    <span class="sec-card-more" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.9rem;">Voir détails ➔</span>
+                    <div class="sec-card-body">
+                        <div class="sec-card-header">
+                            <span class="sec-card-tag">Mangroves & Bioluminescence</span>
+                            <h4>Coucher de Soleil, Feu & Lueur</h4>
+                        </div>
+                        <p>13 km de croisière crépusculaire dans les mangroves, feu de camp et guimauves grillées sur la plage sauvage de Puerto Suelo et lueur nocturne.</p>
+                        <div class="sec-card-route">
+                            <span>13 km Mangroves</span> ➔ <span>Feu de Plage</span> ➔ <span>Bioluminescence</span>
+                        </div>
+                        <div class="sec-card-footer">
+                            <span class="sec-card-more">Voir l'itinéraire complet ➔</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1395,6 +1451,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=8" defer></script>
+    <script src="/app.js?v=9" defer></script>
 </body>
 </html>
