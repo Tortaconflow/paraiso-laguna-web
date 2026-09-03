@@ -3332,3 +3332,202 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
     background: var(--accent-cyan) !important;
     color: #ffffff !important;
 }
+
+/* ==========================================================================
+   BOUTIQUE LUXURY MOBILE UI ENHANCEMENTS (HUMAN-CRAFTED DESIGN v2.4)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Header: Sleek, compact & harmonious */
+    #main-header {
+        padding: 0.75rem 1.25rem !important;
+        background: rgba(255, 255, 255, 0.94) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border-bottom: 1px solid rgba(0, 138, 166, 0.12) !important;
+        box-shadow: 0 4px 20px rgba(5, 19, 26, 0.05);
+    }
+
+    .nav-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 0.5rem !important;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .logo img {
+        height: 42px !important;
+        width: auto !important;
+        mix-blend-mode: multiply !important;
+    }
+
+    /* Refined compact language switcher on mobile header */
+    .lang-switcher {
+        padding: 2px !important;
+        gap: 2px !important;
+        background: rgba(0, 138, 166, 0.05) !important;
+        border: 1px solid rgba(0, 138, 166, 0.18) !important;
+        box-shadow: none !important;
+    }
+
+    .lang-switcher .lang-btn {
+        padding: 5px 8px !important;
+        font-size: 0.72rem !important;
+        gap: 4px !important;
+    }
+
+    .lang-switcher .lang-btn::before {
+        width: 14px !important;
+        height: 10px !important;
+    }
+
+    .hamburger-menu {
+        width: 24px !important;
+        height: 16px !important;
+        margin-left: 0.25rem;
+    }
+
+    /* 2. Hero Section: Editorial & Breathing Room */
+    .hero {
+        padding: 5.5rem 1.25rem 2.5rem 1.25rem !important;
+        min-height: 94svh !important;
+        justify-content: flex-end !important;
+    }
+
+    .hero-bg-scrim {
+        background:
+            linear-gradient(180deg, rgba(3, 12, 16, 0.75) 0%, rgba(3, 12, 16, 0.35) 40%, rgba(3, 12, 16, 0.88) 85%, rgba(3, 12, 16, 0.98) 100%),
+            radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(3, 12, 16, 0.75) 100%) !important;
+    }
+
+    .hero-coords {
+        font-size: 0.68rem !important;
+        letter-spacing: 0.18em !important;
+        margin-bottom: 0.75rem !important;
+        color: rgba(255, 255, 255, 0.7) !important;
+    }
+
+    #hero-main-title {
+        font-size: 2.25rem !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.025em !important;
+        margin-bottom: 0.85rem !important;
+    }
+
+    #hero-main-title em {
+        display: inline-block;
+        font-size: 2.45rem;
+        letter-spacing: -0.01em;
+        margin-top: 0.15rem;
+    }
+
+    .hero-lead {
+        font-size: 0.95rem !important;
+        line-height: 1.55 !important;
+        margin-bottom: 1.5rem !important;
+        color: rgba(255, 255, 255, 0.88) !important;
+    }
+
+    /* Hero CTA Button - Luxury Boutique Styling */
+    .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .btn-hero {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 0.85rem 1.5rem !important;
+        font-size: 0.92rem !important;
+    }
+
+    .btn-hero-primary {
+        background: linear-gradient(135deg, #ffffff, #f0f8fa) !important;
+        color: #03141c !important;
+        font-weight: 700 !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
+    }
+
+    .btn-hero-secondary {
+        border-color: rgba(255, 255, 255, 0.25) !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        font-size: 0.88rem !important;
+        padding: 0.75rem 1.5rem !important;
+    }
+
+    .hero-trust-line {
+        font-size: 0.75rem !important;
+        line-height: 1.5 !important;
+        color: rgba(255, 255, 255, 0.65) !important;
+        margin-top: 0.75rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    /* 3. Hero Live Lagoon Widget: Floating Glass Pill */
+    .hero-live-widget {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        padding: 1rem 1.15rem !important;
+        border-radius: 16px !important;
+        background: rgba(4, 18, 26, 0.65) !important;
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+        border: 1px solid rgba(0, 138, 166, 0.3) !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .hero-live-widget-head {
+        padding-bottom: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .hero-live-widget-list {
+        gap: 0.4rem !important;
+    }
+
+    .hero-live-widget-list li {
+        font-size: 0.78rem !important;
+    }
+
+    .hero-live-widget-action {
+        margin-top: 0.5rem !important;
+        padding-top: 0.5rem !important;
+        font-size: 0.72rem !important;
+    }
+
+    /* 4. Floating Luxury Island for Mobile WhatsApp CTA */
+    .mobile-sticky-cta {
+        left: 1rem !important;
+        right: 1rem !important;
+        bottom: calc(0.85rem + env(safe-area-inset-bottom, 0px)) !important;
+        border-radius: 50px !important;
+        padding: 0.85rem 1.25rem !important;
+        background: linear-gradient(135deg, #20c65a 0%, #0d9050 100%) !important;
+        box-shadow: 0 10px 30px rgba(13, 144, 80, 0.45), 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        backdrop-filter: blur(10px) !important;
+        font-size: 0.95rem !important;
+        letter-spacing: 0.02em !important;
+        transform: translateZ(0);
+        transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .mobile-sticky-cta:active {
+        transform: scale(0.98) !important;
+    }
+
+    body {
+        padding-bottom: 5.5rem !important;
+    }
+}
