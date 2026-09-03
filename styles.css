@@ -3148,3 +3148,187 @@ h2 i,
     from { opacity: 0; transform: translateY(-4px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* ==========================================================================
+   LANGUAGE SWITCHER STYLES (ES | EN | FR) - WITH CRISP SVG FLAGS & LUXURY PILL
+   ========================================================================== */
+:root {
+    --flag-mx: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23006847' d='M0 0h213.3v480H0z'/%3E%3Cpath fill='%23fff' d='M213.3 0h213.4v480H213.3z'/%3E%3Cpath fill='%23ce1126' d='M426.7 0H640v480H426.7z'/%3E%3Ccircle cx='320' cy='240' r='38' fill='%23b8860b' opacity='.85'/%3E%3Ccircle cx='320' cy='240' r='20' fill='%23006847' opacity='.7'/%3E%3C/svg%3E");
+    --flag-us: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23b22234' d='M0 0h640v480H0z'/%3E%3Cpath stroke='%23fff' stroke-width='37' d='M0 55.4h640M0 129.2h640M0 203h640M0 276.9h640M0 350.8h640M0 424.6h640'/%3E%3Cpath fill='%233c3b6e' d='M0 0h260v258.5H0z'/%3E%3Ccircle cx='40' cy='40' r='10' fill='%23fff'/%3E%3Ccircle cx='90' cy='40' r='10' fill='%23fff'/%3E%3Ccircle cx='140' cy='40' r='10' fill='%23fff'/%3E%3Ccircle cx='190' cy='40' r='10' fill='%23fff'/%3E%3Ccircle cx='65' cy='85' r='10' fill='%23fff'/%3E%3Ccircle cx='115' cy='85' r='10' fill='%23fff'/%3E%3Ccircle cx='165' cy='85' r='10' fill='%23fff'/%3E%3Ccircle cx='40' cy='130' r='10' fill='%23fff'/%3E%3Ccircle cx='90' cy='130' r='10' fill='%23fff'/%3E%3Ccircle cx='140' cy='130' r='10' fill='%23fff'/%3E%3Ccircle cx='190' cy='130' r='10' fill='%23fff'/%3E%3Ccircle cx='65' cy='175' r='10' fill='%23fff'/%3E%3Ccircle cx='115' cy='175' r='10' fill='%23fff'/%3E%3Ccircle cx='165' cy='175' r='10' fill='%23fff'/%3E%3Ccircle cx='40' cy='220' r='10' fill='%23fff'/%3E%3Ccircle cx='90' cy='220' r='10' fill='%23fff'/%3E%3Ccircle cx='140' cy='220' r='10' fill='%23fff'/%3E%3Ccircle cx='190' cy='220' r='10' fill='%23fff'/%3E%3C/svg%3E");
+    --flag-fr: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 480'%3E%3Cpath fill='%23002654' d='M0 0h213.3v480H0z'/%3E%3Cpath fill='%23fff' d='M213.3 0h213.4v480H213.3z'/%3E%3Cpath fill='%23ed2939' d='M426.7 0H640v480H426.7z'/%3E%3C/svg%3E");
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 138, 166, 0.22);
+    border-radius: 50px;
+    padding: 3px;
+    gap: 3px;
+    box-shadow: 0 4px 16px rgba(10, 30, 38, 0.08);
+    transition: var(--transition-smooth);
+}
+
+.lang-switcher:hover {
+    border-color: rgba(0, 138, 166, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 138, 166, 0.15);
+}
+
+.lang-btn,
+.drawer-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 6px 11px;
+    border-radius: 50px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.lang-btn::before,
+.drawer-lang-btn::before {
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 12px;
+    border-radius: 2px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.35);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+/* Flag Association */
+/* 1. Spanish (Mexico) */
+.lang-btn[hreflang="es"]::before,
+.drawer-lang-btn[hreflang="es"]::before,
+.lang-btn[data-lang="es"]::before,
+.drawer-lang-btn[data-lang="es"]::before,
+html[lang="es"] .lang-switcher .lang-btn.active::before,
+html[lang="es-MX"] .lang-switcher .lang-btn.active::before,
+html[lang="es"] .drawer-lang-switcher .drawer-lang-btn.active::before,
+html[lang="es-MX"] .drawer-lang-switcher .drawer-lang-btn.active::before {
+    background-image: var(--flag-mx);
+}
+
+/* 2. English (USA) */
+.lang-btn[hreflang="en"]::before,
+.drawer-lang-btn[hreflang="en"]::before,
+.lang-btn[data-lang="en"]::before,
+.drawer-lang-btn[data-lang="en"]::before,
+html[lang="en"] .lang-switcher .lang-btn.active::before,
+html[lang="en-US"] .lang-switcher .lang-btn.active::before,
+html[lang="en"] .drawer-lang-switcher .drawer-lang-btn.active::before,
+html[lang="en-US"] .drawer-lang-switcher .drawer-lang-btn.active::before {
+    background-image: var(--flag-us);
+}
+
+/* 3. French (France) */
+.lang-btn[hreflang="fr"]::before,
+.drawer-lang-btn[hreflang="fr"]::before,
+.lang-btn[data-lang="fr"]::before,
+.drawer-lang-btn[data-lang="fr"]::before,
+html[lang="fr"] .lang-switcher .lang-btn.active::before,
+html[lang="fr-FR"] .lang-switcher .lang-btn.active::before,
+html[lang="fr"] .drawer-lang-switcher .drawer-lang-btn.active::before,
+html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
+    background-image: var(--flag-fr);
+}
+
+/* Hover & Active States */
+.lang-btn:hover,
+.drawer-lang-btn:hover {
+    color: var(--text-primary);
+    background: rgba(0, 138, 166, 0.08);
+    border-color: rgba(0, 138, 166, 0.18);
+    transform: translateY(-1px);
+}
+
+.lang-btn:hover::before,
+.drawer-lang-btn:hover::before {
+    transform: scale(1.12);
+}
+
+.lang-btn.active,
+.drawer-lang-btn.active {
+    background: linear-gradient(135deg, var(--accent-cyan, #008AA6), #00687E) !important;
+    color: #ffffff !important;
+    border-color: transparent;
+    box-shadow: 0 3px 10px rgba(0, 138, 166, 0.35);
+    cursor: default;
+}
+
+.lang-btn.active::before,
+.drawer-lang-btn.active::before {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile Drawer Language Switcher */
+.drawer-lang-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.drawer-lang-title {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+}
+
+.drawer-lang-switcher {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 4px;
+    gap: 6px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.drawer-lang-switcher .drawer-lang-btn,
+.drawer-lang-switcher .lang-btn {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 10px 14px;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 50px;
+}
+
+.drawer-lang-switcher .drawer-lang-btn:hover,
+.drawer-lang-switcher .lang-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.drawer-lang-switcher .drawer-lang-btn.active,
+.drawer-lang-switcher .lang-btn.active {
+    background: var(--accent-cyan) !important;
+    color: #ffffff !important;
+}
