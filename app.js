@@ -962,6 +962,53 @@ function initApp() {
         }
     });
 
+    
+    let lastCalculatedMoon = null;
+    window.lastCalculatedMoon = null;
+
+    const dateInput = document.getElementById('booking-date');
+    const moonPreview = document.getElementById('booking-moon-preview');
+    const expSelect = document.getElementById('booking-experience');
+
+    function updateDateMoonPreview() {
+        if (!dateInput || !moonPreview) return;
+        const selectedDate = dateInput.value;
+        if (!selectedDate) {
+            moonPreview.classList.remove('active', 'glow-high', 'glow-med', 'glow-low');
+            moonPreview.innerHTML = '';
+            lastCalculatedMoon = null;
+            window.lastCalculatedMoon = null;
+            return;
+        }
+
+        const moonData = calculateMoonData(selectedDate + 'T12:00:00', lang);
+        lastCalculatedMoon = moonData;
+        window.lastCalculatedMoon = moonData;
+
+        const headingText = lang === 'en' ? '🌙 Projected Moon for this date' :
+                            lang === 'fr' ? '🌙 Prévision lunaire pour cette date' :
+                            '🌙 Proyección lunar para esta fecha';
+
+        moonPreview.className = 'moon-date-preview active ' + moonData.previewClass;
+        moonPreview.innerHTML = `
+            <div class="moon-preview-header">
+                <span>${headingText}: <strong>${moonData.phaseName}</strong></span>
+                <span class="moon-preview-badge ${moonData.badgeClass}">${moonData.glowLabel}</span>
+            </div>
+            <p class="moon-preview-tip">${moonData.tip}</p>
+        `;
+    }
+
+    if (dateInput) {
+        dateInput.addEventListener('change', updateDateMoonPreview);
+        dateInput.addEventListener('input', updateDateMoonPreview);
+    }
+    if (expSelect) {
+        expSelect.addEventListener('change', () => {
+            if (dateInput && dateInput.value) updateDateMoonPreview();
+        });
+    }
+
     const bookingForm = document.getElementById('whatsapp-booking-form');
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
