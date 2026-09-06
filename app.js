@@ -153,6 +153,91 @@ const GLOW_POTENTIAL_I18N = {
     fr: { high: 'Élevé', medium: 'Moyen', low: 'Faible — lune brillante' }
 };
 
+/* ==========================================================================
+   PREDICTOR LUNAR POR FECHA DE VIAJE
+   app.js invocaba calculateMoonData() sin que la funcion existiera en ningun
+   archivo: al elegir una fecha se lanzaba "ReferenceError: calculateMoonData
+   is not defined" y la prevision nunca aparecia. Aqui queda implementada
+   reutilizando el mismo ciclo sinodico que ya usa el widget del hero, para
+   que ambos datos coincidan siempre.
+   ========================================================================== */
+const MOON_TIPS_I18N = {
+    es: {
+        high: 'Noche oscura: es cuando mejor se ve el brillo del agua.',
+        medium: 'Se ve bien si salimos antes de que suba la luna. Lo confirmamos por WhatsApp.',
+        low: 'La luna estará muy brillante y opaca el destello. Te proponemos fechas cercanas mejores.',
+        other: 'Esta fecha funciona para esta experiencia. La luna solo condiciona la bioluminiscencia.'
+    },
+    en: {
+        high: 'Dark night: this is when the glow shows best.',
+        medium: 'Good if we head out before moonrise. We confirm the time over WhatsApp.',
+        low: 'A bright moon will wash out the glow. We can suggest better dates close by.',
+        other: 'This date works for this experience. The moon only affects bioluminescence.'
+    },
+    fr: {
+        high: 'Nuit noire : c’est la meilleure condition pour voir la lueur.',
+        medium: 'Bien si nous partons avant le lever de la lune. Nous confirmons par WhatsApp.',
+        low: 'Une lune brillante atténue la lueur. Nous pouvons proposer de meilleures dates proches.',
+        other: 'Cette date convient à cette expérience. La lune ne concerne que la bioluminescence.'
+    }
+};
+
+const SYNODIC_MONTH = 29.53058867;
+const MOON_EPOCH = Date.UTC(2000, 0, 6, 18, 14);
+
+function moonAgeFor(timestamp) {
+    let age = ((timestamp - MOON_EPOCH) / 86400000) % SYNODIC_MONTH;
+    if (age < 0) age += SYNODIC_MONTH;
+    return age;
+}
+
+function moonPhaseName(age, lang) {
+    const list = MOON_PHASES_I18N[lang] || MOON_PHASES_I18N.es;
+    const matched = list.find(([limit]) => age <= limit);
+    return matched ? matched[1] : list[0][1];
+}
+
+/**
+ * Devuelve la prevision lunar de una fecha concreta.
+ * @param {string} dateStr  Fecha ISO, p. ej. "2027-01-15T12:00:00".
+ * @param {string} lang     "es" | "en" | "fr".
+ * @param {boolean} moonSensitive  true si la experiencia depende de la luna.
+ */
+function calculateMoonData(dateStr, lang, moonSensitive) {
+    const currentLang = (lang && MOON_PHASES_I18N[lang]) ? lang : 'es';
+    const parsed = new Date(dateStr);
+    const safeDate = isNaN(parsed.getTime()) ? new Date() : parsed;
+
+    const age = moonAgeFor(safeDate.getTime());
+    const illumination = (1 - Math.cos((age / SYNODIC_MONTH) * 2 * Math.PI)) / 2;
+    const glowTexts = GLOW_POTENTIAL_I18N[currentLang] || GLOW_POTENTIAL_I18N.es;
+    const tips = MOON_TIPS_I18N[currentLang] || MOON_TIPS_I18N.es;
+
+    let level = 'medium';
+    if (illumination < 0.35) level = 'high';
+    else if (illumination >= 0.7) level = 'low';
+
+    const relevant = moonSensitive !== false;
+
+    return {
+        phaseName: moonPhaseName(age, currentLang),
+        illumination: Math.round(illumination * 100),
+        glowLabel: glowTexts[level],
+        level: level,
+        previewClass: 'glow-' + (level === 'medium' ? 'med' : level),
+        badgeClass: 'badge-' + (level === 'medium' ? 'med' : level),
+        tip: relevant ? tips[level] : tips.other
+    };
+}
+
+/* Experiencias cuya calidad depende de la fase lunar */
+const MOON_SENSITIVE_TOURS = [
+    'Tour Bioluminiscencia',
+    'Atardecer en la Laguna',
+    'Expedición Noche Lumínica',
+    'Expedición Oaxaca Total'
+];
+
 const I18N_FORM = {
     es: {
         alertMsg: "Por favor completa los campos principales (Experiencia, Personas y Fecha)",
@@ -671,6 +756,9 @@ function renderGalleryGrid() {
     if (loadMoreContainer) {
         loadMoreContainer.style.display = (isGalleryExpanded || currentFilteredPhotos.length <= 8) ? 'none' : 'flex';
     }
+
+    /* Las fotos son <div onclick>: se rehabilitan para teclado en cada pintado. */
+    if (typeof enhanceGalleryKeyboard === 'function') enhanceGalleryKeyboard();
 }
 
 function filterGallery(tag) {
@@ -701,9 +789,12 @@ function openLightbox(index) {
     currentLightboxIndex = index;
     const modal = document.getElementById('lightbox-modal');
     if (!modal) return;
+    dialogReturnFocus = document.activeElement;
     updateLightboxContent();
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+    const closeBtn = modal.querySelector('.lightbox-close');
+    if (closeBtn) setTimeout(() => closeBtn.focus(), 30);
 }
 
 function closeLightbox() {
@@ -712,6 +803,10 @@ function closeLightbox() {
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
+    if (dialogReturnFocus && typeof dialogReturnFocus.focus === 'function') {
+        dialogReturnFocus.focus();
+    }
+    dialogReturnFocus = null;
 }
 
 function changeLightboxImage(direction) {
@@ -782,12 +877,16 @@ function openTourModal(tourKey) {
     
     const modal = document.getElementById('tour-modal');
     if (modal) {
+        dialogReturnFocus = document.activeElement;
         modal.style.display = 'flex';
         setTimeout(() => {
             modal.classList.add('active');
+            /* El foco entraba y se quedaba en <body>: se lleva al cerrar del dialogo. */
+            const firstStop = document.getElementById('modal-close');
+            if (firstStop) firstStop.focus();
         }, 10);
     }
-    
+
     document.body.style.overflow = 'hidden';
 }
 
@@ -801,6 +900,11 @@ function closeTourModal() {
     }
     document.body.style.overflow = 'auto';
     activeTourKey = null;
+    /* Devuelve el foco al control que abrio el dialogo. */
+    if (dialogReturnFocus && typeof dialogReturnFocus.focus === 'function') {
+        dialogReturnFocus.focus();
+    }
+    dialogReturnFocus = null;
 }
 
 window.openTourModal = openTourModal;
@@ -813,27 +917,204 @@ function scrollToSection(sectionId) {
     }
 }
 
+/* Normaliza para comparar: sin emoji, sin acentos, sin dobles espacios. */
+function normalizeTourName(value) {
+    return (value || '')
+        .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{2190}-\u{21FF}]/gu, ' ')
+        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+/* Palabras sin valor distintivo en los tres idiomas del sitio. */
+const TOUR_STOPWORDS = new Set([
+    'tour', 'tours', 'de', 'del', 'la', 'las', 'el', 'los', 'en', 'y', 'a', 'al',
+    'the', 'of', 'in', 'and', 'at', 'des', 'du', 'les', 'le', 'au', 'aux', 'et',
+    'experiencia', 'experience', 'excursion', 'journee', 'day', 'magica', 'magic',
+    'magique', 'paseo', 'completo', 'complete'
+]);
+
+function tourTokens(value) {
+    return normalizeTourName(value)
+        .split(' ')
+        .filter(w => w.length >= 4 && !TOUR_STOPWORDS.has(w));
+}
+
+/* Puntua cuantas palabras distintivas comparten dos nombres de experiencia. */
+function tourMatchScore(candidateTokens, wantedTokens) {
+    if (!candidateTokens.length || !wantedTokens.length) return 0;
+    let score = 0;
+    for (const w of wantedTokens) {
+        if (candidateTokens.indexOf(w) !== -1) score += 2;
+        else if (candidateTokens.some(c => c.startsWith(w) || w.startsWith(c))) score += 1;
+    }
+    return score;
+}
+
+/**
+ * Preselecciona la experiencia en el formulario y baja a la seccion de reserva.
+ * Antes asignaba el texto tal cual: los 5 chips del asistente de WhatsApp
+ * llegaban con emoji ("🌌 Bioluminiscencia Magica") y no coincidian con
+ * ninguna opcion, asi que el <select> quedaba VACIO y el visitante perdia la
+ * intencion que acababa de expresar. Ahora se busca coincidencia tolerante y,
+ * si aun asi no hay ninguna, se respeta lo que el usuario ya tenia elegido.
+ */
+const WHATSAPP_NUMBER = '529541611334';
+
+const CONTACT_INTENT_I18N = {
+    es: (tour) => tour
+        ? '¡Hola, Paraíso Laguna! 🌴 Vengo de su sitio y me interesa la experiencia de *' + tour + '*. ¿Me comparten disponibilidad y precio?'
+        : '¡Hola, Paraíso Laguna! 🌴 Vengo de su sitio y quiero información para reservar una experiencia.',
+    en: (tour) => tour
+        ? 'Hello, Paraíso Laguna! 🌴 I came from your website and I am interested in *' + tour + '*. Could you share availability and pricing?'
+        : 'Hello, Paraíso Laguna! 🌴 I came from your website and would like information to book an experience.',
+    fr: (tour) => tour
+        ? 'Bonjour Paraíso Laguna ! 🌴 Je viens de votre site et je suis intéressé par *' + tour + '*. Pouvez-vous m’indiquer les disponibilités et le tarif ?'
+        : 'Bonjour Paraíso Laguna ! 🌴 Je viens de votre site et je souhaite des informations pour réserver.'
+};
+
+/* Abre WhatsApp con el mensaje ya redactado en el idioma de la pagina. */
+function openWhatsAppIntent(tourLabel, source) {
+    const lang = getCurrentLang();
+    const build = CONTACT_INTENT_I18N[lang] || CONTACT_INTENT_I18N.es;
+    const clean = tourLabel ? normalizeTourNameDisplay(tourLabel) : '';
+
+    if (typeof gtag === 'function') {
+        gtag('event', 'whatsapp_click', {
+            'tour_name': clean || 'general',
+            'source_section': source || 'unknown',
+            'language': lang
+        });
+    }
+
+    window.open('https://api.whatsapp.com/send?phone=' + WHATSAPP_NUMBER +
+        '&text=' + encodeURIComponent(build(clean)), '_blank', 'noopener');
+}
+
+/* Quita solo los emoji decorativos, conservando acentos y mayusculas. */
+function normalizeTourNameDisplay(value) {
+    return (value || '')
+        .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
 function selectTourAndScroll(tourName) {
     const expSelect = document.getElementById('booking-experience');
-    if (expSelect) {
-        expSelect.value = tourName;
+    let matchedLabel = null;
+
+    /* Paginas sin formulario (blog, guias): el boton llamaba a esta funcion y
+       no ocurria nada en absoluto porque no existen ni #booking-experience ni
+       #contacto. Ahora se cumple lo que promete la etiqueta: abrir WhatsApp. */
+    if (!expSelect && !document.getElementById('contacto')) {
+        openWhatsAppIntent(tourName, 'inline_cta');
+        return;
     }
+
+    if (expSelect) {
+        const wanted = normalizeTourName(tourName);
+        const options = Array.from(expSelect.options).filter(o => o.value);
+
+        /* 1. Coincidencia exacta. 2. Exacta ya normalizada. 3. Por palabras
+           distintivas compartidas: asi "🌌 Bioluminiscencia Magica" encuentra
+           la opcion "Tour Bioluminiscencia" en los tres idiomas. */
+        let match = options.find(o => o.value === tourName);
+        if (!match && wanted) match = options.find(o => normalizeTourName(o.value) === wanted);
+        if (!match && wanted) match = options.find(o => normalizeTourName(o.textContent) === wanted);
+        if (!match && wanted) {
+            const wantedTokens = tourTokens(tourName);
+            let best = null, bestScore = 0;
+            options.forEach(o => {
+                const score = Math.max(
+                    tourMatchScore(tourTokens(o.value), wantedTokens),
+                    tourMatchScore(tourTokens(o.textContent), wantedTokens)
+                );
+                if (score > bestScore) { bestScore = score; best = o; }
+            });
+            if (bestScore >= 2) match = best;
+        }
+
+        if (match) {
+            expSelect.value = match.value;
+            matchedLabel = match.textContent.trim();
+            expSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        /* Sin coincidencia: no se toca el campo. Nunca se borra la eleccion previa. */
+    }
+
+    announceSelection(matchedLabel);
     scrollToSection('contacto');
+}
+
+/* Confirmacion visible de que la eleccion se traslado al formulario. */
+function announceSelection(label) {
+    const box = document.getElementById('booking-selection-note');
+    if (!box) return;
+    const lang = getCurrentLang();
+    if (!label) {
+        box.textContent = '';
+        box.classList.remove('active');
+        return;
+    }
+    const prefix = lang === 'en' ? 'Preselected: ' : lang === 'fr' ? 'Présélectionné : ' : 'Preseleccionamos: ';
+    box.textContent = prefix + label;
+    box.classList.add('active');
 }
 
 window.scrollToSection = scrollToSection;
 window.selectTourAndScroll = selectTourAndScroll;
 
+const EXP_FILTER_I18N = {
+    es: { showing: (n, t) => 'Mostrando ' + n + ' de ' + t + ' experiencias.', clear: 'Ver todas', empty: 'Ninguna experiencia coincide con este filtro.' },
+    en: { showing: (n, t) => 'Showing ' + n + ' of ' + t + ' experiences.', clear: 'Show all', empty: 'No experience matches this filter.' },
+    fr: { showing: (n, t) => 'Affichage de ' + n + ' sur ' + t + ' expériences.', clear: 'Tout afficher', empty: 'Aucune expérience ne correspond à ce filtre.' }
+};
+
+/* Informa cuantas tarjetas quedan visibles y ofrece una salida del filtro.
+   Antes no habia contador ni estado vacio, y las 5 expediciones de dia
+   completo seguian visibles bajo cualquier filtro, de modo que el filtro
+   parecia no funcionar. */
+function updateExperienceFilterStatus(category) {
+    const status = document.getElementById('exp-filter-status');
+    if (!status) return;
+    const t = EXP_FILTER_I18N[getCurrentLang()] || EXP_FILTER_I18N.es;
+    const all = document.querySelectorAll('#grid-tours-wrapper .exp-card');
+    const shown = Array.from(all).filter(c => c.dataset.filteredOut !== 'true').length;
+
+    if (category === 'all') {
+        status.classList.remove('active');
+        status.innerHTML = '';
+        return;
+    }
+    status.classList.add('active');
+    const label = shown === 0 ? t.empty : t.showing(shown, all.length);
+    status.innerHTML = '<span>' + label + '</span> <button type="button" onclick="filterExperiences(\'all\')">' + t.clear + '</button>';
+}
+
 function filterExperiences(category) {
     const filterButtons = document.querySelectorAll('#exp-category-filters .filter-btn');
     filterButtons.forEach(btn => {
-        btn.classList.remove('active');
         const onclickAttr = btn.getAttribute('onclick') || '';
-        if (onclickAttr.includes("'" + category + "'")) {
-            btn.classList.add('active');
-        }
+        const isActive = onclickAttr.includes("'" + category + "'");
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
-    
+
+    /* Las expediciones de dia completo son otro nivel de catalogo: si hay un
+       filtro activo se ocultan para que el resultado sea coherente. */
+    const secondaryGrid = document.getElementById('secondary-tours-wrapper');
+    const secondaryTitle = document.querySelector('.secondary-experiences-title');
+    const mostrarTodo = (category === 'all' || !category);
+    [secondaryGrid, secondaryTitle].forEach(el => {
+        if (!el) return;
+        /* .secondary-experiences-grid lleva "display: grid !important", asi que
+           un style inline normal no lo oculta: hay que igualar la prioridad. */
+        if (mostrarTodo) el.style.removeProperty('display');
+        else el.style.setProperty('display', 'none', 'important');
+    });
+
     const cards = document.querySelectorAll('#grid-tours-wrapper .exp-card');
     cards.forEach(card => {
         const cardId = card.id;
@@ -843,8 +1124,11 @@ function filterExperiences(category) {
         else if (category === 'adventure') matches = (cardId === 'tour-card-kayak' || cardId === 'tour-card-chacahua');
         else if (category === 'night') matches = (cardId === 'tour-card-biolum' || cardId === 'tour-card-horse');
         
+        card.dataset.filteredOut = matches ? 'false' : 'true';
+
         if (matches) {
             card.style.display = 'flex';
+            card.removeAttribute('aria-hidden');
             setTimeout(() => {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
@@ -852,11 +1136,14 @@ function filterExperiences(category) {
         } else {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
+            card.setAttribute('aria-hidden', 'true');
             setTimeout(() => {
                 card.style.display = 'none';
             }, 300);
         }
     });
+
+    updateExperienceFilterStatus(category);
 }
 
 function toggleMobileMenu() {
@@ -900,6 +1187,207 @@ window.changeLightboxImage = changeLightboxImage;
 window.filterExperiences = filterExperiences;
 window.toggleMobileMenu = toggleMobileMenu;
 window.closeMobileMenu = closeMobileMenu;
+
+/* ==========================================================================
+   ACCESIBILIDAD Y ESTADOS
+   18 controles del sitio eran <div onclick>: 5 tarjetas de expedicion,
+   8 fotos de galeria y 5 chips del asistente. No recibian foco, no se podian
+   activar con teclado y los lectores de pantalla no los anunciaban como
+   accionables. El acordeon y el boton de menu tampoco exponian su estado,
+   y el modal de tour no cerraba con Escape ni movia el foco.
+   ========================================================================== */
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+const A11Y_I18N = {
+    es: { openMenu: 'Abrir menú de navegación', closeMenu: 'Cerrar menú de navegación', closeDialog: 'Cerrar', tourDetails: 'Detalles del tour', photo: 'Ampliar foto', gallery: 'Foto ampliada', checkDate: 'Consultar mi fecha de viaje' },
+    en: { openMenu: 'Open navigation menu', closeMenu: 'Close navigation menu', closeDialog: 'Close', tourDetails: 'Tour details', photo: 'Enlarge photo', gallery: 'Enlarged photo', checkDate: 'Check my travel date' },
+    fr: { openMenu: 'Ouvrir le menu', closeMenu: 'Fermer le menu', closeDialog: 'Fermer', tourDetails: 'Détails de l’excursion', photo: 'Agrandir la photo', gallery: 'Photo agrandie', checkDate: 'Vérifier ma date de voyage' }
+};
+
+/* Convierte un <div onclick> en un control operable con teclado. */
+function makeKeyboardOperable(el, label) {
+    if (!el || el.dataset.kbReady === 'true') return;
+    el.dataset.kbReady = 'true';
+    if (!el.getAttribute('role')) el.setAttribute('role', 'button');
+    if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
+    if (label && !el.getAttribute('aria-label')) el.setAttribute('aria-label', label);
+    el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+            el.click();
+        }
+    });
+}
+
+let dialogReturnFocus = null;
+
+function trapDialogFocus(dialog, event) {
+    if (event.key !== 'Tab') return;
+    const items = Array.from(dialog.querySelectorAll(FOCUSABLE))
+        .filter(el => el.offsetParent !== null || el === document.activeElement);
+    if (!items.length) return;
+    const first = items[0];
+    const last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+    }
+}
+
+function enhanceAccessibility() {
+    const lang = getCurrentLang();
+    const t = A11Y_I18N[lang] || A11Y_I18N.es;
+
+    /* --- 1. Controles de teclado para los <div onclick> --- */
+    document.querySelectorAll('.sec-exp-card').forEach(card => {
+        const title = card.querySelector('h4');
+        makeKeyboardOperable(card, title ? t.tourDetails + ': ' + title.textContent.trim() : t.tourDetails);
+    });
+    document.querySelectorAll('.wa-chat-chip').forEach(chip => makeKeyboardOperable(chip, chip.textContent.trim()));
+
+    /* --- 2. Acordeon de FAQ: estado expuesto --- */
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        if (!btn || !answer) return;
+        if (!answer.id) answer.id = 'faq-answer-' + Math.random().toString(36).slice(2, 8);
+        btn.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
+        btn.setAttribute('aria-controls', answer.id);
+        btn.addEventListener('click', () => {
+            /* El handler original ya alterno las clases; solo reflejamos el estado. */
+            setTimeout(() => {
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    const otherBtn = other.querySelector('.faq-question');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', other.classList.contains('active') ? 'true' : 'false');
+                });
+            }, 0);
+        });
+    });
+
+    /* --- 3. Boton de menu: estado y etiqueta --- */
+    const burger = document.getElementById('hamburger-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    if (burger && drawer) {
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-controls', 'mobile-drawer');
+        const sync = () => {
+            const open = drawer.classList.contains('active');
+            burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            burger.setAttribute('aria-label', open ? t.closeMenu : t.openMenu);
+        };
+        burger.addEventListener('click', () => setTimeout(sync, 0));
+        drawer.querySelectorAll('a, .drawer-close-btn').forEach(el => el.addEventListener('click', () => setTimeout(sync, 0)));
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && drawer.classList.contains('active')) {
+                closeMobileMenu();
+                sync();
+                burger.focus();
+            }
+        });
+        sync();
+    }
+
+    /* --- 4. Modal de tour: dialogo real (no cerraba con Escape) --- */
+    const modal = document.getElementById('tour-modal');
+    if (modal) {
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        const title = document.getElementById('modal-tour-title');
+        if (title) {
+            if (!title.id) title.id = 'modal-tour-title';
+            modal.setAttribute('aria-labelledby', title.id);
+        }
+        const closeBtn = document.getElementById('modal-close');
+        if (closeBtn && !closeBtn.getAttribute('aria-label')) closeBtn.setAttribute('aria-label', t.closeDialog);
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeTourModal();
+            } else {
+                trapDialogFocus(modal, e);
+            }
+        });
+    }
+
+    /* --- 5. Lightbox: dialogo real --- */
+    const lightbox = document.getElementById('lightbox-modal');
+    if (lightbox) {
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.setAttribute('aria-label', t.gallery);
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('active')) trapDialogFocus(lightbox, e);
+        });
+    }
+
+    /* --- 6. Widget del hero. Era un <a href="#nosotros"> que envolvia un
+           <div onclick>: anidamiento invalido, el teclado no alcanzaba la
+           accion y la etiqueta del enlace ("ver el estado de la laguna")
+           no correspondia con su destino. Pasa a ser un panel informativo
+           con un unico boton real dentro. --- */
+    const widgetAction = document.querySelector('.hero-live-widget-action');
+    if (widgetAction && widgetAction.tagName !== 'BUTTON') {
+        const widget = widgetAction.closest('.hero-live-widget');
+
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = widgetAction.className;
+        btn.innerHTML = widgetAction.innerHTML;
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const contacto = document.getElementById('contacto');
+            if (contacto) contacto.scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                const d = document.getElementById('booking-date');
+                if (d) d.focus();
+            }, 600);
+        });
+        widgetAction.replaceWith(btn);
+
+        /* El contenedor deja de ser enlace y conserva su aspecto y contenido. */
+        if (widget && widget.tagName === 'A') {
+            const panel = document.createElement('div');
+            panel.className = widget.className;
+            panel.setAttribute('aria-label', widget.getAttribute('aria-label') || '');
+            while (widget.firstChild) panel.appendChild(widget.firstChild);
+            widget.replaceWith(panel);
+        }
+    }
+
+    /* --- 7. Zonas de estado que el HTML no tenia --- */
+    const expFilters = document.getElementById('exp-category-filters');
+    if (expFilters && !document.getElementById('exp-filter-status')) {
+        const status = document.createElement('p');
+        status.id = 'exp-filter-status';
+        status.className = 'exp-filter-status';
+        status.setAttribute('role', 'status');
+        status.setAttribute('aria-live', 'polite');
+        expFilters.insertAdjacentElement('afterend', status);
+    }
+
+    const bookingForm = document.getElementById('whatsapp-booking-form');
+    if (bookingForm && !document.getElementById('booking-selection-note')) {
+        const note = document.createElement('p');
+        note.id = 'booking-selection-note';
+        note.className = 'booking-selection-note';
+        note.setAttribute('role', 'status');
+        note.setAttribute('aria-live', 'polite');
+        bookingForm.insertAdjacentElement('beforebegin', note);
+    }
+}
+
+/* La galeria se repinta al filtrar: sus fotos se rehabilitan cada vez. */
+function enhanceGalleryKeyboard() {
+    const t = A11Y_I18N[getCurrentLang()] || A11Y_I18N.es;
+    document.querySelectorAll('#photos-grid-wrapper .gallery-item').forEach(item => {
+        const img = item.querySelector('img');
+        makeKeyboardOperable(item, t.photo + (img && img.alt ? ': ' + img.alt : ''));
+    });
+}
 
 function initApp() {
     const lang = getCurrentLang();
@@ -981,7 +1469,10 @@ function initApp() {
             return;
         }
 
-        const moonData = calculateMoonData(selectedDate + 'T12:00:00', lang);
+        const chosenTour = expSelect ? expSelect.value : '';
+        const moonSensitive = !chosenTour || MOON_SENSITIVE_TOURS.indexOf(chosenTour) !== -1;
+
+        const moonData = calculateMoonData(selectedDate + 'T12:00:00', lang, moonSensitive);
         lastCalculatedMoon = moonData;
         window.lastCalculatedMoon = moonData;
 
@@ -1000,6 +1491,14 @@ function initApp() {
     }
 
     if (dateInput) {
+        /* El campo aceptaba fechas pasadas: se ancla el minimo al dia de hoy
+           en hora local para no enviar una solicitud imposible por WhatsApp. */
+        if (!dateInput.getAttribute('min')) {
+            const now = new Date();
+            const localToday = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+                .toISOString().slice(0, 10);
+            dateInput.setAttribute('min', localToday);
+        }
         dateInput.addEventListener('change', updateDateMoonPreview);
         dateInput.addEventListener('input', updateDateMoonPreview);
     }
@@ -1104,7 +1603,11 @@ function initApp() {
     });
 
     renderGalleryGrid();
+    enhanceAccessibility();
 }
+
+window.calculateMoonData = calculateMoonData;
+window.enhanceAccessibility = enhanceAccessibility;
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initApp);

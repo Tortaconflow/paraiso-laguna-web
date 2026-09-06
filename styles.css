@@ -3714,3 +3714,239 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
         padding: 1.35rem;
     }
 }
+
+
+/* ==========================================================================
+   v2.7 — CORRECCIONES DE EXPERIENCIA MEDIBLES
+   Cada bloque resuelve un problema verificado en la auditoría de UX.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   C1 (CRÍTICO) · El menú móvil era inalcanzable en 30 de 33 páginas.
+   El wordmark textual + el selector de idioma desbordaban la fila del header
+   y empujaban el botón de menú 80 px fuera de la pantalla (ancho medido: 0 px).
+   Se libera espacio ocultando el texto redundante (el isotipo ya lo lleva)
+   y se le da al botón un área táctil real de 44x44.
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    #main-header .nav-container {
+        flex-wrap: nowrap !important;
+        gap: 0.5rem !important;
+        min-width: 0;
+    }
+
+    /* El logotipo ya incluye el nombre de la marca: el texto duplicado sobra */
+    #main-header .logo span {
+        display: none !important;
+    }
+
+    #main-header .logo {
+        flex: 0 1 auto;
+        min-width: 0;
+        gap: 0 !important;
+        overflow: hidden;
+    }
+
+    #main-header .lang-switcher {
+        flex: 0 0 auto;
+    }
+
+    /* Área táctil de 44x44 conservando la barra visual de 24x18 */
+    .hamburger-menu {
+        flex: 0 0 auto !important;
+        width: 44px !important;
+        height: 44px !important;
+        padding: 13px 10px !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        align-items: stretch;
+    }
+}
+
+/* Pantallas muy estrechas (<=360 px): el selector de idioma cede primero */
+@media (max-width: 360px) {
+    #main-header .lang-switcher .lang-btn {
+        padding: 5px 6px !important;
+    }
+    #main-header .logo img {
+        height: 36px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Q1 · Contraste. --accent-cyan (#008AA6) da 4.05:1 sobre blanco y no alcanza
+   el mínimo AA de 4.5:1 para texto normal. Se añade un tono de la misma
+   familia, ya presente en el sistema, para TEXTO y enlaces (6.40:1).
+   El cian original se conserva para bordes, fondos e iconografía.
+   -------------------------------------------------------------------------- */
+:root {
+    --accent-cyan-text: #00687E;   /* 6.40:1 sobre blanco — AA para texto */
+    --text-muted-aa: #5C7079;      /* 4.94:1 sobre el pie #EBF2F5 */
+}
+
+.exp-link,
+.exp-details-link,
+.sec-card-more,
+.sec-card-tag,
+.form-group label,
+.blog-read-link,
+.hero-live-widget-action,
+.post-content a,
+.footer-address a {
+    color: var(--accent-cyan-text) !important;
+}
+
+.exp-tag {
+    color: var(--accent-cyan-text);
+    border-color: rgba(0, 104, 126, 0.35);
+}
+
+/* El pie usaba #8297A1 sobre #EBF2F5 = 2.69:1 */
+.footer-meta,
+#footer-meta-copyright {
+    color: var(--text-muted-aa);
+}
+
+/* --------------------------------------------------------------------------
+   Q2 · Teclado. 18 controles del sitio eran <div onclick> sin foco posible.
+   app.js les asigna role/tabindex; aquí se les da un foco visible coherente.
+   -------------------------------------------------------------------------- */
+.sec-exp-card:focus-visible,
+.gallery-item:focus-visible,
+.wa-chat-chip:focus-visible,
+.hero-live-widget-action:focus-visible {
+    outline: 3px solid var(--accent-cyan-text);
+    outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   A2 · CTA persistente en móvil para las 30 páginas de tour, hub y blog.
+   Antes sólo existía en las 3 portadas; en el resto no había forma de
+   contactar durante ~72 % del recorrido de scroll.
+   -------------------------------------------------------------------------- */
+.mobile-sticky-cta:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: -4px;
+}
+
+/* --------------------------------------------------------------------------
+   Filtro de experiencias: retroalimentación de resultados y estado vacío.
+   -------------------------------------------------------------------------- */
+.exp-filter-status {
+    display: none;
+    margin: -1.5rem auto 2rem auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.exp-filter-status.active {
+    display: block;
+}
+
+.exp-filter-status button {
+    background: none;
+    border: none;
+    padding: 0.5rem 0.35rem;
+    font: inherit;
+    font-weight: 700;
+    color: var(--accent-cyan-text);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Diálogos: el modal de tour no cerraba con Escape ni movía el foco.
+   -------------------------------------------------------------------------- */
+.modal-content:focus,
+.lightbox-content-wrapper:focus {
+    outline: none;
+}
+
+/* --------------------------------------------------------------------------
+   Q3 · Canal real de seguimiento en el pie (sustituye al boletín simulado).
+   -------------------------------------------------------------------------- */
+.footer-follow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.footer-follow a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 44px;
+    padding: 0.55rem 1rem;
+    border-radius: 50px;
+    background: rgba(0, 138, 166, 0.10);
+    border: 1px solid rgba(0, 138, 166, 0.30);
+    color: var(--accent-cyan-text);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.footer-follow a:hover {
+    background: rgba(0, 138, 166, 0.18);
+    border-color: var(--accent-cyan-text);
+}
+
+/* --------------------------------------------------------------------------
+   Objetivos táctiles de las acciones de tarjeta (medían 24 px de alto).
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .exp-card-actions {
+        gap: 0.5rem;
+    }
+    .exp-link,
+    .exp-details-link,
+    .sec-card-more,
+    .blog-read-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .footer-col ul a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+}
+
+/* Confirmacion de la experiencia preseleccionada desde una tarjeta o chip. */
+.booking-selection-note {
+    display: none;
+    margin: 0 0 1rem 0;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius-sm, 8px);
+    background: rgba(0, 168, 107, 0.08);
+    border: 1px solid rgba(0, 168, 107, 0.35);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.booking-selection-note.active {
+    display: block;
+}
+
+/* El widget del hero pasa de enlace a panel informativo con un boton real
+   dentro: se reponen los estilos que dependian de la etiqueta <a>. */
+button.hero-live-widget-action {
+    width: 100%;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    border-top: 1px dashed rgba(255, 255, 255, 0.18);
+    font: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+div.hero-live-widget {
+    display: block;
+}

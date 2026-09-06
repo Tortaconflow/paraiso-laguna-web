@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "paraiso-laguna",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tests/server.js"],
+      "port": 3100
+    }
+  ]
+}

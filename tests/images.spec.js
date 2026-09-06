@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const BASE = 'http://localhost:3000';
+const BASE = 'http://127.0.0.1:3100';
 
 const pagesToTest = [
     '/',
