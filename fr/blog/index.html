@@ -22,7 +22,7 @@
     <meta property="og:image" content="/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=10">
+    <link rel="stylesheet" href="/styles.css?v=11">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- Schema.org Blog Markup -->
@@ -161,12 +161,39 @@
             Écotourisme Responsable & Préservation Marine à Oaxaca, Mexique.
         </div>
     </footer>
-    <script src="/app.js?v=10"></script>
+    <script src="/app.js?v=11"></script>
 
     <!-- CTA persistente en movil: el blog no ofrecia ningun punto de contacto. -->
     <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20!%20%F0%9F%8C%B4%20Je%20viens%20de%20votre%20blog%20et%20je%20souhaite%20des%20informations%20pour%20r%C3%A9server." target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Réserver sur WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
         <span>Réserver sur WhatsApp</span>
     </a>
+
+    <!-- Menu movil: esta pagina mostraba el boton de menu pero no existia
+         ningun cajon que abrir, asi que el boton no hacia nada. Los enlaces
+         son los mismos que la pagina ya declara en su cabecera. -->
+    <div class="mobile-menu-drawer" id="mobile-drawer">
+        <div class="drawer-header" style="display: flex; justify-content: space-between; align-items: center; padding: 2rem;">
+            <a href="/fr/#inicio" class="logo" onclick="closeMobileMenu()">
+                <span style="font-weight: 800; font-size: 1.4rem; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
+            </a>
+            <button class="drawer-close-btn" onclick="closeMobileMenu()" aria-label="Fermer le menu" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer; min-width: 44px; min-height: 44px;">&times;</button>
+        </div>
+        <nav class="drawer-nav" style="padding: 2rem;">
+            <span style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 2rem;">✧ MENU DE NAVIGATION</span>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 2rem;">
+                <li><a href="/fr/#experiencias" onclick="closeMobileMenu()" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; color: #fff;">01. Expériences</a></li>
+                <li><a href="/fr/#galeria" onclick="closeMobileMenu()" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; color: #fff;">02. Galerie</a></li>
+                <li><a href="/fr/#contacto" onclick="closeMobileMenu()" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; color: #fff;">03. Réserver</a></li>
+                <li><a href="/fr/#faqs" onclick="closeMobileMenu()" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; color: #fff;">04. FAQ</a></li>
+                <li><a href="/fr/blog/" onclick="closeMobileMenu()" style="font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 600; color: #fff;">05. Blog</a></li>
+            </ul>
+            <div style="margin-top: 3.5rem;">
+                <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20!%20%F0%9F%8C%B4%20Je%20viens%20de%20votre%20blog%20et%20je%20souhaite%20des%20informations%20pour%20r%C3%A9server." target="_blank" rel="noopener noreferrer" class="btn btn-primary submit-btn" onclick="closeMobileMenu()" style="width: 100%; display: flex; justify-content: center; background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
+                    Réserver sur WhatsApp ➔
+                </a>
+            </div>
+        </nav>
+    </div>
 </body>
 </html>

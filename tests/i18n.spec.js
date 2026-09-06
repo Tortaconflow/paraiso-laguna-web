@@ -5,7 +5,7 @@ const BASE = 'http://127.0.0.1:3100';
 test.describe('Internacionalización (i18n) y Switchers', () => {
 
     test('la página raíz en español tiene lang="es", canonical y hreflangs válidos', async ({ page }) => {
-        await page.goto(BASE + '/');
+        await page.goto(BASE + '/', { waitUntil: 'domcontentloaded' });
         await expect(page.locator('html')).toHaveAttribute('lang', 'es');
         
         const canonical = page.locator('link[rel="canonical"]');
@@ -21,7 +21,7 @@ test.describe('Internacionalización (i18n) y Switchers', () => {
     });
 
     test('la página en inglés /en/ tiene lang="en", canonical y contenido traducido', async ({ page }) => {
-        await page.goto(BASE + '/en/');
+        await page.goto(BASE + '/en/', { waitUntil: 'domcontentloaded' });
         await expect(page.locator('html')).toHaveAttribute('lang', 'en');
         
         const canonical = page.locator('link[rel="canonical"]');
@@ -32,7 +32,7 @@ test.describe('Internacionalización (i18n) y Switchers', () => {
     });
 
     test('la página en francés /fr/ tiene lang="fr", canonical y contenido traducido', async ({ page }) => {
-        await page.goto(BASE + '/fr/');
+        await page.goto(BASE + '/fr/', { waitUntil: 'domcontentloaded' });
         await expect(page.locator('html')).toHaveAttribute('lang', 'fr');
         
         const canonical = page.locator('link[rel="canonical"]');
@@ -61,21 +61,21 @@ test.describe('Internacionalización (i18n) y Switchers', () => {
         ];
 
         for (const u of testUrls) {
-            const res = await page.goto(BASE + u);
+            const res = await page.goto(BASE + u, { waitUntil: 'domcontentloaded' });
             expect(res.status()).toBe(200);
             await expect(page.locator('h1')).toBeVisible();
         }
     });
 
     test('el modal de tour en inglés muestra textos en inglés', async ({ page }) => {
-        await page.goto(BASE + '/en/');
+        await page.goto(BASE + '/en/', { waitUntil: 'domcontentloaded' });
         await page.evaluate(() => window.openTourModal('biolum'));
         await expect(page.locator('#modal-tour-title')).toHaveText('Magic Bioluminescence');
         await expect(page.locator('#modal-tour-tag')).toHaveText('Night Experience');
     });
 
     test('el modal de tour en francés muestra textos en francés', async ({ page }) => {
-        await page.goto(BASE + '/fr/');
+        await page.goto(BASE + '/fr/', { waitUntil: 'domcontentloaded' });
         await page.evaluate(() => window.openTourModal('biolum'));
         await expect(page.locator('#modal-tour-title')).toHaveText('Bioluminescence Magique');
         await expect(page.locator('#modal-tour-tag')).toHaveText('Expérience Nocturne');

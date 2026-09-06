@@ -402,3 +402,77 @@ test.describe('Sin errores nuevos en consola', () => {
         });
     }
 });
+
+// ---------------------------------------------------------------------------
+// Cache y carga de scripts.
+// styles.css y app.js cambiaron, pero las paginas seguian pidiendo ?v=10, asi
+// que un visitante recurrente habria seguido viendo la version antigua. Tres
+// paginas del blog ni siquiera llevaban parametro de version.
+// Ademas blog/liberacion-tortugas-puerto-escondido.html invocaba
+// toggleMobileMenu() sin cargar nunca app.js: su boton de menu no hacia nada.
+// ---------------------------------------------------------------------------
+const TODAS_LAS_PAGINAS = ['/'].concat(HOMES.slice(1)).concat(PAGINAS_INTERNAS).concat([
+    '/blog/liberacion-tortugas-puerto-escondido.html',
+    '/en/blog/manialtepec-bioluminescence-guide.html',
+    '/fr/blog/liberation-tortues-puerto-escondido.html'
+]);
+
+test.describe('Cache y carga de scripts', () => {
+    for (const ruta of TODAS_LAS_PAGINAS) {
+        test(`${ruta} carga hoja de estilos y script con version`, async ({ page }) => {
+            await ir(page, ruta);
+
+            const css = await page.getAttribute('link[rel="stylesheet"][href*="styles.css"]', 'href');
+            expect(css, 'falta la hoja de estilos').toBeTruthy();
+            expect(css, `sin parametro de version: ${css}`).toMatch(/styles\.css\?v=\d+/);
+
+            const js = await page.getAttribute('script[src*="app.js"]', 'src');
+            expect(js, 'la pagina no carga app.js').toBeTruthy();
+            expect(js, `sin parametro de version: ${js}`).toMatch(/app\.js\?v=\d+/);
+        });
+    }
+
+    test('el boton de menu funciona en el articulo de tortugas', async ({ page }) => {
+        // Esta pagina no cargaba app.js: toggleMobileMenu no existia.
+        await ir(page, '/blog/liberacion-tortugas-puerto-escondido.html');
+        const definida = await page.evaluate(() => typeof window.toggleMobileMenu === 'function');
+        expect(definida, 'toggleMobileMenu no esta definida').toBe(true);
+
+        await page.setViewportSize({ width: 390, height: 844 });
+        const burger = page.locator('#hamburger-btn');
+        await expect(burger).toBeVisible();
+        await burger.click();
+        await expect(page.locator('#mobile-drawer')).toHaveClass(/active/);
+    });
+});
+
+// ---------------------------------------------------------------------------
+// Siete paginas mostraban el boton de menu sin que existiera ningun cajon que
+// abrir: el boton era decorativo. En movil esas paginas no tenian navegacion
+// alguna, porque el <nav> horizontal se oculta por debajo de 768 px.
+// ---------------------------------------------------------------------------
+test.describe('El boton de menu abre un menu real', () => {
+    test.use({ viewport: { width: 390, height: 844 } });
+
+    for (const ruta of TODAS_LAS_PAGINAS) {
+        test(`${ruta} tiene menu movil operativo`, async ({ page }) => {
+            await ir(page, ruta);
+
+            const burger = page.locator('#hamburger-btn');
+            await expect(burger).toBeVisible();
+
+            const drawer = page.locator('#mobile-drawer');
+            await expect(drawer, 'el boton existe pero no hay cajon que abrir').toHaveCount(1);
+
+            await burger.click();
+            await expect(drawer).toHaveClass(/active/);
+
+            // El menu debe llevar a alguna parte
+            const enlaces = await drawer.locator('.drawer-nav a[href]').count();
+            expect(enlaces).toBeGreaterThan(0);
+
+            await page.keyboard.press('Escape');
+            await expect(drawer).not.toHaveClass(/active/);
+        });
+    }
+});
