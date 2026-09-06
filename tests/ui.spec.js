@@ -3,7 +3,7 @@
 
 const { test, expect } = require('@playwright/test');
 
-const BASE = process.env.BASE_URL || 'http://localhost:3000';
+const BASE = process.env.BASE_URL || 'http://127.0.0.1:3100';
 const viewports = [
     { name: 'desktop', width: 1280, height: 720 },
     { name: 'mobile', width: 375, height: 667 },

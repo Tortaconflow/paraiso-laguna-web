@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = Number(process.env.PL_TEST_PORT) || 3100;
 const ROOT = path.resolve(__dirname, '..');
 
 const MIME_TYPES = {
