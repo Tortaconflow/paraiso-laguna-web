@@ -1602,8 +1602,58 @@ function initApp() {
         if (e.key === 'ArrowRight') changeLightboxImage(1);
     });
 
+    initBlogMoonChecker();
     renderGalleryGrid();
     enhanceAccessibility();
+}
+
+function initBlogMoonChecker() {
+    const input = document.getElementById('blog-moon-date-input');
+    const resultBox = document.getElementById('blog-moon-result');
+    if (!input || !resultBox) return;
+
+    const lang = getCurrentLang();
+
+    if (!input.getAttribute('min')) {
+        const now = new Date();
+        const localToday = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+        input.setAttribute('min', localToday);
+        if (!input.value) input.value = localToday;
+    }
+
+    function update() {
+        if (!input.value) return;
+        const data = calculateMoonData(input.value + 'T12:00:00', lang, true);
+        const heading = lang === 'en' ? 'Projected Moon for this date' :
+                        lang === 'fr' ? 'Prévision lunaire pour cette date' :
+                        'Proyección lunar para esta fecha';
+        const illumLabel = lang === 'en' ? 'Illumination' :
+                           lang === 'fr' ? 'Illumination' :
+                           'Iluminación';
+        const bookBtnText = lang === 'en' ? 'Book for this date on WhatsApp ➔' :
+                            lang === 'fr' ? 'Réserver pour cette date sur WhatsApp ➔' :
+                            'Apartar esta fecha por WhatsApp ➔';
+
+        const waMsg = lang === 'en' ? `Hello Paraíso Laguna! 🌴 I checked your moon calendar for ${input.value} (${data.phaseName}, ${data.glowLabel}) and would like to book the Bioluminescence Tour.` :
+                      lang === 'fr' ? `Bonjour Paraíso Laguna ! 🌴 J'ai vérifié le calendrier lunaire pour le ${input.value} (${data.phaseName}, ${data.glowLabel}) et je souhaite réserver le tour de bioluminescence.` :
+                      `¡Hola Paraíso Laguna! 🌴 Revisé su calendario lunar para el ${input.value} (${data.phaseName}, ${data.glowLabel}) y quiero reservar el Tour de Bioluminiscencia.`;
+
+        resultBox.className = 'moon-date-preview active ' + data.previewClass;
+        resultBox.innerHTML = `
+            <div class="moon-preview-header">
+                <span>🌙 ${heading}: <strong>${data.phaseName}</strong> (${illumLabel}: ${data.illumination}%)</span>
+                <span class="moon-preview-badge ${data.badgeClass}">${data.glowLabel}</span>
+            </div>
+            <p class="moon-preview-tip" style="margin: 0.5rem 0 1rem 0;">${data.tip}</p>
+            <a href="https://wa.me/529541611334?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.85rem; padding:0.5rem 1.25rem; min-height:40px; background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);">
+                ${bookBtnText}
+            </a>
+        `;
+    }
+
+    input.addEventListener('change', update);
+    input.addEventListener('input', update);
+    update();
 }
 
 window.calculateMoonData = calculateMoonData;

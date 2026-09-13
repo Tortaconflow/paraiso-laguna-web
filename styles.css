@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    CSS DESIGN SYSTEM & PREMIUM AESTHETICS - PARAÃSO LAGUNA
    ========================================================================== */
 
@@ -1909,6 +1909,148 @@ footer {
 .blog-back-btn:hover {
     color: var(--accent-cyan);
     transform: translateX(-3px);
+}
+
+/* ==========================================================================
+   LUNAR CALENDAR & INTERACTIVE MOON CHECKER (BLOG ENHANCEMENT)
+   ========================================================================== */
+.lunar-calendar-section {
+    margin: 2.5rem 0;
+}
+
+.lunar-calendar-table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0 2rem 0;
+    border-radius: var(--radius-sm, 8px);
+    border: 1px solid rgba(0, 138, 166, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.lunar-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.lunar-table th {
+    background: rgba(0, 138, 166, 0.12);
+    color: var(--accent-cyan);
+    font-weight: 700;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid rgba(0, 138, 166, 0.25);
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+}
+
+.lunar-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(0, 138, 166, 0.08);
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.lunar-table tr:nth-child(even) {
+    background: rgba(0, 138, 166, 0.02);
+}
+
+.lunar-table tr:hover {
+    background: rgba(0, 138, 166, 0.06);
+}
+
+.lunar-badge-peak {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(0, 168, 107, 0.15);
+    color: #008f5a;
+    border: 1px solid rgba(0, 168, 107, 0.3);
+}
+
+.lunar-badge-opt {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(0, 138, 166, 0.12);
+    color: var(--accent-cyan, #008AA6);
+    border: 1px solid rgba(0, 138, 166, 0.25);
+}
+
+.lunar-table-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #128C7E;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.lunar-table-btn:hover {
+    background: rgba(37, 211, 102, 0.1);
+    color: #075E54;
+}
+
+/* Interactive Date Checker Box */
+.lunar-checker-box {
+    margin: 2rem 0;
+    padding: 1.75rem;
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid rgba(0, 138, 166, 0.25);
+    border-radius: var(--radius-md, 12px);
+    box-shadow: var(--shadow-premium);
+}
+
+.lunar-checker-box h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.lunar-checker-box p.checker-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+}
+
+.lunar-checker-input-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.lunar-checker-date-input {
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 138, 166, 0.35);
+    background: #fff;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-family: inherit;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+.lunar-checker-date-input:focus {
+    outline: none;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 3px rgba(0, 138, 166, 0.15);
 }
 
 /* Post Footer CTA */
