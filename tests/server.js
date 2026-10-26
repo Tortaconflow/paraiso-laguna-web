@@ -25,8 +25,18 @@ const server = http.createServer((req, res) => {
         reqPath += 'index.html';
     }
 
-    let filePath = path.join(ROOT, reqPath);
-    if (!fs.existsSync(filePath) && fs.existsSync(filePath + '/index.html')) {
+    // Prevenir Path Traversal asegurando que la ruta resuelta este estrictamente dentro de ROOT
+    const normalizedReqPath = path.normalize(reqPath).replace(/^(\.\.[\/\\])+/, '');
+    const resolvedPath = path.resolve(ROOT, '.' + path.sep + normalizedReqPath);
+
+    if (!resolvedPath.startsWith(ROOT)) {
+        res.writeHead(403, { 'Content-Type': 'text/plain' });
+        res.end('403 Forbidden');
+        return;
+    }
+
+    let filePath = resolvedPath;
+    if (!fs.existsSync(filePath) && fs.existsSync(path.join(filePath, 'index.html'))) {
         filePath = path.join(filePath, 'index.html');
     }
 
