@@ -4427,7 +4427,7 @@ button.hero-live-widget-action {
     body:has(#mobile-drawer.active) .mobile-sticky-cta,
     body:has(#tour-modal.active) .mobile-sticky-cta,
     body:has(#lightbox-modal.active) .mobile-sticky-cta,
-    body:has(.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus) .mobile-sticky-cta,
+    body:has(#whatsapp-booking-form:focus-within) .mobile-sticky-cta,
     body.ui-overlay-open .mobile-sticky-cta {
         transform: translateY(150%) !important;
         opacity: 0 !important;

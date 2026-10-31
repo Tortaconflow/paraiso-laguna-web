@@ -549,6 +549,50 @@ test.describe('v2.8 · Codificación limpia, tarjetas mobile-first y sticky inte
         await expect(sticky).toHaveCSS('opacity', '1');
     });
 
+    test('el botón sticky de WhatsApp se oculta al enfocar el formulario, reaparece al retirar el foco y se sigue ocultando con modales', async ({ page }) => {
+        await ir(page, '/');
+        const sticky = page.locator('.mobile-sticky-cta');
+
+        // 1. CTA visible en navegación normal
+        await expect(sticky).toHaveCSS('opacity', '1');
+        await expect(sticky).toHaveCSS('pointer-events', 'auto');
+
+        // 2. CTA oculto al enfocar un campo de #whatsapp-booking-form
+        const nameInput = page.locator('#whatsapp-booking-form #booking-name');
+        await nameInput.scrollIntoViewIfNeeded();
+        await nameInput.focus();
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        // 3. CTA vuelve a aparecer al retirar el foco
+        await nameInput.evaluate(el => el.blur());
+        await expect(sticky).toHaveCSS('opacity', '1');
+        await expect(sticky).toHaveCSS('pointer-events', 'auto');
+
+        // 4. CTA continúa ocultándose al abrir el modal de detalles y el lightbox
+        const detailsBtn = page.locator('.exp-details-link').first();
+        await detailsBtn.scrollIntoViewIfNeeded();
+        await detailsBtn.click();
+        await expect(page.locator('#tour-modal')).toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        await page.keyboard.press('Escape');
+        await expect(page.locator('#tour-modal')).not.toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '1');
+
+        const galleryItem = page.locator('#photos-grid-wrapper .gallery-item').first();
+        await galleryItem.scrollIntoViewIfNeeded();
+        await galleryItem.click();
+        await expect(page.locator('#lightbox-modal')).toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        await page.keyboard.press('Escape');
+        await expect(page.locator('#lightbox-modal')).not.toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '1');
+    });
+
     test('el footer móvil mantiene una estructura compacta de 2 columnas (< 1200px de alto)', async ({ page }) => {
         await ir(page, '/');
         const footerBox = await page.locator('footer').boundingBox();
