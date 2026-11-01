@@ -476,3 +476,126 @@ test.describe('El boton de menu abre un menu real', () => {
         });
     }
 });
+
+
+// ---------------------------------------------------------------------------
+// v2.8 · Evolución Mobile-First: 8 viewports sin overflow, cero mojibake,
+// tarjetas desacopladas legibles, botón sticky inteligente y footer compacto.
+// ---------------------------------------------------------------------------
+const VIEWPORTS_OBJETIVO = [
+    { name: '320px', width: 320, height: 600 },
+    { name: '360px', width: 360, height: 740 },
+    { name: '375px', width: 375, height: 667 },
+    { name: '390px', width: 390, height: 844 },
+    { name: '430px', width: 430, height: 932 },
+    { name: '768px', width: 768, height: 1024 },
+    { name: '1024px', width: 1024, height: 768 },
+    { name: '1440px', width: 1440, height: 900 },
+];
+
+test.describe('v2.8 · Sin desbordamiento horizontal en los 8 viewports objetivo', () => {
+    for (const vp of VIEWPORTS_OBJETIVO) {
+        test('ausencia de scroll horizontal accidental en ' + vp.name + ' (' + vp.width + 'x' + vp.height + ')', async ({ page }) => {
+            await page.setViewportSize({ width: vp.width, height: vp.height });
+            await ir(page, '/');
+            const overflow = await page.evaluate(() => {
+                return document.documentElement.scrollWidth - window.innerWidth;
+            });
+            expect(overflow, 'desbordamiento de ' + overflow + 'px en ' + vp.name).toBeLessThanOrEqual(0);
+        });
+    }
+});
+
+test.describe('v2.8 · Codificación limpia, tarjetas mobile-first y sticky inteligente', () => {
+    test.use({ viewport: { width: 390, height: 844 } });
+
+    test('ausencia total de símbolos corruptos (mojibake) en estilos y DOM (ES, EN, FR)', async ({ page }) => {
+        for (const home of HOMES) {
+            await ir(page, home);
+            const corrupto = await page.evaluate(() => {
+                const bodyText = document.body.innerText;
+                const li = document.querySelector('.pkg-list li');
+                const beforeContent = li ? getComputedStyle(li, '::before').content : '';
+                const chip = document.querySelector('.wa-chat-chip');
+                const afterContent = chip ? getComputedStyle(chip, '::after').content : '';
+                const combined = bodyText + ' ' + beforeContent + ' ' + afterContent;
+                return /âœ|âž|Ã¡|Ã©|Ã­|Ã³|Ãº|PARAÃ/.test(combined);
+            });
+            expect(corrupto).toBe(false);
+        }
+    });
+
+    test('las tarjetas principales muestran especificaciones prácticas visibles y botones >= 44px en móvil', async ({ page }) => {
+        await ir(page, '/');
+        const card = page.locator('#grid-tours-wrapper .exp-card').first();
+        await card.scrollIntoViewIfNeeded();
+        await expect(card.locator('.exp-hover-drawer')).toBeVisible();
+        const ctaBox = await card.locator('.exp-link').boundingBox();
+        expect(ctaBox.height).toBeGreaterThanOrEqual(44);
+    });
+
+    test('el botón sticky de WhatsApp se repliega al abrir el menú móvil o un modal de tour', async ({ page }) => {
+        await ir(page, '/');
+        const sticky = page.locator('.mobile-sticky-cta');
+        await expect(sticky).toHaveCSS('opacity', '1');
+
+        await page.locator('#hamburger-btn').click();
+        await expect(page.locator('#mobile-drawer')).toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        await page.keyboard.press('Escape');
+        await expect(page.locator('#mobile-drawer')).not.toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '1');
+    });
+
+    test('el botón sticky de WhatsApp se oculta al enfocar el formulario, reaparece al retirar el foco y se sigue ocultando con modales', async ({ page }) => {
+        await ir(page, '/');
+        const sticky = page.locator('.mobile-sticky-cta');
+
+        // 1. CTA visible en navegación normal
+        await expect(sticky).toHaveCSS('opacity', '1');
+        await expect(sticky).toHaveCSS('pointer-events', 'auto');
+
+        // 2. CTA oculto al enfocar un campo de #whatsapp-booking-form
+        const nameInput = page.locator('#whatsapp-booking-form #booking-name');
+        await nameInput.scrollIntoViewIfNeeded();
+        await nameInput.focus();
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        // 3. CTA vuelve a aparecer al retirar el foco
+        await nameInput.evaluate(el => el.blur());
+        await expect(sticky).toHaveCSS('opacity', '1');
+        await expect(sticky).toHaveCSS('pointer-events', 'auto');
+
+        // 4. CTA continúa ocultándose al abrir el modal de detalles y el lightbox
+        const detailsBtn = page.locator('.exp-details-link').first();
+        await detailsBtn.scrollIntoViewIfNeeded();
+        await detailsBtn.click();
+        await expect(page.locator('#tour-modal')).toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        await page.keyboard.press('Escape');
+        await expect(page.locator('#tour-modal')).not.toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '1');
+
+        const galleryItem = page.locator('#photos-grid-wrapper .gallery-item').first();
+        await galleryItem.scrollIntoViewIfNeeded();
+        await galleryItem.click();
+        await expect(page.locator('#lightbox-modal')).toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '0');
+        await expect(sticky).toHaveCSS('pointer-events', 'none');
+
+        await page.keyboard.press('Escape');
+        await expect(page.locator('#lightbox-modal')).not.toHaveClass(/active/);
+        await expect(sticky).toHaveCSS('opacity', '1');
+    });
+
+    test('el footer móvil mantiene una estructura compacta de 2 columnas (< 1200px de alto)', async ({ page }) => {
+        await ir(page, '/');
+        const footerBox = await page.locator('footer').boundingBox();
+        expect(footerBox.height).toBeLessThan(1200);
+    });
+});

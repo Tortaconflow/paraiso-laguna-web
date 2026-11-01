@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CSS DESIGN SYSTEM & PREMIUM AESTHETICS - PARAÃSO LAGUNA
+   CSS DESIGN SYSTEM & PREMIUM AESTHETICS - PARAÍSO LAGUNA
    ========================================================================== */
 
 /* 1. IMPORTS & VARIABLES */
@@ -170,7 +170,7 @@ a {
     box-shadow: var(--glow-cyan);
 }
 
-/* 4. HEADER / NAVIGATION (scoped al navbar: las pÃ¡ginas de blog/tours
+/* 4. HEADER / NAVIGATION (scoped al navbar: las páginas de blog/tours
    tienen un segundo <header class="post-header"> que NO debe quedar fijo) */
 #main-header {
     position: fixed;
@@ -232,7 +232,7 @@ nav a:hover {
     color: var(--accent-cyan);
 }
 
-/* 5. HERO SECTION â€” full-bleed editorial, la fotografÃ­a es la protagonista */
+/* 5. HERO SECTION — full-bleed editorial, la fotografía es la protagonista */
 .hero {
     position: relative;
     width: 100%;
@@ -378,7 +378,7 @@ nav a:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Live Lagoon Widget â€” floating, compact, real data */
+/* Live Lagoon Widget — floating, compact, real data */
 .hero-live-widget {
     position: absolute;
     z-index: 2;
@@ -1342,7 +1342,14 @@ footer {
 }
 
 .wa-chat-chip::after {
-    content: 'âž”';
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008AA6' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
     font-size: 0.75rem;
     color: var(--accent-cyan);
     opacity: 0.7;
@@ -1626,7 +1633,7 @@ footer {
 }
 
 /* ==========================================================================
-   40. SECCIÃ“N DE BLOG PREMIUM & ESTILOS DE LECTURA (SEO/GEO)
+   40. SECCIÓN DE BLOG PREMIUM & ESTILOS DE LECTURA (SEO/GEO)
    ========================================================================== */
 
 /* Blog Layout & Catalog Grid */
@@ -2598,7 +2605,7 @@ footer {
 
 
 /* ==========================================================================
-   INTEGRACIÃ“N VERSIÃ“N B: EXPEDICIONES (PAQUETES) & NUESTRA COMUNIDAD
+   INTEGRACIÓN VERSIÓN B: EXPEDICIONES (PAQUETES) & NUESTRA COMUNIDAD
    ========================================================================== */
 
 /* --- Expediciones completas (paquetes) --- */
@@ -2671,7 +2678,13 @@ footer {
 }
 
 .pkg-list li::before {
-    content: "âœ”";
+    content: '';
+    width: 15px;
+    height: 15px;
+    top: 0.55rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300A86B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
     left: 0;
     color: var(--accent-green);
@@ -2750,7 +2763,7 @@ footer {
     }
 }
 
-/* --- Pulido: punto "en vivo" del monitoreo (de la versiÃ³n B) --- */
+/* --- Pulido: punto "en vivo" del monitoreo (de la versión B) --- */
 .live-dot {
     display: inline-block;
     width: 0.6rem;
@@ -2781,7 +2794,7 @@ textarea:focus-visible {
     .live-dot { animation: none; }
 }
 
-/* --- Trust bar: garantÃ­as visibles antes de que el usuario pregunte --- */
+/* --- Trust bar: garantías visibles antes de que el usuario pregunte --- */
 .trust-bar {
     list-style: none;
     display: flex;
@@ -2846,7 +2859,7 @@ textarea:focus-visible {
         box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.18);
     }
 
-    /* Un solo CTA persistente en mÃ³vil: se retira la burbuja redonda para no duplicar */
+    /* Un solo CTA persistente en móvil: se retira la burbuja redonda para no duplicar */
     .wa-widget-container {
         display: none;
     }
@@ -2856,7 +2869,7 @@ textarea:focus-visible {
     }
 }
 
-/* --- PartÃ­culas de bioluminiscencia ambiental en el Hero (sincronizadas con la fase lunar real) --- */
+/* --- Partículas de bioluminiscencia ambiental en el Hero (sincronizadas con la fase lunar real) --- */
 .hero-bio-canvas {
     position: absolute;
     inset: 0;
@@ -2868,8 +2881,8 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   TOUR HERO (pÃ¡ginas individuales de cada tour) â€” mismo lenguaje visual
-   editorial full-bleed que el Hero del home, escalado para pÃ¡gina interior.
+   TOUR HERO (páginas individuales de cada tour) — mismo lenguaje visual
+   editorial full-bleed que el Hero del home, escalado para página interior.
    ========================================================================== */
 .tour-hero {
     position: relative;
@@ -2880,7 +2893,7 @@ textarea:focus-visible {
     justify-content: flex-end;
     overflow: hidden;
     /* el header fijo ya lo despeja .blog-post-container (margin-top:8rem);
-       aquÃ­ solo se necesita respiro interno para el contenido */
+       aquí solo se necesita respiro interno para el contenido */
     padding: 2.5rem 2rem;
     margin: 0 -1.5rem 3rem -1.5rem;
     border-radius: var(--radius-lg);
@@ -4092,3 +4105,434 @@ button.hero-live-widget-action {
 div.hero-live-widget {
     display: block;
 }
+
+.hero-live-widget .hero-live-widget-action,
+button.hero-live-widget-action {
+    color: #5EEAD4 !important;
+}
+
+/* ==========================================================================
+   v2.8 — EVOLUCIÓN PROFESIONAL MOBILE-FIRST (UX / UI / CRO / ACCESIBILIDAD)
+   ========================================================================== */
+
+/* 1. Tokens del Sistema Visual Mobile-First */
+:root {
+    --space-2xs: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2.25rem;
+    --tap-target-min: 44px;
+    --surface-card-solid: #FFFFFF;
+    --border-card-subtle: rgba(9, 30, 41, 0.10);
+}
+
+/* 2. D1 · Prevención de Desbordamientos Horizontales en Todos los Viewports (320px–1440px) */
+.experiences-grid,
+.secondary-experiences-grid,
+.testimonials-grid,
+.pkg-grid,
+.why-grid,
+.blog-grid,
+.luxury-asymmetric-masonry {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)) !important;
+}
+
+/* 3. D6 · Nuevo Enfoque de Tarjetas de Tours: Fotografía Desacoplada + Cuerpo Estructurado */
+#grid-tours-wrapper .exp-card {
+    background: var(--surface-card-solid) !important;
+    border: 1px solid var(--border-card-subtle) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: 0 12px 32px rgba(9, 30, 41, 0.07) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    padding: 1.35rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    overflow: hidden !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-img-container {
+    order: 1;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    z-index: 1 !important;
+    width: calc(100% + 2.7rem) !important;
+    height: 215px !important;
+    margin: -1.35rem -1.35rem 1.1rem -1.35rem !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+    overflow: hidden !important;
+    flex-shrink: 0;
+}
+
+/* Sombra sutil solo en el borde superior para legibilidad de los badges flotantes */
+#grid-tours-wrapper .exp-card .exp-img-container::after {
+    background: linear-gradient(180deg, rgba(4, 18, 26, 0.48) 0%, rgba(4, 18, 26, 0.12) 45%, transparent 100%) !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-badge-float {
+    top: 0.85rem !important;
+    right: 0.85rem !important;
+    left: 0.85rem !important;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#grid-tours-wrapper .exp-card .exp-tag {
+    order: 2;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.72rem !important;
+    padding: 0.28rem 0.75rem !important;
+}
+
+#grid-tours-wrapper .exp-card h3 {
+    order: 3;
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--text-primary) !important;
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+    margin: 0 0 0.5rem 0 !important;
+}
+
+#grid-tours-wrapper .exp-card > p {
+    order: 4;
+    color: var(--text-secondary) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+    margin: 0 0 0.9rem 0 !important;
+    opacity: 1 !important;
+}
+
+/* Ficha práctica visible sin depender de hover */
+#grid-tours-wrapper .exp-card .exp-hover-drawer {
+    order: 5;
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    background: rgba(0, 138, 166, 0.04) !important;
+    border: 1px solid rgba(0, 138, 166, 0.14) !important;
+    border-radius: 12px !important;
+    padding: 0.65rem 0.85rem !important;
+    margin: 0 0 1rem 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    gap: 0.35rem !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-drawer-title {
+    display: none !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-drawer-specs {
+    gap: 0.3rem !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-drawer-spec-item {
+    font-size: 0.8rem !important;
+    color: var(--text-secondary) !important;
+    line-height: 1.38 !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-drawer-spec-item strong {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+#grid-tours-wrapper .exp-card .exp-card-actions {
+    order: 6;
+    margin-top: auto !important;
+    padding-top: 0.85rem !important;
+    border-top: 1px solid rgba(9, 30, 41, 0.07);
+    gap: 0.5rem !important;
+    flex-wrap: wrap;
+}
+
+#grid-tours-wrapper .exp-card .exp-link {
+    background: rgba(0, 104, 126, 0.08);
+    border: 1.5px solid var(--accent-cyan-text);
+    color: var(--accent-cyan-text) !important;
+    padding: 0.5rem 0.95rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.86rem;
+    min-height: var(--tap-target-min);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid-tours-wrapper .exp-card .exp-link:hover {
+    background: rgba(0, 104, 126, 0.15);
+}
+
+#grid-tours-wrapper .exp-card .exp-details-link {
+    color: var(--accent-cyan-text) !important;
+    font-size: 0.86rem !important;
+    font-weight: 600 !important;
+    min-height: var(--tap-target-min);
+    padding: 0.4rem 0.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* 4. D4, D5, D7, D3 · Ajustes Mobile-First (<= 768px) */
+@media (max-width: 768px) {
+    /* Contenedores y grillas sin desborde */
+    .container {
+        padding: 2.25rem 1.15rem !important;
+        max-width: 100%;
+    }
+
+    .experiences-grid,
+    .secondary-experiences-grid,
+    .testimonials-grid,
+    .pkg-grid,
+    .why-grid,
+    .blog-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 1.35rem !important;
+    }
+
+    /* D5 · Rediseño controlado del Hero en móvil */
+    .hero {
+        min-height: auto !important;
+        padding: 4.85rem 1.15rem 1.65rem 1.15rem !important;
+        justify-content: flex-start !important;
+    }
+
+    .hero-coords {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.14em !important;
+        margin-bottom: 0.45rem !important;
+    }
+
+    #hero-main-title {
+        font-size: clamp(1.85rem, 6.4vw, 2.3rem) !important;
+        line-height: 1.1 !important;
+        margin-bottom: 0.6rem !important;
+    }
+
+    #hero-main-title em {
+        font-size: clamp(1.95rem, 6.8vw, 2.4rem) !important;
+        margin-top: 0.05rem !important;
+    }
+
+    .hero-lead {
+        font-size: 0.9rem !important;
+        line-height: 1.48 !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .hero-actions {
+        gap: 0.55rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+
+    .btn-hero {
+        min-height: 46px !important;
+        padding: 0.72rem 1.25rem !important;
+        font-size: 0.9rem !important;
+    }
+
+    .hero-trust-line {
+        font-size: 0.72rem !important;
+        line-height: 1.4 !important;
+        margin-top: 0.45rem !important;
+        margin-bottom: 0.65rem !important;
+    }
+
+    /* Widget de estado de laguna compacto en 2 columnas */
+    .hero-live-widget {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.25rem !important;
+        padding: 0.75rem 0.95rem !important;
+        border-radius: 14px !important;
+    }
+
+    .hero-live-widget-head {
+        padding-bottom: 0.4rem !important;
+        margin-bottom: 0.4rem !important;
+        font-size: 0.76rem !important;
+    }
+
+    .hero-live-widget-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+    }
+
+    .hero-live-widget-list li {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.15rem !important;
+        font-size: 0.72rem !important;
+        background: rgba(255, 255, 255, 0.04);
+        padding: 0.35rem 0.55rem;
+        border-radius: 8px;
+    }
+
+    button.hero-live-widget-action {
+        margin-top: 0.35rem !important;
+        padding-top: 0.35rem !important;
+        min-height: 44px !important;
+        font-size: 0.72rem !important;
+        color: #5EEAD4 !important;
+    }
+
+    /* D4 · Filtros de categorías compactos con scroll horizontal */
+    .gallery-filters {
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 0.25rem 0.5rem 0.5rem 0.15rem !important;
+        margin-bottom: 1.35rem !important;
+        gap: 0.5rem !important;
+    }
+
+    .gallery-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter-btn {
+        flex: 0 0 auto !important;
+        scroll-snap-align: start;
+        white-space: nowrap !important;
+        min-height: 42px;
+        padding: 0.5rem 0.95rem !important;
+        font-size: 0.84rem !important;
+    }
+
+    /* D7 · Botón Sticky de WhatsApp compacto y no interferente */
+    .mobile-sticky-cta {
+        left: 0.85rem !important;
+        right: 0.85rem !important;
+        bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px)) !important;
+        min-height: 46px !important;
+        padding: 0.7rem 1.1rem !important;
+        font-size: 0.9rem !important;
+        box-shadow: 0 8px 22px rgba(13, 144, 80, 0.38), 0 2px 8px rgba(0, 0, 0, 0.22) !important;
+        transition: transform 0.25s ease, opacity 0.25s ease !important;
+    }
+
+    body:has(#mobile-drawer.active) .mobile-sticky-cta,
+    body:has(#tour-modal.active) .mobile-sticky-cta,
+    body:has(#lightbox-modal.active) .mobile-sticky-cta,
+    body:has(#whatsapp-booking-form:focus-within) .mobile-sticky-cta,
+    body.ui-overlay-open .mobile-sticky-cta {
+        transform: translateY(150%) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* D3 · Reestructuración compacta del Footer en móvil (2 columnas) */
+    footer {
+        padding: 2.25rem 1.15rem 1.5rem 1.15rem !important;
+    }
+
+    .footer-cta {
+        margin-top: 2rem !important;
+        padding: 1.65rem 1.25rem !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.35rem 1rem !important;
+        padding-bottom: 1.5rem !important;
+        text-align: left !important;
+    }
+
+    .footer-col {
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 0.65rem !important;
+    }
+
+    .footer-col:first-child,
+    .footer-col:nth-child(4) {
+        grid-column: 1 / -1;
+    }
+
+    .footer-col:nth-child(4) {
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(9, 30, 41, 0.08);
+    }
+
+    .footer-col h4 {
+        text-align: left !important;
+        margin-bottom: 0.15rem !important;
+        font-size: 0.78rem !important;
+    }
+
+    .footer-col ul {
+        gap: 0.15rem !important;
+    }
+
+    .footer-col ul a {
+        min-height: 36px !important;
+        font-size: 0.86rem !important;
+        padding: 0.15rem 0;
+    }
+
+    .footer-partner-badges {
+        justify-content: flex-start !important;
+        gap: 0.5rem !important;
+    }
+
+    .footer-meta {
+        margin-top: 1rem !important;
+        padding-top: 1rem !important;
+        text-align: left;
+    }
+}
+
+/* 5. Teléfonos Pequeños (320px - 360px): Calibración Fina */
+@media (max-width: 360px) {
+    .container {
+        padding: 1.85rem 0.9rem !important;
+    }
+
+    #main-header {
+        padding: 0.55rem 0.75rem !important;
+    }
+
+    #main-header .logo img {
+        height: 32px !important;
+    }
+
+    #main-header .lang-switcher .lang-btn {
+        padding: 4px 5px !important;
+        font-size: 0.68rem !important;
+    }
+
+    #grid-tours-wrapper .exp-card {
+        padding: 1.1rem !important;
+    }
+
+    #grid-tours-wrapper .exp-card .exp-img-container {
+        width: calc(100% + 2.2rem) !important;
+        margin: -1.1rem -1.1rem 0.95rem -1.1rem !important;
+        height: 190px !important;
+    }
+
+    #grid-tours-wrapper .exp-card .exp-card-actions {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    #grid-tours-wrapper .exp-card .exp-link,
+    #grid-tours-wrapper .exp-card .exp-details-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
