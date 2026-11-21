@@ -1129,27 +1129,42 @@ function updateLightboxContent() {
 const TOUR_GUIDE_URLS = {
     es: {
         biolum: '/bioluminiscencia-oaxaca/',
+        'laguna-sunset': '/atardecer-laguna-manialtepec/',
         tortugas: '/liberacion-tortugas-oaxaca/',
         delfines: '/avistamiento-delfines-oaxaca/',
         cabalgata: '/paseo-caballo-puerto-escondido/',
         kayak: '/kayak-manglares-manialtepec/',
-        chacahua: '/tour-chacahua/'
+        cascadas: '/cascadas-copalita-oaxaca/',
+        tirolesa: '/tirolesa-puerto-escondido/',
+        termales: '/aguas-termales-atotonilco-oaxaca/',
+        chacahua: '/tour-chacahua/',
+        mazunte: '/tour-mazunte-punta-cometa/'
     },
     en: {
         biolum: '/en/bioluminescence-tour-oaxaca/',
+        'laguna-sunset': '/en/manialtepec-lagoon-sunset-tour/',
         tortugas: '/en/turtle-release-puerto-escondido/',
         delfines: '/en/dolphin-whale-watching-puerto-escondido/',
         cabalgata: '/en/sunset-horseback-riding-puerto-escondido/',
         kayak: '/en/kayak-manialtepec-lagoon/',
-        chacahua: '/en/chacahua-national-park-tour/'
+        cascadas: '/en/copalita-waterfalls-oaxaca/',
+        tirolesa: '/en/zipline-puerto-escondido/',
+        termales: '/en/atotonilco-hot-springs-oaxaca/',
+        chacahua: '/en/chacahua-national-park-tour/',
+        mazunte: '/en/mazunte-punta-cometa-tour/'
     },
     fr: {
         biolum: '/fr/bioluminescence-oaxaca/',
+        'laguna-sunset': '/fr/coucher-soleil-lagune-manialtepec/',
         tortugas: '/fr/liberation-tortues-puerto-escondido/',
         delfines: '/fr/dauphins-baleines-puerto-escondido/',
         cabalgata: '/fr/balade-cheval-coucher-soleil/',
         kayak: '/fr/kayak-lagune-manialtepec/',
-        chacahua: '/fr/parc-national-chacahua-tour/'
+        cascadas: '/fr/cascades-copalita-oaxaca/',
+        tirolesa: '/fr/tyrolienne-puerto-escondido/',
+        termales: '/fr/sources-thermales-atotonilco/',
+        chacahua: '/fr/parc-national-chacahua-tour/',
+        mazunte: '/fr/excursion-mazunte-punta-cometa/'
     }
 };
 

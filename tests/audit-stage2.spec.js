@@ -113,9 +113,9 @@ test.describe('Etapa 2 · i18n, SEO, Schema, OG y Paginas Legales', () => {
     }
   });
 
-  test('las 36 paginas del sitemap cumplen Schema JSON-LD valido, OG absolutas, Google Fonts, titulos <= 65 chars y enlace de privacidad', async ({ page, request }) => {
+  test('las 51 paginas del sitemap cumplen Schema JSON-LD valido, OG absolutas, Google Fonts, titulos <= 65 chars y enlace de privacidad', async ({ page, request }) => {
     const routes = getSitemapRoutes();
-    expect(routes.length).toBe(36);
+    expect(routes.length).toBe(51);
 
     for (const route of routes) {
       await ir(page, route);

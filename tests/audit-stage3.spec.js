@@ -117,22 +117,25 @@ test.describe('Etapa 3 · Traduccion total EN/FR, galerias en tours, SILO modal,
     }
   });
 
-  test('el modal #tour-modal enlaza al SILO en tours principales y se oculta en tours secundarios (ES/EN/FR)', async ({ page, request }) => {
+  test('el modal #tour-modal enlaza al SILO en tours principales y secundarios (ES/EN/FR)', async ({ page, request }) => {
     const cases = [
       { home: '/', flagship: [
         { key: 'biolum', expected: '/bioluminiscencia-oaxaca/' },
         { key: 'chacahua', expected: '/tour-chacahua/' },
         { key: 'delfines', expected: '/avistamiento-delfines-oaxaca/' },
+        { key: 'cascadas', expected: '/cascadas-copalita-oaxaca/' },
       ] },
       { home: '/en/', flagship: [
         { key: 'biolum', expected: '/en/bioluminescence-tour-oaxaca/' },
         { key: 'chacahua', expected: '/en/chacahua-national-park-tour/' },
         { key: 'delfines', expected: '/en/dolphin-whale-watching-puerto-escondido/' },
+        { key: 'cascadas', expected: '/en/copalita-waterfalls-oaxaca/' },
       ] },
       { home: '/fr/', flagship: [
         { key: 'biolum', expected: '/fr/bioluminescence-oaxaca/' },
         { key: 'chacahua', expected: '/fr/parc-national-chacahua-tour/' },
         { key: 'delfines', expected: '/fr/dauphins-baleines-puerto-escondido/' },
+        { key: 'cascadas', expected: '/fr/cascades-copalita-oaxaca/' },
       ] },
     ];
 
@@ -147,10 +150,6 @@ test.describe('Etapa 3 · Traduccion total EN/FR, galerias en tours, SILO modal,
         expect(res.status(), `SILO target ${f.expected} debe responder 200`).toBe(200);
         await page.locator('#modal-close').click();
       }
-
-      await page.evaluate(() => window.openTourModal('cascadas'));
-      await expect(page.locator('#modal-guide-link')).toBeHidden();
-      await page.locator('#modal-close').click();
     }
   });
 
