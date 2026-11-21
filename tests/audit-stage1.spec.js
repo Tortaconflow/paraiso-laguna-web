@@ -40,9 +40,9 @@ async function getWhatsappClickEvents(page) {
 }
 
 test.describe('Etapa 1 · Auditoria Critica P0', () => {
-  test('todos los enlaces internos en las 33 paginas del sitemap devuelven HTTP 200', async ({ page, request }) => {
+  test('todos los enlaces internos en las 36 paginas del sitemap devuelven HTTP 200', async ({ page, request }) => {
     const routes = getSitemapRoutes();
-    expect(routes.length).toBe(33);
+    expect(routes.length).toBe(36);
 
     const internalTargets = new Set(routes);
     for (const route of routes) {

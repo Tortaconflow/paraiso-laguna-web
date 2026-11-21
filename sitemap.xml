@@ -331,4 +331,34 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/blog/liberation-tortues-puerto-escondido.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/blog/liberacion-tortugas-puerto-escondido.html" />
   </url>
+  <url>
+    <loc>https://paraisolaguna.com/aviso-de-privacidad/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/aviso-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/aviso-de-privacidad/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/en/privacy-policy/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/aviso-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/aviso-de-privacidad/" />
+  </url>
+  <url>
+    <loc>https://paraisolaguna.com/fr/politique-confidentialite/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://paraisolaguna.com/aviso-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://paraisolaguna.com/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://paraisolaguna.com/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://paraisolaguna.com/aviso-de-privacidad/" />
+  </url>
 </urlset>

@@ -29,7 +29,7 @@
     <meta property="og:description" content="Reserva tours de bioluminiscencia en Manialtepec, liberación de tortugas, avistamiento de delfines, kayak en manglares y excursiones a Chacahua. Guías locales certificados en Puerto Escondido.">
     <meta property="og:url" content="https://paraisolaguna.com/">
     <meta property="og:site_name" content="Paraíso Laguna">
-    <meta property="og:image" content="https://paraisolaguna.com/assets/images/paraiso-laguna-bioluminiscencia.jpg">
+    <meta property="og:image" content="https://paraisolaguna.com/assets/images/og-paraiso-laguna-1200x630.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Bioluminiscencia en Laguna Manialtepec - Paraíso Laguna Ecoturismo">
@@ -38,7 +38,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tours de Ecoturismo en Puerto Escondido, Oaxaca | Bioluminiscencia y Aventura — Paraíso Laguna">
     <meta name="twitter:description" content="Reserva tours de bioluminiscencia en Manialtepec, liberación de tortugas, avistamiento de delfines y kayak en manglares en Puerto Escondido. Guías locales certificados.">
-    <meta name="twitter:image" content="https://paraisolaguna.com/assets/images/paraiso-laguna-bioluminiscencia.jpg">
+    <meta name="twitter:image" content="https://paraisolaguna.com/assets/images/og-paraiso-laguna-1200x630.jpg">
     
     <!-- Google Fonts Preconnect and Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +50,7 @@
     <link rel="preload" href="/assets/images/logo.jpg" as="image" type="image/jpeg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=2.8.1">
+    <link rel="stylesheet" href="/styles.css?v=2.8.2">
     
     <!-- Favicon (Prepared for custom asset) -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -60,292 +60,292 @@
        JSON-LD STRUCTURED SCHEMA (SEO SUPREMACY)
        ========================================================================== -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Place",
+      "@id": "https://paraisolaguna.com/#place",
+      "name": "Laguna de Manialtepec",
+      "description": "Una de las lagunas bioluminiscentes más famosas de México, ubicada a solo 14 km de Puerto Escondido, Oaxaca.",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "15.9500",
+        "longitude": "-97.1167"
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=15.9500,-97.1167",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laguna de Manialtepec, Puerto Escondido",
+        "addressLocality": "Puerto Escondido",
+        "addressRegion": "Oaxaca",
+        "postalCode": "71980",
+        "addressCountry": "MX"
+      }
+    },
+    {
+      "@type": "TravelAgency",
+      "@id": "https://paraisolaguna.com/#organization",
+      "name": "Paraíso Laguna",
+      "url": "https://paraisolaguna.com",
+      "logo": "https://paraisolaguna.com/assets/images/logo.jpg",
+      "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
+      "email": "reilyvica@gmail.com",
+      "telephone": "+529541611334",
+      "priceRange": "$$",
+      "description": "Paraíso Laguna es una agencia premium de ecoturismo y aventura local en Puerto Escondido, Oaxaca. Nos especializamos en tours ecológicos, reserva de experiencias en kayak, avistamiento de delfines y ballenas, liberación de tortugas y bioluminiscencia en la Laguna de Manialtepec.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Laguna de Manialtepec, Puerto Escondido",
+        "addressLocality": "Puerto Escondido",
+        "addressRegion": "Oaxaca",
+        "postalCode": "71980",
+        "addressCountry": "MX"
+      },
+      "sameAs": [
+        "https://www.instagram.com/paraisolagunamx",
+        "https://www.facebook.com/profile.php?id=61587637104410"
+      ],
+      "openingHours": [
+        "Mo-Su 09:00-18:00"
+      ],
+      "location": {
+        "@id": "https://paraisolaguna.com/#place"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-biolum",
+      "name": "Bioluminiscencia Mágica",
+      "description": "Experiencia nocturna en la Laguna de Manialtepec. Navega y nada en aguas bioluminiscentes iluminadas por dinoflagelados que emiten luz azul-verdosa al ser perturbados.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT3H",
+      "tourStartPoint": {
+        "@id": "https://paraisolaguna.com/#place"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-tortugas",
+      "name": "Integración de Tortugas",
+      "description": "Conoce el campamento tortuguero La Escobilla o Vive Mar, aprende sobre el cuidado de las tortugas marinas y ayuda a una tortuga bebé a integrarse al océano al atardecer.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT2H",
+      "tourStartPoint": {
+        "@id": "https://paraisolaguna.com/#place"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-delfines",
+      "name": "Avistamiento de Delfines y Ballenas en Puerto Escondido",
+      "description": "Navega en el Océano Pacífico frente a Puerto Escondido para observar delfines, mantarrayas, tortugas y ballenas bajo el cálido amanecer.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT4H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-cabalgata",
+      "name": "Atardecer a Caballo y Caballos Nadadores",
+      "description": "Cabalga por hermosos paisajes naturales, observa la flora y fauna de Manialtepec, y presencia el espectáculo único de los caballos nadadores en el río.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT3H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-kayak",
+      "name": "Paseo en Kayak por Manglares",
+      "description": "Recorrido guiado en kayak a través de los canales de manglares en la Laguna de Manialtepec, ideal para la observación de aves exóticas y conexión natural.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT1H30M",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-chacahua",
+      "name": "Tour de Chacahua y Manglares",
+      "description": "Exploración completa en lancha de los laberintos de manglares del Parque Nacional Lagunas de Chacahua, observación de iguanas y descanso en playas vírgenes.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT6H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según el tamaño del grupo y temporada.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-cascadas",
+      "name": "Cascadas Mágicas de Copalita",
+      "description": "Viaje selvático al sur de Puerto Escondido en San Juan Lachao para nadar en cascadas de aguas cristalinas rodeadas de densa vegetación tropical.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT7H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-tirolesa",
+      "name": "Tirolesa Extrema en San Juan Lachao",
+      "description": "Circuito de aventura extrema con caminata por el bosque chatino, nado en cascadas cristalinas y deslizamiento en tirolesas sobre espectaculares cañones naturales.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT7H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-termales",
+      "name": "Aguas Termales de Atotonilco",
+      "description": "Cabalgata de relajación y salud hacia las pozas termales minerales naturales de Atotonilco, rodeado de los sonidos de la naturaleza virgen de Oaxaca.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT7H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-mazunte",
+      "name": "Tour Mazunte Costa Oaxaqueña y Punta Cometa",
+      "description": "Recorrido de día completo por las playas de Mazunte, Zipolite, el Centro Mexicano de la Tortuga y el espectacular mirador de Punta Cometa para apreciar el atardecer.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT9H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "TouristTrip",
+      "@id": "https://paraisolaguna.com/#tour-laguna-sunset",
+      "name": "Atardecer en la Laguna de Manialtepec y Playa Puerto Suelo",
+      "description": "Navegación de 13 km por los manglares, fogata y bombones en la playa semivirgen de Puerto Suelo, y regreso bajo el brillo mágico de la bioluminiscencia nocturna.",
+      "provider": {
+        "@id": "https://paraisolaguna.com/#organization"
+      },
+      "duration": "PT5H",
+      "offers": {
+        "@type": "Offer",
+        "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
+        "url": "https://paraisolaguna.com/#contacto",
+        "priceCurrency": "MXN",
+        "availability": "https://schema.org/InStock"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://paraisolaguna.com/#faqs",
+      "mainEntity": [
         {
-          "@type": "Place",
-          "@id": "https://paraisolaguna.com/#place",
-          "name": "Laguna de Manialtepec",
-          "description": "Una de las lagunas bioluminiscentes más famosas de México, ubicada a solo 14 km de Puerto Escondido, Oaxaca.",
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "15.9500",
-            "longitude": "-97.1167"
-          },
-          "hasMap": "https://www.google.com/maps/search/?api=1&query=15.9500,-97.1167",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Laguna de Manialtepec, Puerto Escondido",
-            "addressLocality": "Puerto Escondido",
-            "addressRegion": "Oaxaca",
-            "postalCode": "71980",
-            "addressCountry": "MX"
+          "@type": "Question",
+          "name": "¿Qué incluye la experiencia de Bioluminiscencia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluye el traslado en lancha con guías locales certificados por la Laguna de Manialtepec, chaleco salvavidas obligatorio y tiempo libre para nadar en el agua bioluminiscente. Adicionalmente, se puede coordinar el transporte de ida y vuelta desde Puerto Escondido o Mazunte."
           }
         },
         {
-          "@type": "TravelAgency",
-          "@id": "https://paraisolaguna.com/#organization",
-          "name": "Paraíso Laguna",
-          "url": "https://paraisolaguna.com",
-          "logo": "https://paraisolaguna.com/assets/images/logo.jpg",
-          "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
-          "email": "reilyvica@gmail.com",
-          "telephone": "+529541611334",
-          "priceRange": "$$",
-          "description": "Paraíso Laguna es una agencia premium de ecoturismo y aventura local en Puerto Escondido, Oaxaca. Nos especializamos en tours ecológicos, reserva de experiencias en kayak, avistamiento de delfines y ballenas, liberación de tortugas y bioluminiscencia en la Laguna de Manialtepec.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Laguna de Manialtepec, Puerto Escondido",
-            "addressLocality": "Puerto Escondido",
-            "addressRegion": "Oaxaca",
-            "postalCode": "71980",
-            "addressCountry": "MX"
-          },
-          "sameAs": [
-            "https://www.instagram.com/paraisolagunamx",
-            "https://www.facebook.com/profile.php?id=61587637104410"
-          ],
-          "openingHours": [
-            "Mo-Su 09:00-18:00"
-          ],
-          "location": {
-            "@id": "https://paraisolaguna.com/#place"
+          "@type": "Question",
+          "name": "¿Es seguro para niños y adultos mayores?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "¡Sí, absolutamente! Todas nuestras experiencias son de nivel familiar y amigables con el medio ambiente. Contamos con chalecos salvavidas para todas las edades y las embarcaciones son manejadas por capitanes locales certificados y experimentados."
           }
         },
         {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-biolum",
-          "name": "Bioluminiscencia Mágica",
-          "description": "Experiencia nocturna en la Laguna de Manialtepec. Navega y nada en aguas bioluminiscentes iluminadas por dinoflagelados que emiten luz azul-verdosa al ser perturbados.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT3H",
-          "tourStartPoint": {
-            "@id": "https://paraisolaguna.com/#place"
-          },
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
+          "@type": "Question",
+          "name": "¿Por qué no publican precios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque el precio justo depende de la fecha, el tamaño del grupo y si combinas experiencias. Mandas tu solicitud por WhatsApp y respondemos con la mejor tarifa de ese día, descuentos de grupo si aplican y el método de pago que te acomode. Sin registros ni pagos por adelantado."
           }
         },
         {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-tortugas",
-          "name": "Integración de Tortugas",
-          "description": "Conoce el campamento tortuguero La Escobilla o Vive Mar, aprende sobre el cuidado de las tortugas marinas y ayuda a una tortuga bebé a integrarse al océano al atardecer.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT2H",
-          "tourStartPoint": {
-            "@id": "https://paraisolaguna.com/#place"
-          },
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
+          "@type": "Question",
+          "name": "¿Qué ropa o aditamentos debo llevar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recomendamos llevar traje de baño, toalla, ropa cómoda que se pueda mojar y calzado cerrado para el agua. Muy importante: no usar repelentes ni protectores solares químicos para proteger el delicado ecosistema lagunar."
           }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-delfines",
-          "name": "Avistamiento de Delfines y Ballenas en Puerto Escondido",
-          "description": "Navega en el Océano Pacífico frente a Puerto Escondido para observar delfines, mantarrayas, tortugas y ballenas bajo el cálido amanecer.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT4H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-cabalgata",
-          "name": "Atardecer a Caballo y Caballos Nadadores",
-          "description": "Cabalga por hermosos paisajes naturales, observa la flora y fauna de Manialtepec, y presencia el espectáculo único de los caballos nadadores en el río.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT3H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-kayak",
-          "name": "Paseo en Kayak por Manglares",
-          "description": "Recorrido guiado en kayak a través de los canales de manglares en la Laguna de Manialtepec, ideal para la observación de aves exóticas y conexión natural.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT1H30M",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-chacahua",
-          "name": "Tour de Chacahua y Manglares",
-          "description": "Exploración completa en lancha de los laberintos de manglares del Parque Nacional Lagunas de Chacahua, observación de iguanas y descanso en playas vírgenes.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT6H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según el tamaño del grupo y temporada.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-cascadas",
-          "name": "Cascadas Mágicas de Copalita",
-          "description": "Viaje selvático al sur de Puerto Escondido en San Juan Lachao para nadar en cascadas de aguas cristalinas rodeadas de densa vegetación tropical.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT7H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-tirolesa",
-          "name": "Tirolesa Extrema en San Juan Lachao",
-          "description": "Circuito de aventura extrema con caminata por el bosque chatino, nado en cascadas cristalinas y deslizamiento en tirolesas sobre espectaculares cañones naturales.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT7H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-termales",
-          "name": "Aguas Termales de Atotonilco",
-          "description": "Cabalgata de relajación y salud hacia las pozas termales minerales naturales de Atotonilco, rodeado de los sonidos de la naturaleza virgen de Oaxaca.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT7H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-mazunte",
-          "name": "Tour Mazunte Costa Oaxaqueña y Punta Cometa",
-          "description": "Recorrido de día completo por las playas de Mazunte, Zipolite, el Centro Mexicano de la Tortuga y el espectacular mirador de Punta Cometa para apreciar el atardecer.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT9H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "Tour",
-          "@id": "https://paraisolaguna.com/#tour-laguna-sunset",
-          "name": "Atardecer en la Laguna de Manialtepec y Playa Puerto Suelo",
-          "description": "Navegación de 13 km por los manglares, fogata y bombones en la playa semivirgen de Puerto Suelo, y regreso bajo el brillo mágico de la bioluminiscencia nocturna.",
-          "provider": {
-            "@id": "https://paraisolaguna.com/#organization"
-          },
-          "duration": "PT5H",
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según temporada y número de pasajeros.",
-            "url": "https://paraisolaguna.com/#contacto",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://paraisolaguna.com/#faqs",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Qué incluye la experiencia de Bioluminiscencia?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Incluye el traslado en lancha con guías locales certificados por la Laguna de Manialtepec, chaleco salvavidas obligatorio y tiempo libre para nadar en el agua bioluminiscente. Adicionalmente, se puede coordinar el transporte de ida y vuelta desde Puerto Escondido o Mazunte."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Es seguro para niños y adultos mayores?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "¡Sí, absolutamente! Todas nuestras experiencias son de nivel familiar y amigables con el medio ambiente. Contamos con chalecos salvavidas para todas las edades y las embarcaciones son manejadas por capitanes locales certificados y experimentados."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Por qué no publican precios?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Porque el precio justo depende de la fecha, el tamaño del grupo y si combinas experiencias. Mandas tu solicitud por WhatsApp y respondemos con la mejor tarifa de ese día, descuentos de grupo si aplican y el método de pago que te acomode. Sin registros ni pagos por adelantado."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué ropa o aditamentos debo llevar?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Recomendamos llevar traje de baño, toalla, ropa cómoda que se pueda mojar y calzado cerrado para el agua. Muy importante: no usar repelentes ni protectores solares químicos para proteger el delicado ecosistema lagunar."
-              }
-            }
-          ]
         }
       ]
     }
+  ]
+}
     </script>
     <link rel="canonical" href="https://paraisolaguna.com/">
     <link rel="alternate" hreflang="es" href="https://paraisolaguna.com/">
@@ -1056,63 +1056,61 @@
 
             <!-- Marcado estructurado JSON-LD de Reseñas para Google rich snippets -->
             <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "Product",
-              "name": "Tours de Ecoturismo en Puerto Escondido - Paraíso Laguna",
-              "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
-              "description": "Tours ecológicos premium en Puerto Escondido: bioluminiscencia, liberación de tortugas, avistamiento de delfines, kayak y Chacahua.",
-              "brand": {
-                "@type": "Brand",
-                "name": "Paraíso Laguna"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "bestRating": "5",
-                "worstRating": "5",
-                "ratingCount": "11"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Angel Salgado"
-                  },
-                  "reviewBody": "There's a lot of tour agencies in Puerto Escondido but I am so glad we chose Paraíso Laguna. They offer all the main tours at a very affordable price compared to the nearby competitors, and each guide is extremely polite.",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Sabkodua Sabkodua"
-                  },
-                  "reviewBody": "Quiero recomendar ampliamente los servicios de Paraíso Laguna, principalmente destacar la profesionalidad y amabilidad de Juan de Dios. Fuimos a la experiencia de bioluminiscencia en la Laguna de Manialtepec y fue increíble.",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                  }
-                },
-                {
-                  "@type": "Review",
-                  "author": {
-                    "@type": "Person",
-                    "name": "Yasi Ojeda"
-                  },
-                  "reviewBody": "Fui con unas amigas el fin de semana y la verdad no esperaba que fuera tan increíble. Hicimos el tour de kayak y desde que llegamos los guías nos hicieron sentir súper cómodas; se nota que están certificados.",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5"
-                  }
-                }
-              ]
-            }
-            </script>
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Paraíso Laguna — Tours de Ecoturismo en Puerto Escondido",
+  "image": "https://paraisolaguna.com/assets/images/og-paraiso-laguna-1200x630.jpg",
+  "description": "Tours ecológicos en Puerto Escondido, Oaxaca: bioluminiscencia en Manialtepec, liberación de tortugas, avistamiento de delfines, kayak y Chacahua.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "11"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Angel Salgado"
+      },
+      "reviewBody": "There's a lot of tour agencies in Puerto Escondido but I am so glad we chose Paraíso Laguna. They offer all the main tours at a very affordable price compared to the nearby competitors, and each guide is extremely polite.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Sabkodua Sabkodua"
+      },
+      "reviewBody": "Quiero recomendar ampliamente los servicios de Paraíso Laguna, principalmente destacar la profesionalidad y amabilidad de Juan de Dios. Fuimos a la experiencia de bioluminiscencia en la Laguna de Manialtepec y fue increíble.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Yasi Ojeda"
+      },
+      "reviewBody": "Fui con unas amigas el fin de semana y la verdad no esperaba que fuera tan increíble. Hicimos el tour de kayak y desde que llegamos los guías nos hicieron sentir súper cómodas; se nota que están certificados.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    }
+  ],
+  "@id": "https://paraisolaguna.com/#organization",
+  "url": "https://paraisolaguna.com/"
+}
+    </script>
         </section>
 
         <section id="faqs" class="container reveal">
@@ -1343,7 +1341,7 @@
             </div>
 
             <div class="footer-meta" id="footer-meta-copyright">
-                &copy; 2026 Paraíso Laguna. Todos los derechos reservados. <br>
+                &copy; 2026 Paraíso Laguna. Todos los derechos reservados. · <a href="/aviso-de-privacidad/">Aviso de Privacidad</a> <br>
                 Desarrollo estático ultra-rápido de Ecoturismo Responsable en México.
             </div>
         </div>
@@ -1454,6 +1452,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=2.8.1" defer></script>
+    <script src="/app.js?v=2.8.2" defer></script>
 </body>
 </html>
