@@ -6,6 +6,19 @@
     RewriteEngine On
     RewriteBase /
 
+    # --- 0. Redirección Canónica HTTPS + Sin WWW (segura detrás de Hostinger CDN) ---
+    RewriteCond %{HTTP_HOST} ^www\.paraisolaguna\.com$ [NC]
+    RewriteRule ^ https://paraisolaguna.com%{REQUEST_URI} [R=301,L,NE]
+
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://paraisolaguna.com%{REQUEST_URI} [R=301,L,NE]
+
+    # --- 0b. Bloquear acceso público a archivos internos, auditorías, pruebas y Git ---
+    RewriteRule ^(\.git|\.claude|tests|test-results|node_modules)(/|$) - [F,L,NC]
+    RewriteRule \.(md|lock|log|bak|sql)$ - [F,L,NC]
+    RewriteRule ^(package(-lock)?\.json|playwright\.config\.js|\.gitignore)$ - [F,L,NC]
+
     # --- 1. Redirecciones 301 de URLs antiguas a Nuevas Secciones (con Hash y NE) ---
     RewriteRule ^galeria/?$ /#galeria [R=301,NE,NC,L]
     RewriteRule ^galeria-2/?$ /#galeria [R=301,NE,NC,L]
@@ -49,4 +62,40 @@
     RewriteCond %{REQUEST_URI} litespeed-cache [NC]
     RewriteRule .* - [G,L]
 
+</IfModule>
+
+# --- 5. Protección adicional a archivos de configuración y auditoría ---
+<IfModule mod_authz_core.c>
+    <FilesMatch "^(\.htaccess|\.gitignore|package(-lock)?\.json|playwright\.config\.js|.*\.md)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# --- 6. Cabeceras de Seguridad HTTP ---
+<IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(css|js|webp|jpg|jpeg|png|gif|svg|ico|woff2)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+# --- 7. Caché de navegador para recursos estáticos ---
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
 </IfModule>

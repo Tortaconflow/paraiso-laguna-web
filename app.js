@@ -396,7 +396,7 @@ const TOURS_DATA_I18N = {
             title: "Tour de Chacahua",
             tag: "Tour Completo",
             desc: "Esta actividad toma 1 hora en transporte hasta el pueblo de Zapotal donde se encuentra la primera laguna. Ahí abordaremos una embarcación para un recorrido de aproximadamente 2 horas por toda la laguna, donde conocerás los Laberintos de Manglares, especies de aves migratorias, iguanas y más. Llegaremos a la laguna de Chacahua donde podrás nadar, descansar o disfrutar de mariscos.",
-            duration: "3 Horas",
+            duration: "6 Horas",
             time: "12:30 PM (Medio día)",
             includes: "✅ Chaleco salvavidas\n✅ Seguro de viajero\n✅ Guía certificado\n✅ Transporte viaje redondo",
             bring: "Traje de baño, toalla, ropa de cambio cómoda, lentes de sol y efectivo para consumo de alimentos locales.",
@@ -1603,8 +1603,112 @@ function initApp() {
     });
 
     initBlogMoonChecker();
+    initWhatsAppClickTracking();
     renderGalleryGrid();
     enhanceAccessibility();
+}
+
+/**
+ * Detecta la sección de origen para atribución granular en GA4.
+ */
+function detectWhatsAppSource(el) {
+    if (el.id === 'hero-btn-primary' || el.closest('#inicio')) return 'hero_cta';
+    if (el.classList.contains('mobile-sticky-cta')) return 'mobile_sticky_cta';
+    if (el.classList.contains('wa-floating-bubble') || el.closest('#wa-chat-widget')) return 'floating_bubble';
+    if (el.closest('.tour-hero')) return 'tour_hero_cta';
+    if (el.closest('#blog-moon-result')) return 'blog_moon_checker';
+    if (el.closest('#main-footer, footer:not(.post-footer-cta)')) return 'footer_whatsapp';
+    if (el.closest('.post-content, .blog-post-container')) return 'page_content_cta';
+    return 'direct_link';
+}
+
+/**
+ * Deduce el tour asociado desde data-tour, parámetro text de WhatsApp o la ruta actual.
+ */
+function extractWhatsAppTourName(el, rawUrl) {
+    if (el.dataset && el.dataset.tour) return el.dataset.tour;
+    const textMatch = rawUrl ? (() => {
+        try {
+            return new URL(rawUrl, window.location.origin).searchParams.get('text') || '';
+        } catch (_) {
+            return '';
+        }
+    })() : '';
+    const hay = normalizeTourName(textMatch + ' ' + window.location.pathname);
+    const known = [
+        ['biolumin', 'Bioluminiscencia'],
+        ['tortug', 'Liberación de Tortugas'],
+        ['turtle', 'Liberación de Tortugas'],
+        ['tortues', 'Liberación de Tortugas'],
+        ['delfin', 'Delfines y Ballenas'],
+        ['dolphin', 'Delfines y Ballenas'],
+        ['dauphin', 'Delfines y Ballenas'],
+        ['balein', 'Delfines y Ballenas'],
+        ['cabalgat', 'Atardecer a Caballo'],
+        ['caballo', 'Atardecer a Caballo'],
+        ['horseback', 'Atardecer a Caballo'],
+        ['cheval', 'Atardecer a Caballo'],
+        ['kayak', 'Paseo en Kayak'],
+        ['chacahua', 'Tour de Chacahua'],
+        ['cascad', 'Cascadas de Copalita'],
+        ['tiroles', 'Tirolesa Extrema'],
+        ['tyrolien', 'Tirolesa Extrema'],
+        ['termal', 'Aguas Termales'],
+        ['thermal', 'Aguas Termales'],
+        ['mazunte', 'Tour de Mazunte']
+    ];
+    for (const [needle, label] of known) {
+        if (hay.includes(needle)) return label;
+    }
+    const slug = window.location.pathname.replace(/^\/+|\/+$/g, '');
+    return slug || 'general';
+}
+
+/**
+ * Registra en GA4 todos los clics directos a WhatsApp (enlaces wa.me, burbuja y widget blog).
+ */
+function initWhatsAppClickTracking() {
+    if (window.__waTrackingBound) return;
+    window.__waTrackingBound = true;
+
+    document.addEventListener('click', (e) => {
+        if (!e.target || typeof e.target.closest !== 'function') return;
+
+        const directLink = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+        const bubbleTrigger = e.target.closest('.wa-floating-bubble[onclick*="wa.me"], .wa-floating-bubble[onclick*="api.whatsapp.com"]');
+        const inlineBlogTrigger = (!directLink && !bubbleTrigger)
+            ? e.target.closest('[onclick*="waQuickChat"]')
+            : null;
+
+        let targetEl = directLink || bubbleTrigger;
+        let rawUrl = '';
+        let sourceSection = '';
+
+        if (directLink) {
+            rawUrl = directLink.href || '';
+            sourceSection = detectWhatsAppSource(directLink);
+        } else if (bubbleTrigger) {
+            const m = (bubbleTrigger.getAttribute('onclick') || '').match(/https:\/\/[^'"\s)]+/);
+            rawUrl = m ? m[0] : '';
+            sourceSection = 'floating_bubble';
+        } else if (inlineBlogTrigger && typeof window.waQuickChat === 'function' && window.waQuickChat.toString().includes('wa.me')) {
+            targetEl = inlineBlogTrigger;
+            const m = (inlineBlogTrigger.getAttribute('onclick') || '').match(/'([^']+)'/);
+            rawUrl = m ? '?text=' + encodeURIComponent(m[1]) : '';
+            sourceSection = detectWhatsAppSource(inlineBlogTrigger);
+        }
+
+        if (!targetEl || typeof window.gtag !== 'function') return;
+
+        window.gtag('event', 'whatsapp_click', {
+            'event_category': 'Conversion',
+            'tour_name': extractWhatsAppTourName(targetEl, rawUrl),
+            'source_section': sourceSection,
+            'page_path': window.location.pathname,
+            'language': getCurrentLang(),
+            'link_url': directLink ? rawUrl : (rawUrl || window.location.href)
+        });
+    });
 }
 
 function initBlogMoonChecker() {

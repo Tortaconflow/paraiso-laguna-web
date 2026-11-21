@@ -238,6 +238,7 @@ nav a:hover {
     width: 100%;
     min-height: 100vh;
     min-height: 100svh;
+    background: #04121a;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -256,7 +257,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 70%;
+    object-position: 50% 28%;
     transform: scale(1.08);
     animation: heroKenBurns 26s ease-in-out infinite alternate;
     will-change: transform;
@@ -272,8 +273,8 @@ nav a:hover {
     inset: 0;
     z-index: 1;
     background:
-        linear-gradient(180deg, rgba(4, 14, 20, 0.15) 0%, rgba(4, 14, 20, 0.35) 55%, rgba(4, 14, 20, 0.75) 100%),
-        linear-gradient(90deg, rgba(4, 14, 20, 0.65) 0%, rgba(4, 14, 20, 0.25) 50%, rgba(4, 14, 20, 0.05) 78%);
+        linear-gradient(180deg, rgba(4, 14, 20, 0.25) 0%, rgba(4, 14, 20, 0.45) 55%, rgba(4, 14, 20, 0.85) 100%),
+        linear-gradient(90deg, rgba(4, 14, 20, 0.72) 0%, rgba(4, 14, 20, 0.35) 50%, rgba(4, 14, 20, 0.08) 78%);
 }
 
 .hero-inner {
@@ -288,10 +289,9 @@ nav a:hover {
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
     margin-bottom: 1.5rem;
-    animation: heroFadeUp 0.8s ease both;
-    animation-delay: 0.1s;
 }
 
 #hero-main-title {
@@ -301,9 +301,8 @@ nav a:hover {
     line-height: 1.08;
     letter-spacing: -0.02em;
     color: #fff;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.6);
     margin-bottom: 1.25rem;
-    animation: heroFadeUp 0.9s ease both;
-    animation-delay: 0.25s;
 }
 
 #hero-main-title em {
@@ -315,21 +314,18 @@ nav a:hover {
 
 .hero-lead {
     font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.92);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
     font-weight: 300;
     line-height: 1.6;
     max-width: 38ch;
     margin-bottom: 1.75rem;
-    animation: heroFadeUp 0.9s ease both;
-    animation-delay: 0.45s;
 }
 
 .hero-actions {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    animation: heroFadeUp 0.9s ease both;
-    animation-delay: 0.6s;
 }
 
 .btn-hero {
@@ -368,9 +364,8 @@ nav a:hover {
 .hero-trust-line {
     margin-top: 1.25rem;
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.65);
-    animation: heroFadeUp 0.9s ease both;
-    animation-delay: 0.75s;
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes heroFadeUp {
@@ -750,9 +745,10 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    background: linear-gradient(135deg, #fff, var(--text-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
+    background: none;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: currentColor;
 }
 
 .form-group {
@@ -1383,7 +1379,7 @@ footer {
 .filter-btn:hover {
     background: rgba(29, 112, 184, 0.1);
     border-color: var(--accent-cyan);
-    color: #fff;
+    color: var(--text-primary);
     box-shadow: var(--glow-cyan);
 }
 
@@ -1646,9 +1642,10 @@ footer {
 .blog-page-hero h1 {
     font-size: clamp(2.5rem, 5vw, 3.8rem);
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #fff, var(--text-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
+    background: none;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: currentColor;
 }
 
 .blog-page-hero p {
@@ -1716,7 +1713,7 @@ footer {
 
 .blog-card-title {
     font-size: 1.35rem;
-    color: #fff;
+    color: var(--text-primary);
     margin-bottom: 0.75rem;
     line-height: 1.3;
     font-weight: 700;
@@ -1724,7 +1721,7 @@ footer {
 }
 
 .blog-card:hover .blog-card-title {
-    color: var(--accent-cyan);
+    color: var(--accent-cyan-text);
 }
 
 .blog-card-desc {
@@ -2888,6 +2885,7 @@ textarea:focus-visible {
     position: relative;
     width: 100%;
     min-height: 50vh;
+    background: #04121a;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -3553,9 +3551,9 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
         justify-content: flex-end !important;
     }
 
-    .hero-bg-scrim {
+    .hero-scrim {
         background:
-            linear-gradient(180deg, rgba(3, 12, 16, 0.75) 0%, rgba(3, 12, 16, 0.35) 40%, rgba(3, 12, 16, 0.88) 85%, rgba(3, 12, 16, 0.98) 100%),
+            linear-gradient(180deg, rgba(3, 12, 16, 0.78) 0%, rgba(3, 12, 16, 0.35) 40%, rgba(3, 12, 16, 0.88) 85%, rgba(3, 12, 16, 0.98) 100%),
             radial-gradient(ellipse at 50% 30%, transparent 40%, rgba(3, 12, 16, 0.75) 100%) !important;
     }
 
@@ -3563,7 +3561,7 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
         font-size: 0.68rem !important;
         letter-spacing: 0.18em !important;
         margin-bottom: 0.75rem !important;
-        color: rgba(255, 255, 255, 0.7) !important;
+        color: rgba(255, 255, 255, 0.9) !important;
     }
 
     #hero-main-title {
@@ -3621,7 +3619,7 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
     .hero-trust-line {
         font-size: 0.75rem !important;
         line-height: 1.5 !important;
-        color: rgba(255, 255, 255, 0.65) !important;
+        color: rgba(255, 255, 255, 0.88) !important;
         margin-top: 0.75rem !important;
         margin-bottom: 1rem !important;
     }
@@ -3945,7 +3943,6 @@ html[lang="fr-FR"] .drawer-lang-switcher .drawer-lang-btn.active::before {
 .sec-card-tag,
 .form-group label,
 .blog-read-link,
-.hero-live-widget-action,
 .post-content a,
 .footer-address a {
     color: var(--accent-cyan-text) !important;
@@ -4108,7 +4105,7 @@ div.hero-live-widget {
 
 .hero-live-widget .hero-live-widget-action,
 button.hero-live-widget-action {
-    color: #5EEAD4 !important;
+    color: #7CE8FF !important;
 }
 
 /* ==========================================================================
@@ -4382,19 +4379,15 @@ button.hero-live-widget-action {
         padding-top: 0.35rem !important;
         min-height: 44px !important;
         font-size: 0.72rem !important;
-        color: #5EEAD4 !important;
+        color: #7CE8FF !important;
     }
 
-    /* D4 · Filtros de categorías compactos con scroll horizontal */
+    /* D4 · Filtros de categorías compactos con wrap para evitar clipping */
     .gallery-filters {
-        flex-wrap: nowrap !important;
-        justify-content: flex-start !important;
-        overflow-x: auto !important;
-        overscroll-behavior-x: contain;
-        scroll-snap-type: x proximity;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        padding: 0.25rem 0.5rem 0.5rem 0.15rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        padding: 0.25rem 0.5rem 0.5rem 0.5rem !important;
         margin-bottom: 1.35rem !important;
         gap: 0.5rem !important;
     }
@@ -4436,7 +4429,7 @@ button.hero-live-widget-action {
 
     /* D3 · Reestructuración compacta del Footer en móvil (2 columnas) */
     footer {
-        padding: 2.25rem 1.15rem 1.5rem 1.15rem !important;
+        padding: 2.25rem 1.15rem 6rem 1.15rem !important;
     }
 
     .footer-cta {
