@@ -50,7 +50,7 @@
     <link rel="preload" href="/assets/images/logo.jpg" as="image" type="image/jpeg">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=2.8.2">
+    <link rel="stylesheet" href="/styles.css?v=2.8.3">
     
     <!-- Favicon (Prepared for custom asset) -->
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
@@ -383,7 +383,7 @@
                     <a href="/fr/" class="lang-btn" hreflang="fr" lang="fr" data-lang="fr">FR</a>
                 </div>
             <!-- Hamburger Button (Luxury Redesign Addition) -->
-            <button class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
+            <button type="button" class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -450,10 +450,10 @@
 
             <!-- Experiences Category Filters -->
             <div class="gallery-filters" id="exp-category-filters" style="margin-top: -1.5rem; margin-bottom: 3rem;">
-                <button class="filter-btn active" onclick="filterExperiences('all')">🌴 All Tours</button>
-                <button class="filter-btn" onclick="filterExperiences('nature')">🐢 Wildlife</button>
-                <button class="filter-btn" onclick="filterExperiences('adventure')">🛶 Adventure & Paddle</button>
-                <button class="filter-btn" onclick="filterExperiences('night')">🌌 Night & Sunset</button>
+                <button type="button" class="filter-btn active" onclick="filterExperiences('all')">🌴 All Tours</button>
+                <button type="button" class="filter-btn" onclick="filterExperiences('nature')">🐢 Wildlife</button>
+                <button type="button" class="filter-btn" onclick="filterExperiences('adventure')">🛶 Adventure & Paddle</button>
+                <button type="button" class="filter-btn" onclick="filterExperiences('night')">🌌 Night & Sunset</button>
             </div>
 
             <div class="experiences-grid" id="grid-tours-wrapper">
@@ -476,7 +476,7 @@
                     <h3>Magic Bioluminescence</h3>
                     <p>Dip your hand into the water and watch it spark with glowing light. An unforgettable night.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="#contacto" onclick="selectTourAndScroll('Tour Bioluminiscencia')" class="exp-link" id="link-quote-biolum" aria-label="Get a WhatsApp quote for Magic Bioluminescence">
+                        <a href="#contacto" onclick="selectTourAndScroll('Tour Bioluminiscencia')" class="exp-link" id="link-quote-biolum" aria-label="Preselect Magic Bioluminescence in the booking form">
                             Get a Quote ➔
                         </a>
                         <a href="/en/bioluminescence-tour-oaxaca/" onclick="openTourModal('biolum'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="View details for Magic Bioluminescence tour">
@@ -513,7 +513,7 @@
                     <h3>Sea Turtle Release</h3>
                     <p>Guide baby sea turtles into the Pacific Ocean and support local conservation sanctuaries.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="#contacto" onclick="selectTourAndScroll('Sea Turtle Release')" class="exp-link" id="link-quote-turtles" aria-label="Get a WhatsApp quote for Sea Turtle Release">
+                        <a href="#contacto" onclick="selectTourAndScroll('Sea Turtle Release')" class="exp-link" id="link-quote-turtles" aria-label="Preselect Sea Turtle Release in the booking form">
                             Get a Quote ➔
                         </a>
                         <a href="/en/turtle-release-puerto-escondido/" onclick="openTourModal('tortugas'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="View details for Sea Turtle Release tour">
@@ -551,7 +551,7 @@
                     <h3>Dolphin & Whale Watching</h3>
                     <p>Sail the tranquil Pacific Ocean at sunrise surrounded by wild spinner dolphins and whales.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="#contacto" onclick="selectTourAndScroll('Avistamiento de Delfines')" class="exp-link" id="link-quote-dolphins" aria-label="Get a WhatsApp quote for Dolphin and Whale Watching">
+                        <a href="#contacto" onclick="selectTourAndScroll('Avistamiento de Delfines')" class="exp-link" id="link-quote-dolphins" aria-label="Preselect Dolphin and Whale Watching in the booking form">
                             Get a Quote ➔
                         </a>
                         <a href="/en/dolphin-whale-watching-puerto-escondido/" onclick="openTourModal('delfines'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="View details for Dolphin and Whale Watching tour">
@@ -589,7 +589,7 @@
                     <h3>Sunset Horseback Riding</h3>
                     <p>Ride well-cared horses along scenic riverbanks and watch swimming horses at sunset.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="#contacto" onclick="selectTourAndScroll('Sunset Horseback')" class="exp-link" id="link-quote-horse" aria-label="Get a WhatsApp quote for Sunset Horseback Riding">
+                        <a href="#contacto" onclick="selectTourAndScroll('Sunset Horseback')" class="exp-link" id="link-quote-horse" aria-label="Preselect Sunset Horseback Riding in the booking form">
                             Get a Quote ➔
                         </a>
                         <a href="/en/sunset-horseback-riding-puerto-escondido/" onclick="openTourModal('cabalgata'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="View details for Sunset Horseback Riding tour">
@@ -614,7 +614,7 @@
                         <img src="/assets/images/tours/kayak/kayak-silueta-amanecer.webp"
                              srcset="/assets/images/tours/kayak/kayak-silueta-amanecer-400w.webp 400w,
                                      /assets/images/tours/kayak/kayak-silueta-amanecer-800w.webp 800w,
-                                     /assets/images/tours/kayak/kayak-silueta-amanecer.webp 1920w"
+                                     /assets/images/tours/kayak/kayak-silueta-amanecer.webp 1200w"
                              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
                              alt="Sunrise kayaking in Manialtepec Lagoon" class="exp-img" loading="lazy" width="800" height="533">
                         <!-- Floating Spec Badge -->
@@ -627,7 +627,7 @@
                     <h3>Mangrove Kayak Tour</h3>
                     <p>Glide silently through natural mangrove channels and discover over 300 bird species.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="#contacto" onclick="selectTourAndScroll('Paseo en Kayak')" class="exp-link" id="link-quote-kayak" aria-label="Get a WhatsApp quote for Mangrove Kayak Tour">
+                        <a href="#contacto" onclick="selectTourAndScroll('Paseo en Kayak')" class="exp-link" id="link-quote-kayak" aria-label="Preselect Mangrove Kayak Tour in the booking form">
                             Get a Quote ➔
                         </a>
                         <a href="/en/kayak-manialtepec-lagoon/" onclick="openTourModal('kayak'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="View details for Mangrove Kayak Expedition">
@@ -649,10 +649,10 @@
                 <!-- Tour 6: Chacahua Day Tour -->
                 <article class="glass-card exp-card" id="tour-card-chacahua">
                     <div class="exp-img-container">
-                        <img src="/assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca.png" 
+                        <img src="/assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca.webp" 
                              srcset="/assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca-400w.webp 400w,
                                      /assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca-800w.webp 800w,
-                                     /assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca.png 1200w"
+                                     /assets/images/tours/chacahua/tour-chacahua-manglares-oaxaca.webp 1200w"
                              sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 350px"
                              alt="Chacahua National Park mangrove labyrinths" class="exp-img" loading="lazy" width="800" height="533">
                         <!-- Floating Spec Badge -->
@@ -665,7 +665,7 @@
                     <h3>Chacahua National Park</h3>
                     <p>Cruise massive mangrove labyrinths, meet wild iguanas, and relax on pristine Pacific beaches.</p>
                     <div class="exp-card-actions" style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 1rem;">
-                        <a href="#contacto" onclick="selectTourAndScroll('Tour Chacahua')" class="exp-link" id="link-quote-chacahua" aria-label="Get a WhatsApp quote for Chacahua Day Tour">
+                        <a href="#contacto" onclick="selectTourAndScroll('Tour Chacahua')" class="exp-link" id="link-quote-chacahua" aria-label="Preselect Chacahua Day Tour in the booking form">
                             Get a Quote ➔
                         </a>
                         <a href="/en/chacahua-national-park-tour/" onclick="openTourModal('chacahua'); return false;" class="exp-details-link" style="color: var(--accent-cyan); font-size: 0.95rem; font-weight: 600;" aria-label="View details for Chacahua National Park Day Tour">
@@ -718,7 +718,7 @@
                 <!-- Tour 8: Tirolesa -->
                 <div class="glass-card sec-exp-card" id="tour-card-tirolesa" onclick="openTourModal('tirolesa')">
                     <div class="sec-card-media">
-                        <img src="/assets/images/tours/tirolesa/Gemini_Generated_Image_e9dr9pe9dr9pe9dr.webp" alt="Extreme Zipline Circuit in Lachao" class="sec-card-img" loading="lazy" width="800" height="533">
+                        <img src="/assets/images/tours/tirolesa/tirolesa-selva-puerto-escondido.webp" alt="Extreme Zipline Circuit in Lachao" class="sec-card-img" loading="lazy" width="800" height="533">
                         <div class="sec-card-badge">🕒 7 Hours · Adrenaline</div>
                     </div>
                     <div class="sec-card-body">
@@ -781,7 +781,7 @@
                 <!-- Tour 11: Atardecer en la Laguna -->
                 <div class="glass-card sec-exp-card" id="tour-card-laguna-sunset" onclick="openTourModal('laguna-sunset')">
                     <div class="sec-card-media">
-                        <img src="/assets/images/chacahua-oaxaca-sunsets.jpg" alt="Lagoon Sunset, Bonfire and Bioluminescence" class="sec-card-img" loading="lazy" width="800" height="533">
+                        <img src="/assets/images/tours/atardecer-laguna/atardecer-puerto-suelo-fogata.webp" alt="Lagoon Sunset, Bonfire and Bioluminescence" class="sec-card-img" loading="lazy" width="800" height="533">
                         <div class="sec-card-badge">🕒 5-6 Hours · Sunset & Night</div>
                     </div>
                     <div class="sec-card-body">
@@ -854,18 +854,18 @@
             
             <!-- Category Filters -->
             <div class="gallery-filters" id="gallery-category-filters">
-                <button class="filter-btn active" onclick="filterGallery('todos')">✨ All Photos</button>
-                <button class="filter-btn" onclick="filterGallery('biolum')">🌌 Bioluminescence</button>
-                <button class="filter-btn" onclick="filterGallery('turtles')">🐢 Turtles & Dolphins</button>
-                <button class="filter-btn" onclick="filterGallery('landscapes')">🌅 Sunsets & Landscapes</button>
-                <button class="filter-btn" onclick="filterGallery('adventures')">🛶 Kayak & Adventure</button>
+                <button type="button" class="filter-btn active" onclick="filterGallery('todos')">✨ All Photos</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('biolum')">🌌 Bioluminescence</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('turtles')">🐢 Turtles & Dolphins</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('landscapes')">🌅 Sunsets & Landscapes</button>
+                <button type="button" class="filter-btn" onclick="filterGallery('adventures')">🛶 Kayak & Adventure</button>
             </div>
 
             <!-- Dynamic Masonry Gallery Grid -->
             <div class="gallery-grid" id="photos-grid-wrapper">
                 <!-- First 8 images loaded from real tour photos -->
                 <div class="gallery-item span-featured" onclick="openLightbox(0)">
-                    <img src="/assets/images/tours/bioluminiscencia/estela-bioluminiscente-manialtepec.webp" alt="Boat wake glowing bright neon blue in Manialtepec Lagoon" loading="lazy">
+                    <img src="/assets/images/tours/bioluminiscencia/estela-bioluminiscente-manialtepec.webp" alt="Boat wake glowing bright neon blue in Manialtepec Lagoon" loading="lazy" width="1200" height="1200">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Bioluminescence</span>
                         <p>Manialtepec, 21:40 — The glowing wake 🌌</p>
@@ -873,7 +873,7 @@
                 </div>
 
                 <div class="gallery-item span-v" onclick="openLightbox(1)">
-                    <img src="/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp" alt="Night bioluminescence glowing in Manialtepec Lagoon" loading="lazy">
+                    <img src="/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp" alt="Night bioluminescence glowing in Manialtepec Lagoon" loading="lazy" width="1200" height="1200">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Bioluminescence</span>
                         <p>The lagoon that lights up at night ✨</p>
@@ -881,7 +881,7 @@
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="/assets/images/tours/tortugas/tortugas-crias-la-escobilla.webp" alt="Newborn sea turtle hatchlings ready for release at La Escobilla" loading="lazy">
+                    <img src="/assets/images/tours/tortugas/tortugas-crias-la-escobilla.webp" alt="Newborn sea turtle hatchlings ready for release at La Escobilla" loading="lazy" width="1200" height="1200">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Conservation</span>
                         <p>La Escobilla, 18:20 — Hatchlings ready for the ocean 🐢</p>
@@ -889,7 +889,7 @@
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(3)">
-                    <img src="/assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca.webp" alt="Baby sea turtles heading into the Pacific Ocean" loading="lazy">
+                    <img src="/assets/images/tours/tortugas/integracion-tortugas-marinas-oaxaca.webp" alt="Baby sea turtles heading into the Pacific Ocean" loading="lazy" width="1200" height="1200">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Conservation</span>
                         <p>Sea Turtle Release 🐢</p>
@@ -897,7 +897,7 @@
                 </div>
 
                 <div class="gallery-item span-h" onclick="openLightbox(4)">
-                    <img src="/assets/images/tours/tortugas/i.webp" alt="Community sea turtle sanctuary on the Oaxaca coast" loading="lazy">
+                    <img src="/assets/images/tours/tortugas/tortugas-crias-la-escobilla.webp" alt="Community sea turtle sanctuary on the Oaxaca coast" loading="lazy" width="1200" height="1200">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Conservation</span>
                         <p>Community Turtle Sanctuary 🐢</p>
@@ -905,7 +905,7 @@
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="/assets/images/tours/delfines-ballenas/delfines-junto-lancha.webp" alt="Wild dolphins swimming beside our tour boat in the Pacific" loading="lazy">
+                    <img src="/assets/images/tours/delfines-ballenas/delfines-junto-lancha.webp" alt="Wild dolphins swimming beside our tour boat in the Pacific" loading="lazy" width="1024" height="1024">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Marine Life</span>
                         <p>Open Pacific, 06:50 — Dolphins beside the boat 🐬</p>
@@ -913,7 +913,7 @@
                 </div>
 
                 <div class="gallery-item span-v" onclick="openLightbox(6)">
-                    <img src="/assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp" alt="Dolphin and humpback whale watching off Puerto Escondido" loading="lazy">
+                    <img src="/assets/images/tours/delfines-ballenas/avistamiento-delfines-ballenas-puerto-escondido.webp" alt="Dolphin and humpback whale watching off Puerto Escondido" loading="lazy" width="1024" height="1024">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Marine Life</span>
                         <p>Wild Dolphin Watching 🐬</p>
@@ -921,7 +921,7 @@
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(7)">
-                    <img src="/assets/images/tours/delfines-ballenas/unnamed-8.webp" alt="Wild spinner dolphins leaping in the Pacific Ocean" loading="lazy">
+                    <img src="/assets/images/tours/delfines-ballenas/delfines-junto-lancha.webp" alt="Wild spinner dolphins leaping in the Pacific Ocean" loading="lazy" width="1024" height="1024">
                     <div class="gallery-overlay">
                         <span class="photo-tag">Marine Life</span>
                         <p>Pacific Dolphins 🐬</p>
@@ -931,7 +931,7 @@
 
             <!-- Expand Gallery Button -->
             <div class="gallery-load-more" id="gallery-load-more-container">
-                <button class="btn btn-secondary" id="gallery-load-btn" onclick="expandGallery()">
+                <button type="button" class="btn btn-secondary" id="gallery-load-btn" onclick="expandGallery()">
                     📷 View all authentic photos (32 photos)
                 </button>
             </div>
@@ -940,9 +940,9 @@
         <!-- DYNAMIC LIGHTBOX WIDGET -->
         <div id="lightbox-modal" class="lightbox-overlay">
             <div class="lightbox-content-wrapper">
-                <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-                <button class="lightbox-nav-btn lightbox-prev" onclick="changeLightboxImage(-1)">◀</button>
-                <button class="lightbox-nav-btn lightbox-next" onclick="changeLightboxImage(1)">▶</button>
+                <button type="button" class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                <button type="button" class="lightbox-nav-btn lightbox-prev" onclick="changeLightboxImage(-1)">◀</button>
+                <button type="button" class="lightbox-nav-btn lightbox-next" onclick="changeLightboxImage(1)">▶</button>
                 <img id="lightbox-current-img" class="lightbox-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" width="1200" height="800" alt="Expanded view">
                 <div class="lightbox-caption-box">
                     <div id="lightbox-current-caption" class="lightbox-caption">Photo caption</div>
@@ -1010,7 +1010,7 @@
                         <div class="review-author" style="display: flex; align-items: center; gap: 0.75rem;">
                             <div class="author-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-cyan, #008AA6); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">AS</div>
                             <div>
-                                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Angel Salgado</h4>
+                                <h3 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Angel Salgado</h3>
                                 <span style="font-size: 0.75rem; color: var(--text-muted);">10 reseñas · 4 fotos • Google Maps</span>
                             </div>
                         </div>
@@ -1027,7 +1027,7 @@
                         <div class="review-author" style="display: flex; align-items: center; gap: 0.75rem;">
                             <div class="author-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-orange, #FF7A00); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">SS</div>
                             <div>
-                                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Sabkodua Sabkodua</h4>
+                                <h3 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Sabkodua Sabkodua</h3>
                                 <span style="font-size: 0.75rem; color: var(--text-muted);">Local Guide · 16 reseñas · 15 fotos</span>
                             </div>
                         </div>
@@ -1044,7 +1044,7 @@
                         <div class="review-author" style="display: flex; align-items: center; gap: 0.75rem;">
                             <div class="author-avatar" style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent-green, #00A86B); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem;">YO</div>
                             <div>
-                                <h4 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Yasi Ojeda</h4>
+                                <h3 style="margin: 0; font-size: 0.95rem; color: var(--text-primary);">Yasi Ojeda</h3>
                                 <span style="font-size: 0.75rem; color: var(--text-muted);">Google Maps</span>
                             </div>
                         </div>
@@ -1124,7 +1124,7 @@
             <div class="faq-grid" id="faqs-accordion-wrapper">
                 
                 <div class="faq-item glass-card" id="faq-item-1">
-                    <button class="faq-question" id="btn-faq-q1">
+                    <button type="button" class="faq-question" id="btn-faq-q1">
                         What is included in the Bioluminescence Tour?
                         <span class="faq-icon-arrow">▼</span>
                     </button>
@@ -1136,7 +1136,7 @@
                 </div>
 
                 <div class="faq-item glass-card" id="faq-item-2">
-                    <button class="faq-question" id="btn-faq-q2">
+                    <button type="button" class="faq-question" id="btn-faq-q2">
                         Is it safe for children and senior travelers?
                         <span class="faq-icon-arrow">▼</span>
                     </button>
@@ -1148,7 +1148,7 @@
                 </div>
 
                 <div class="faq-item glass-card" id="faq-item-3">
-                    <button class="faq-question" id="btn-faq-q3">
+                    <button type="button" class="faq-question" id="btn-faq-q3">
                         Why are prices confirmed via WhatsApp?
                         <span class="faq-icon-arrow">▼</span>
                     </button>
@@ -1160,7 +1160,7 @@
                 </div>
 
                 <div class="faq-item glass-card" id="faq-item-4">
-                    <button class="faq-question" id="btn-faq-q4">
+                    <button type="button" class="faq-question" id="btn-faq-q4">
                         What clothing and gear should I bring?
                         <span class="faq-icon-arrow">▼</span>
                     </button>
@@ -1263,7 +1263,9 @@
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.25rem"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972zm11.378-5.395c-.328-.164-1.942-.959-2.242-1.069-.3-.11-.518-.165-.736.165-.219.329-.848 1.069-1.039 1.288-.19.219-.382.247-.71.082-.328-.164-1.386-.511-2.641-1.63-1.04-.927-1.742-2.073-1.946-2.402-.204-.329-.022-.507.142-.671.147-.148.328-.384.492-.575.164-.192.219-.329.328-.549.11-.219.055-.411-.027-.575-.082-.164-.736-1.77-.996-2.42-.266-.65-.558-.56-.763-.571-.19-.01-.41-.012-.628-.012-.218 0-.573.082-.873.411-.3.329-1.147 1.123-1.147 2.738 0 1.616 1.173 3.178 1.337 3.397.164.22 2.307 3.524 5.59 4.945.781.338 1.39.54 1.867.691.784.249 1.498.214 2.062.13.629-.094 1.942-.795 2.216-1.56.273-.767.273-1.424.19-1.56-.081-.137-.3-.219-.628-.383z"/></svg>
                             Book via WhatsApp
                         </button>
+                        <p class="cta-trust-microcopy">⚡ Avg. reply under 10 min · No deposit required · Private &amp; group rates</p>
                         <p class="booking-hint" style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">Opens WhatsApp with your pre-written message. No upfront payment required.</p>
+                        <p class="booking-privacy-note" style="text-align: center; font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.4rem;">By continuing, you agree to receive your WhatsApp quote. <a href="/en/privacy-policy/" style="color: var(--accent-cyan-text); text-decoration: underline;">Privacy Policy</a>.</p>
                     </form>
                 </div>
 
@@ -1293,19 +1295,20 @@
 
             <!-- Columna 2: Colección (Links SILO) -->
             <div class="footer-col">
-                <h4>Tours Collection</h4>
+                <h3>Tours Collection</h3>
                 <ul>
                     <li><a href="/en/bioluminescence-tour-oaxaca/">🌌 Bioluminescence</a></li>
                     <li><a href="/en/turtle-release-puerto-escondido/">🐢 Turtle Release</a></li>
                     <li><a href="/en/chacahua-national-park-tour/">🏝️ Chacahua Tour</a></li>
                     <li><a href="/en/kayak-manialtepec-lagoon/">🛶 Mangrove Kayak</a></li>
                     <li><a href="/en/sunset-horseback-riding-puerto-escondido/">🐎 Horseback Riding</a></li>
+                    <li><a href="/en/dolphin-whale-watching-puerto-escondido/">🐬 Dolphins &amp; Whales</a></li>
                 </ul>
             </div>
 
             <!-- Columna 3: Compromiso -->
             <div class="footer-col">
-                <h4>Commitment</h4>
+                <h3>Commitment</h3>
                 <ul>
                     <li><a href="#contacto">Private Bookings</a></li>
                     <li><a href="#testimonios">Real Reviews</a></li>
@@ -1317,7 +1320,7 @@
 
             <!-- Columna 4: Newsletter & Contacto -->
             <div class="footer-col">
-                <h4>Follow Us</h4>
+                <h3>Follow Us</h3>
                 <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem; text-align: left;">Follow our local conservation chronicles and wildlife sightings.</p>
                 <div class="footer-follow">
                     <a href="https://www.instagram.com/paraisolagunamx" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> Instagram</a>
@@ -1357,7 +1360,7 @@
        ========================================================================== -->
     <div id="tour-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5, 19, 26, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem; transition: var(--transition-smooth);">
         <div class="glass-card modal-content" style="position: relative; width: 100%; max-width: 650px; padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium); border: 1px solid var(--border-glass-hover); max-height: 90vh; overflow-y: auto;">
-            <button id="modal-close" class="modal-close-btn" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text-secondary); font-size: 2rem; cursor: pointer; transition: var(--transition-smooth);">&times;</button>
+            <button type="button" id="modal-close" class="modal-close-btn" style="position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; color: var(--text-secondary); font-size: 2rem; cursor: pointer; transition: var(--transition-smooth);">&times;</button>
             <span class="exp-tag" id="modal-tour-tag" style="margin-bottom: 1rem;">Experience</span>
             <h3 id="modal-tour-title" style="font-size: 2rem; color: var(--text-primary); margin-bottom: 1.5rem; letter-spacing: -0.02em;">Tour Name</h3>
             <p id="modal-tour-desc" style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; font-weight: 300;">Tour description...</p>
@@ -1369,9 +1372,10 @@
                 <div style="grid-column: span 2;"><strong style="color: var(--accent-cyan); display: block; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.25rem;">🎒 What to bring</strong><span id="modal-tour-bring" style="color: var(--text-secondary); font-size: 0.95rem;">Swimsuit, towel, comfortable clothes, reef-safe gear.</span></div>
             </div>
             
-            <button id="modal-cta-btn" class="btn btn-primary submit-btn" style="width: 100%; display: flex; justify-content: center; background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
+            <button type="button" id="modal-cta-btn" class="btn btn-primary submit-btn" style="width: 100%; display: flex; justify-content: center; background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
                 Request Quote via WhatsApp
             </button>
+            <a id="modal-guide-link" class="modal-guide-link" href="#" style="display: none;">Read full tour guide →</a>
         </div>
     </div>
 
@@ -1389,7 +1393,7 @@
                         <div class="wa-chat-status">Online & Ready</div>
                     </div>
                 </div>
-                <button class="wa-chat-close" onclick="toggleWaChat()">&times;</button>
+                <button type="button" class="wa-chat-close" onclick="toggleWaChat()">&times;</button>
             </div>
             
             <div class="wa-chat-body">
@@ -1429,7 +1433,7 @@
             <a href="#inicio" class="logo" onclick="closeMobileMenu()">
                 <span style="font-weight: 800; font-size: 1.4rem; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
-            <button class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
+            <button type="button" class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
         </div>
         <nav class="drawer-nav" style="padding: 2rem;">
             <span style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 2rem;">✧ NAVIGATION MENU</span>
@@ -1457,6 +1461,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=2.8.2" defer></script>
+    <script src="/app.js?v=2.8.3" defer></script>
 </body>
 </html>

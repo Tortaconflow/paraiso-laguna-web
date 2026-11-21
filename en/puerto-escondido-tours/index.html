@@ -39,7 +39,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles.css?v=2.8.2">
+    <link rel="stylesheet" href="/styles.css?v=2.8.3">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- JSON-LD Schema: TouristDestination + ItemList + BreadcrumbList -->
@@ -107,7 +107,7 @@
     <header id="main-header">
         <div class="nav-container">
             <a href="/en/#inicio" class="logo" id="header-logo-link" style="display: flex; align-items: center; gap: 0.75rem;">
-                <img src="/assets/images/logo.jpg" alt="Paraíso Laguna Logo" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                <img src="/assets/images/logo.jpg" alt="Paraíso Laguna Logo" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                 <span style="font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
             <nav id="navbar-menu">
@@ -124,7 +124,7 @@
                 <span class="lang-btn active" data-lang="en">EN</span>
                 <a href="/fr/puerto-escondido-excursions/" class="lang-btn" hreflang="fr" lang="fr" data-lang="fr">FR</a>
             </div>
-            <button class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
+            <button type="button" class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -410,7 +410,7 @@
             <!-- Col 1: Brand & Conservation -->
             <div class="footer-col">
                 <a href="/en/#inicio" class="logo" id="footer-logo-link" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <img src="/assets/images/logo.jpg" alt="Paraíso Laguna Logo" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                    <img src="/assets/images/logo.jpg" alt="Paraíso Laguna Logo" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                     <span style="font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
                 </a>
                 <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; text-align: left;">We design premier eco-experiences in Puerto Escondido, promoting conservation and low-impact responsible tourism.</p>
@@ -422,19 +422,20 @@
 
             <!-- Col 2: Tours Collection -->
             <div class="footer-col">
-                <h4>Tours Collection</h4>
+                <h3>Tours Collection</h3>
                 <ul>
                     <li><a href="/en/bioluminescence-tour-oaxaca/">🌌 Bioluminescence</a></li>
                     <li><a href="/en/turtle-release-puerto-escondido/">🐢 Turtle Release</a></li>
                     <li><a href="/en/chacahua-national-park-tour/">🏝️ Chacahua Tour</a></li>
                     <li><a href="/en/kayak-manialtepec-lagoon/">🛶 Mangrove Kayak</a></li>
                     <li><a href="/en/sunset-horseback-riding-puerto-escondido/">🐎 Horseback Riding</a></li>
+                    <li><a href="/en/dolphin-whale-watching-puerto-escondido/">🐬 Dolphins &amp; Whales</a></li>
                 </ul>
             </div>
 
             <!-- Col 3: Commitment -->
             <div class="footer-col">
-                <h4>Commitment</h4>
+                <h3>Commitment</h3>
                 <ul>
                     <li><a href="/en/#contacto">Private Bookings</a></li>
                     <li><a href="/en/#testimonios">Real Reviews</a></li>
@@ -446,7 +447,7 @@
 
             <!-- Col 4: Follow Us & Contact -->
             <div class="footer-col">
-                <h4>Follow Us</h4>
+                <h3>Follow Us</h3>
                 <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem; text-align: left;">Follow our local conservation chronicles and Pacific wildlife sightings.</p>
                 <div class="footer-follow">
                     <a href="https://www.instagram.com/paraisolagunamx" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> Instagram</a>
@@ -494,7 +495,7 @@
             <a href="/en/#inicio" class="logo" onclick="closeMobileMenu()">
                 <span style="font-weight: 800; font-size: 1.4rem; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
-            <button class="drawer-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
+            <button type="button" class="drawer-close-btn" onclick="closeMobileMenu()" aria-label="Close navigation menu" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
         </div>
         <nav class="drawer-nav" style="padding: 2rem;">
             <span style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 2rem;">✧ NAVIGATION MENU</span>
@@ -522,7 +523,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=2.8.2"></script>
+    <script src="/app.js?v=2.8.3"></script>
 
     <!-- Persistent Mobile CTA -->
     <a href="https://wa.me/529541611334?text=Hello%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%8A%20I%20am%20planning%20a%20trip%20to%20Puerto%20Escondido%20and%20would%20like%20to%20build%20a%20custom%20itinerary." target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Book on WhatsApp">

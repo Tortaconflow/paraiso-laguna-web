@@ -208,6 +208,8 @@ a {
     box-shadow: none !important;
     border: none !important;
     object-fit: contain;
+    width: auto;
+    max-width: 100%;
 }
 
 .logo span {
@@ -1806,7 +1808,8 @@ footer {
     color: var(--text-secondary);
 }
 
-.post-hero-image-wrapper {
+.post-hero-image-wrapper,
+.post-hero-img-wrapper {
     width: 100%;
     height: 450px;
     border-radius: var(--radius-lg);
@@ -1816,7 +1819,8 @@ footer {
     border: 1px solid var(--border-glass);
 }
 
-.post-hero-image {
+.post-hero-image,
+.post-hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2086,7 +2090,8 @@ footer {
     .blog-grid {
         grid-template-columns: 1fr;
     }
-    .post-hero-image-wrapper {
+    .post-hero-image-wrapper,
+    .post-hero-img-wrapper {
         height: 250px;
         margin-bottom: 2rem;
     }
@@ -2431,6 +2436,7 @@ footer {
     text-align: left;
 }
 
+.footer-col h3,
 .footer-col h4 {
     font-size: 0.85rem;
     font-weight: 700;
@@ -2542,6 +2548,7 @@ footer {
         align-items: center;
         text-align: center;
     }
+    .footer-col h3,
     .footer-col h4 {
         text-align: center;
     }
@@ -4460,6 +4467,7 @@ button.hero-live-widget-action {
         border-top: 1px solid rgba(9, 30, 41, 0.08);
     }
 
+    .footer-col h3,
     .footer-col h4 {
         text-align: left !important;
         margin-bottom: 0.15rem !important;
@@ -4529,3 +4537,91 @@ button.hero-live-widget-action {
     }
 }
 
+
+/* ==========================================================================
+   ETAPA 3: Editorial Tour Galleries, Modal SILO Link & CRO Micro-copy
+   ========================================================================== */
+.tour-photo-gallery {
+    margin-top: 3.5rem;
+}
+
+.tour-photo-gallery h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-glass);
+    padding-bottom: 0.75rem;
+}
+
+.tour-photo-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.tour-photo-card {
+    margin: 0;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-premium);
+}
+
+.tour-photo-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.tour-photo-card figcaption {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+    .tour-photo-gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.modal-guide-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    min-height: 44px;
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    border: 1.5px solid #00687E;
+    background: rgba(255, 255, 255, 0.92);
+    color: #005266 !important;
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.modal-guide-link:hover {
+    background: #ffffff;
+    color: #003D4D !important;
+    border-color: #004E5E;
+    transform: translateY(-1px);
+}
+
+.cta-trust-microcopy {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.5;
+}

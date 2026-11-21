@@ -20,17 +20,18 @@
     
 
     <!-- OpenGraph -->
-    <meta property="og:locale" content="es_MX">
+    <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Excursion Parc National de Chacahua | Paraíso Laguna">
-    <meta property="og:description" content="Explorez le Parc National des Lagunes de Chacahua : traversée en bateau dans les mangroves géantes, observation d'iguanes et détente sur les plages du Pacifique.<meta property="og:url" content="https://paraisolaguna.com/tour-chacahua/">
+    <meta property="og:description" content="Explorez le Parc National de Chacahua depuis Puerto Escondido : bateau dans les mangroves, Île aux Iguanes et plages sauvages.">
+    <meta property="og:url" content="https://paraisolaguna.com/fr/parc-national-chacahua-tour/">
     <meta property="og:site_name" content="Paraíso Laguna">
     <meta property="og:image" content="https://paraisolaguna.com/assets/images/tours/chacahua/chacahua-canal-manglar.webp">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Excursion Parc National de Chacahua | Paraíso Laguna">
-    <meta name="twitter:description" content="Explora los laberintos de manglares y canales de aves en el Parque Nacional Chacahua. Tour con transporte viaje redondo y guía. Reserva por WhatsApp.">
+    <meta name="twitter:description" content="Excursion en bateau au Parc National de Chacahua à Oaxaca : mangroves, faune sauvage et plage du Pacifique.">
     <meta name="twitter:image" content="https://paraisolaguna.com/assets/images/tours/chacahua/chacahua-canal-manglar.webp">
 
     <!-- Stylesheets -->
@@ -38,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=2.8.2">
+    <link rel="stylesheet" href="/styles.css?v=2.8.3">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- JSON-LD Schema: Tour + FAQPage -->
@@ -46,117 +47,151 @@
     {
       "@context": "https://schema.org",
       "@graph": [
-        {
-          "@type": "TouristTrip",
-          "@id": "https://paraisolaguna.com/tour-chacahua/#tour",
-          "name": "Tour al Parque Nacional Lagunas de Chacahua",
-          "description": "Excursión al Parque Nacional Lagunas de Chacahua en Oaxaca. Incluye traslado desde Puerto Escondido, paseo en lancha artesanal, exploración de túneles y laberintos de manglar, avistamiento de iguanas y aves migratorias, y tiempo libre para nadar en la playa de Chacahua.",
-          "touristType": "Ecoturismo de Aventura y Naturaleza",
-          "image": "https://paraisolaguna.com/assets/images/tours/chacahua/chacahua-canal-manglar.webp",
-          "provider": {
-            "@type": "TravelAgency",
-            "name": "Paraíso Laguna",
-            "url": "https://paraisolaguna.com",
-            "telephone": "+529541611334"
-          },
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según el tamaño del grupo y temporada.",
-            "url": "https://paraisolaguna.com/tour-chacahua/#reservar",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          },
-          "itinerary": {
-            "@type": "ItemList",
-            "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Salida de Puerto Escondido (12:30 PM) en transporte terrestre"},
-              {"@type": "ListItem", "position": 2, "name": "Llegada al pueblo de Zapotal y abordaje de lancha"},
-              {"@type": "ListItem", "position": 3, "name": "Recorrido en bote navegando canales y laberintos de manglar"},
-              {"@type": "ListItem", "position": 4, "name": "Avistamiento de fauna local (aves, iguanas) en la Isla de las Iguanas"},
-              {"@type": "ListItem", "position": 5, "name": "Llegada a las playas de Chacahua, descanso y comida local frente al mar"},
-              {"@type": "ListItem", "position": 6, "name": "Regreso por lancha al atardecer y traslado de vuelta a Puerto Escondido"}
-            ]
-          },
-          "duration": "PT5H",
-          "touristDestination": {
-            "@type": "TouristDestination",
-            "name": "Parque Nacional Lagunas de Chacahua",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "15.9667",
-              "longitude": "-97.6667"
+            {
+                  "@type": "TouristTrip",
+                  "@id": "https://paraisolaguna.com/fr/parc-national-chacahua-tour/#tour",
+                  "name": "Excursion Parc National des Lagunes de Chacahua",
+                  "description": "Excursion guidée de 6 heures au Parc National des Lagunes de Chacahua à Oaxaca : transfert climatisé depuis Puerto Escondido, navigation de 2h dans les mangroves et baignade.",
+                  "touristType": "Écotourisme en parc national",
+                  "image": "https://paraisolaguna.com/assets/images/tours/chacahua/chacahua-canal-manglar.webp",
+                  "provider": {
+                        "@type": "TravelAgency",
+                        "name": "Paraíso Laguna",
+                        "url": "https://paraisolaguna.com",
+                        "telephone": "+529541611334"
+                  },
+                  "offers": {
+                        "@type": "Offer",
+                        "description": "Devis personnalisé via WhatsApp selon la taille du groupe.",
+                        "url": "https://paraisolaguna.com/fr/parc-national-chacahua-tour/#reservar",
+                        "priceCurrency": "MXN",
+                        "availability": "https://schema.org/InStock"
+                  },
+                  "itinerary": {
+                        "@type": "ItemList",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Prise en charge à votre hôtel à Puerto Escondido (12h30)"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Arrivée à l'embarcadère de Zapotal et embarquement (13h30)"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Navigation guidée dans les labyrinthes de mangroves"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 4,
+                                    "name": "Observation des oiseaux tropicaux et arrêt à l'Île aux Iguanes"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 5,
+                                    "name": "Temps libre sur la baie de Chacahua pour nager et déguster des plats locaux"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 6,
+                                    "name": "Navigation retour au coucher du soleil et transfert à votre hôtel"
+                              }
+                        ]
+                  },
+                  "duration": "PT6H",
+                  "touristDestination": {
+                        "@type": "TouristDestination",
+                        "name": "Parc National Lagunes de Chacahua",
+                        "geo": {
+                              "@type": "GeoCoordinates",
+                              "latitude": "15.9667",
+                              "longitude": "-97.6667"
+                        },
+                        "address": {
+                              "@type": "PostalAddress",
+                              "addressLocality": "Chacahua",
+                              "addressRegion": "Oaxaca",
+                              "addressCountry": "MX"
+                        }
+                  }
             },
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Chacahua",
-              "addressRegion": "Oaxaca",
-              "addressCountry": "MX"
+            {
+                  "@type": "FAQPage",
+                  "@id": "https://paraisolaguna.com/fr/parc-national-chacahua-tour/#faqs",
+                  "mainEntity": [
+                        {
+                              "@type": "Question",
+                              "name": "Combien de temps dure l'excursion à Chacahua ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "L'excursion complète dure environ 6 heures (trajets aller-retour inclus), avec départ vers 12h30 et retour en soirée après le coucher du soleil."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Peut-on se baigner en sécurité dans la lagune ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Oui. L'eau du chenal abrité est tiède, calme et dépourvue de grosses vagues, idéale pour une baignade détendue."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Quels animaux sauvages vit-on dans le Parc National ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "De nombreux oiseaux côtiers et migrateurs (hérons, pélicans, spatules), des iguanes verts dans les mangliers et des crocodiles américains protégés dans leur habitat."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Le repas est-il compris dans la sortie ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Les repas ne sont pas inclus afin de vous laisser choisir librement parmi les restaurants familiaux en bord de plage à Chacahua (pensez à prendre des espèces)."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "L'excursion est-elle adaptée aux enfants et aux seniors ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Oui, c'est une sortie très paisible : véhicule climatisé, bateaux couverts stables avec gilets fournis et navigation sans houle sur les lagunes."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Quelle est la meilleure saison pour aller à Chacahua ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Chacahua se visite toute l'année : de novembre à mai le ciel est ensoleillé et l'eau très limpide ; de juin à octobre la mangrove revêt un vert tropical spectaculaire."
+                              }
+                        }
+                  ]
+            },
+            {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                        {
+                              "@type": "ListItem",
+                              "position": 1,
+                              "name": "Accueil",
+                              "item": "https://paraisolaguna.com/fr/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 2,
+                              "name": "Parc National de Chacahua",
+                              "item": "https://paraisolaguna.com/fr/parc-national-chacahua-tour/"
+                        }
+                  ]
             }
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://paraisolaguna.com/tour-chacahua/#faqs",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Cuánto tiempo dura el tour a Chacahua?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El tour dura aproximadamente de 5 a 6 horas en total. Incluye 1 hora de traslado terrestre de ida desde Puerto Escondido, un recorrido de aproximadamente 2 horas en embarcación por las lagunas y manglares, y 2 horas libres en el pueblo y playa de Chacahua para comer, nadar y descansar."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Se puede nadar en las lagunas de Chacahua?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, hay zonas designadas y seguras donde el agua es sumamente tranquila, ideal para nadar y relajarse. También visitamos la bocabarra donde la laguna se une con el Océano Pacífico."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué tipo de fauna silvestre se puede ver en el Parque Nacional?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El Parque Nacional Lagunas de Chacahua es hogar de una inmensa biodiversidad. Podrás observar diversas aves migratorias y locales (garzas, pelícanos, cigüeñas), iguanas verdes en libertad en las copas de los árboles, y con suerte cangrejos terrestres y diversos peces de estuario."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Está incluida la comida en el tour?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La comida no está incluida en la tarifa básica para brindarte libertad de elegir. Llegamos a enramadas locales frente a la playa donde podrás degustar mariscos recién pescados, tlayudas y platos tradicionales oaxaqueños a precios muy accesibles directamente de las familias de Chacahua."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Es seguro el tour para niños y adultos mayores?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, es una excursión sumamente tranquila y segura. Los traslados terrestres son cómodos y en las lanchas proporcionamos chalecos salvavidas certificados obligatorios. El oleaje en las lagunas es nulo, lo que garantiza una navegación agradable y sin mareos."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuál es la mejor temporada para visitar Chacahua?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Chacahua es espectacular todo el año. De noviembre a mayo (temporada seca) los días son soleados y el agua es templada y cristalina. De julio a octubre (temporada de lluvias) la vegetación es exuberante y los canales lucen increíblemente verdes y místicos."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://paraisolaguna.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Tour Chacahua", "item": "https://paraisolaguna.com/tour-chacahua/"}
-          ]
-        }
       ]
-    }
+}
     </script>
     
     
@@ -175,7 +210,7 @@
     <header id="main-header">
         <div class="nav-container">
             <a href="/fr/#inicio" class="logo" id="header-logo-link" style="display: flex; align-items: center; gap: 0.75rem;">
-                <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                 <span style="font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
             <nav id="navbar-menu">
@@ -193,7 +228,7 @@
                     <span class="lang-btn active" data-lang="fr">FR</span>
                 </div>
             <!-- Hamburger Button (Luxury Redesign Addition) -->
-            <button class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Ouvrir le menu de navigation">
+            <button type="button" class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Ouvrir le menu de navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -207,26 +242,26 @@
         <!-- Breadcrumbs -->
         <nav aria-label="Breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
             <a href="/fr/" style="color: var(--text-secondary);">Accueil</a> <span style="margin: 0 0.5rem;">›</span>
-            <span style="color: var(--accent-cyan);">Tour Chacahua</span>
+            <span style="color: var(--accent-cyan);">Parc National de Chacahua</span>
         </nav>
 
         <article>
             <section class="tour-hero" id="reservar">
                 <div class="tour-hero-media" aria-hidden="true">
-                    <img src="/assets/images/tours/chacahua/chacahua-canal-manglar.webp" alt="Labyrinthes de mangroves émeraude dans le Parc National des Lagunes de Chacahua" fetchpriority="high">
+                    <img src="/assets/images/tours/chacahua/chacahua-canal-manglar.webp" alt="Labyrinthes de mangroves émeraude dans le Parc National des Lagunes de Chacahua" fetchpriority="high" width="1200" height="1200">
                 </div>
                 <div class="tour-hero-scrim" aria-hidden="true"></div>
                 <div class="tour-hero-inner">
-                    <p class="tour-hero-label">Tour Completo · Exploración Natural</p>
-                    <h1>Tour de Chacahua desde Puerto Escondido: Lagunas, Manglares y Playas Vírgenes</h1>
-                    <p class="tour-hero-lead">Adéntrate en los misteriosos túneles de manglar del <strong>Parque Nacional Lagunas de Chacahua</strong>, una de las áreas naturales protegidas más vírgenes y ricas en biodiversidad de México. Disfruta un recorrido en embarcación artesanal, observa aves exóticas en libertad y relájate en la impresionante bahía costera donde confluyen la laguna y el Océano Pacífico.</p>
+                    <p class="tour-hero-label">Excursion Complète · Parc National Protégé</p>
+                    <h1>Parc National de Chacahua depuis Puerto Escondido : Lagunes &amp; Mangroves</h1>
+                    <p class="tour-hero-lead">Pénétrez dans les tunnels végétaux du <strong>Parc National des Lagunes de Chacahua</strong>, l'une des réserves côtières les plus intactes du Mexique. Naviguez parmi les oiseaux migrateurs et les iguanes sauvages avant de profiter d'une baie préservée face au Pacifique.</p>
                     <div class="tour-hero-facts">
-                    <div><strong>🕒 Durée</strong><span>5-6 Heures</span></div>
-                    <div><strong>☀️ Heurerio</strong><span>12:30 PM — Tarde</span></div>
+                    <div><strong>🕒 Durée</strong><span>6 Heures</span></div>
+                    <div><strong>☀️ Horaires</strong><span>12h30 — Après-midi</span></div>
                     <div><strong>📍 Départ</strong><span>Puerto Escondido</span></div>
                     </div>
-                    <p class="tour-hero-includes">Incluye: Transporte viaje redondo, lancha artesanal, seguro de viajero, guía certificado local.</p>
-                    <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%9D%20Quiero%20reservar%20el%20Tour%20de%20Chacahua.%20%C2%BFMe%20pueden%20dar%20informaci%C3%B3n%20y%20precios%3F" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-primary">
+                    <p class="tour-hero-includes">Comprend : Transport climatisé A/R, bateau traditionnel ombragé, gilets, assurance voyageur, guide certifié.</p>
+                    <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%8F%9D%EF%B8%8F%20J%27aimerais%20r%C3%A9server%20l%27excursion%20au%20Parc%20National%20de%20Chacahua.%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
                         Réserver via WhatsApp
                     </a>
@@ -236,98 +271,119 @@
             <!-- Main Content (SEO Dense) -->
             <section class="post-content">
 
-                <h2>El Parque Nacional Lagunas de Chacahua</h2>
-                <p>Ubicado aproximadamente a 60 kilómetros al oeste de <strong>Puerto Escondido, Oaxaca</strong>, el <strong>Parque Nacional Lagunas de Chacahua</strong> fue decretado como área natural protegida en 1937 y es considerado uno de los humedales más valiosos del Pacífico Sur mexicano. La reserva está conformada por un complejo sistema de cinco lagunas costeras rodeadas por densos bosques de manglares rojos y blancos.</p>
-                <p>Este ecosistema sirve de refugio a miles de especies, desde cocodrilos en cautiverio regulado hasta iguanas verdes que descansan en lo alto de la selva y una impresionante variedad de aves migratorias procedentes del norte del continente. Conocer Chacahua es adentrarse en un México auténtico, de ritmos relajados, naturaleza abrumadora y comunidades afro-oaxaqueñas sumamente hospitalarias.</p>
+                <h2>Le Parc National des Lagunes de Chacahua</h2>
+                <p>Situé à environ 60 km à l'ouest de <strong>Puerto Escondido, Oaxaca</strong>, le <strong>Parc National des Lagunes de Chacahua</strong> est protégé depuis 1937. Ses cinq lagunes côtières bordées d'épaisses mangroves rouges et blanches forment l'un des plus riches sanctuaires écologiques du Pacifique mexicain.</p>
+                <p>Loin des grands complexes hôteliers, Chacahua révèle un Mexique authentique, rythmé par ses villages afro-oaxaquéens hospitaliers et une nature foisonnante.</p>
 
-                <h2>Qué esperar del recorrido en lancha por los manglares</h2>
-                <p>Nuestra excursión a Chacahua comienza con un cómodo traslado terrestre de una hora hasta la comunidad de Zapotal, el portal de entrada a las lagunas. Allí abordamos una lancha artesanal techada que nos llevará en una travesía mágica de dos horas por la laguna.</p>
-                <p>Navegaremos lentamente por canales estrechos que funcionan como <strong>laberintos de manglares</strong>, donde el follaje se cierra sobre nosotros creando espectaculares cúpulas verdes naturales. A lo largo del trayecto, tu guía certificado local te ayudará a identificar aves como garzas reales, pelícanos grises, espátulas rosadas y halcones pescadores. Visitaremos también la pintoresca "Isla de las Iguanas", un santuario silvestre donde decenas de iguanas de gran tamaño habitan de manera natural en los manglares.</p>
+                <h2>La navigation en bateau dans les mangroves</h2>
+                <p>Après environ une heure de route confortable vers le hameau de Zapotal, nous embarquons à bord d'un bateau traditionnel couvert pour deux heures de découverte écologique :</p>
+                <ul>
+                    <li><strong>Labyrinthes de palétuviers :</strong> Passage sous de spectaculaires voûtes végétales où s'abritent crabes, poissons d'estuaire et hérons.</li>
+                    <li><strong>Oiseaux sauvages et migrateurs :</strong> Observation de grandes aigrettes, spatules rosées, pélicans bruns, cigognes et balbuzards.</li>
+                    <li><strong>Île aux Iguanes :</strong> Découverte d'un sanctuaire naturel peuplé de grands iguanes verts perchés au sommet des arbres côtiers.</li>
+                </ul>
 
                 <div class="post-highlight-box">
-                    <h3>🌅 La Bahía de Chacahua: El paraíso entre el río y el mar</h3>
-                    <p>El punto culminante del viaje es nuestra llegada al pueblo de Chacahua, una comunidad de pescadores atrapada en el tiempo. Aquí tendrás tiempo libre para:</p>
+                    <h3>🌅 La baie de Chacahua entre lagune et océan</h3>
+                    <p>À l'arrivée au village de pêcheurs, vous profitez d'un temps libre généreux pour :</p>
                     <ul>
-                        <li>Nadar en las aguas templadas y completamente tranquilas del canal lagunar.</li>
-                        <li>Observar la bocabarra, el espectacular encuentro de las aguas fluviales verdes con el azul intenso del Océano Pacífico.</li>
-                        <li>Descansar en las hamacas y enramadas rústicas frente al mar con una bebida fría.</li>
-                        <li>Degustar la exquisita gastronomía afro-oaxaqueña: pescado fresco al mojo de ajo, tlayudas de mariscos y salsas locales hechas al momento.</li>
+                        <li>Nager en toute tranquillité dans les eaux tièdes et calmes du chenal protégé.</li>
+                        <li>Admirer l'embouchure où la lagune émeraude rejoint les vagues bleues du Pacifique.</li>
+                        <li>Vous reposer dans les hamacs et paillotes artisanales au bord d'une plage vierge.</li>
+                        <li>Savourer poissons grillés frais, fruits de mer ou tlayudas préparés par les familles de Chacahua (repas en option sur place).</li>
                     </ul>
                 </div>
 
-                <h2>¿Qué incluye nuestro tour certificado a Chacahua?</h2>
+                <h2>Que comprend notre excursion certifiée à Chacahua ?</h2>
                 <ul>
-                    <li><strong>Transporte viaje redondo</strong> en unidades con aire acondicionado y choferes profesionales.</li>
-                    <li><strong>Paseo en lancha de motor</strong> con espacio de sombra y chalecos salvavidas para todos los participantes.</li>
-                    <li><strong>Guía certificado local</strong> bilingüe apasionado por la naturaleza.</li>
-                    <li><strong>Visitas guiadas:</strong> Canales de manglar, Isla de las Iguanas y Bocabarra costera.</li>
-                    <li><strong>Seguro de viajero</strong> integral.</li>
+                    <li><strong>Transport aller-retour climatisé :</strong> Prise en charge et dépose à votre hébergement à Puerto Escondido.</li>
+                    <li><strong>Traversée en bateau couvert :</strong> Pilote local diplômé et gilets de sauvetage obligatoires fournis.</li>
+                    <li><strong>Guide local certifié :</strong> Explications naturalistes et découverte de l'histoire afro-oaxaquéenne.</li>
+                    <li><strong>Assurance voyageur complète :</strong> Couverture incluse durant toute l'excursion.</li>
                 </ul>
 
-                <h2>Itinéraire complet de l'excursion</h2>
+                <h2>Itinéraire détaillé de la journée</h2>
                 <ol>
-                    <li><strong>12:30 PM</strong> — Recogida directa en tu hotel de Puerto Escondido.</li>
-                    <li><strong>1:30 PM</strong> — Llegada al embarcadero del pueblo rústico Zapotal.</li>
-                    <li><strong>1:45 PM</strong> — Abordamos la embarcación y comenzamos la navegación guiada por las lagunas y los laberintos de manglar.</li>
-                    <li><strong>2:30 PM</strong> — Parada en la Isla de las Iguanas para observación ecológica de iguanas verdes.</li>
-                    <li><strong>3:30 PM</strong> — Llegada al pueblo pesquero de Chacahua y la zona de enramadas.</li>
-                    <li><strong>3:45 PM a 5:30 PM</strong> — Tiempo libre para nadar en la playa, caminar hacia el faro histórico, descansar en hamacas y comer mariscos locales frescos frente al mar.</li>
-                    <li><strong>5:45 PM</strong> — Abordamos la lancha para navegar de vuelta disfrutando de los increíbles reflejos del atardecer sobre el agua de la laguna.</li>
-                    <li><strong>6:45 PM</strong> — Regreso a Zapotal y abordaje de nuestro transporte terrestre.</li>
-                    <li><strong>7:45 PM</strong> — Llegada de vuelta a tu hotel en Puerto Escondido.</li>
+                    <li><strong>12h30</strong> — Prise en charge à votre hôtel à Puerto Escondido.</li>
+                    <li><strong>13h30</strong> — Arrivée à Zapotal et embarquement sur la lagune.</li>
+                    <li><strong>13h45</strong> — Début de la croisière guidée dans les canaux et mangroves.</li>
+                    <li><strong>14h30</strong> — Arrêt écologique à l'Île aux Iguanes et zones d'observation d'oiseaux.</li>
+                    <li><strong>15h30</strong> — Arrivée au village et à la plage de Chacahua.</li>
+                    <li><strong>15h45 à 17h30</strong> — Baignade libre, promenade vers le phare panoramique, détente et repas local en bord de mer.</li>
+                    <li><strong>17h45</strong> — Retour en bateau sous les reflets dorés du coucher du soleil.</li>
+                    <li><strong>18h45</strong> — Départ de Zapotal par la route vers Puerto Escondido.</li>
+                    <li><strong>19h45</strong> — Retour à votre hôtel.</li>
                 </ol>
 
-                <h2>¿Qué ropa y equipo debo llevar?</h2>
+                <h2>Que faut-il apporter pour visiter Chacahua ?</h2>
                 <ul>
-                    <li>Traje de baño puesto y toalla de playa.</li>
-                    <li>Ropa cómoda de cambio ligera y fresca.</li>
-                    <li>Sandalias para caminar en agua o calzado antideslizante.</li>
-                    <li>Lentes de sol, sombrero o gorra.</li>
-                    <li>Protector solar biodegradable.</li>
-                    <li><strong>Dinero en efectivo:</strong> Muy importante, ya que en Chacahua no existen cajeros automáticos ni terminales de pago con tarjeta, y la señal telefónica es nula. Todo consumo local se liquida en efectivo.</li>
+                    <li>Maillot de bain déjà enfilé, serviette et tenue de rechange légère.</li>
+                    <li>Sandales tenant bien au pied ou chaussures adaptées à l'eau.</li>
+                    <li>Lunettes de soleil, chapeau et protection solaire biodégradable.</li>
+                    <li><strong>Espèces (Pesos mexicains) :</strong> Indispensable — il n'y a ni distributeur automatique ni terminal bancaire fonctionnel à Chacahua pour vos boissons et repas sur place.</li>
                 </ul>
             </section>
 
+            <!-- Tour Editorial Gallery -->
+            <section class="tour-photo-gallery">
+                <h2>Galerie Photo Réelle de l'Excursion</h2>
+                <div class="tour-photo-gallery-grid">
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/chacahua/chacahua-canal-manglar.webp" alt="Navigation dans les canaux émeraude du Parc National de Chacahua" loading="lazy" decoding="async" width="1200" height="1200">
+                        <figcaption>Dédale paisible de palétuviers durant la traversée</figcaption>
+                    </figure>
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/chacahua/cocodrilo-pasto.webp" alt="Crocodile sauvage se chauffant au soleil dans la réserve de Chacahua" loading="lazy" decoding="async" width="720" height="480">
+                        <figcaption>Faune côtière protégée observée dans son milieu naturel</figcaption>
+                    </figure>
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/chacahua/dos-cocodrilos-manglar.webp" alt="Faune préservée au cœur des racines côtières de Chacahua" loading="lazy" decoding="async" width="702" height="468">
+                        <figcaption>Biodiversité exceptionnelle protégée au sein du parc national</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+
             <!-- FAQ Section -->
             <section style="margin-top: 4rem;">
-                <h2 style="text-align: left; font-size: 1.6rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem;">Foire Aux Questions (FAQ)</h2>
+                <h2 style="text-align: left; font-size: 1.6rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem;">Questions Fréquentes sur Chacahua</h2>
 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cuánto tiempo dura el tour a Chacahua?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">El tour tiene una duración total aproximada de 5 a 6 horas. Incluye la recogida en tu hotel en Puerto Escondido a las 12:30 PM y el regreso alrededor de las 7:45 PM, justo después del atardecer.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Combien de temps dure l'excursion à Chacahua ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">L'excursion complète dure environ 6 heures (trajets aller-retour inclus), avec départ vers 12h30 et retour en soirée après le coucher du soleil.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Se puede nadar en las lagunas de Chacahua?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Sí, nadar en el canal templado de Chacahua es una experiencia espectacular y completamente segura. Las corrientes en la laguna son nulas y el oleaje es inexistente, ideal para refrescarse.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Peut-on se baigner en sécurité dans la lagune ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Oui. L'eau du chenal abrité est tiède, calme et dépourvue de grosses vagues, idéale pour une baignade détendue.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Qué tipo de fauna silvestre se puede ver en el Parque Nacional?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Podrás ver diversas aves migratorias (garzas, pelícanos grises, espátulas), iguanas verdes que descansan en el follaje del manglar, y con suerte crustáceos costeros y peces nativos del ecosistema lagunar.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Quels animaux sauvages vit-on dans le Parc National ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">De nombreux oiseaux côtiers et migrateurs (hérons, pélicans, spatules), des iguanes verts dans les mangliers et des crocodiles américains protégés dans leur habitat.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Está incluida la comida en la tarifa del tour?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">No. Para que tengas la libertad de elegir tu propio menú, la comida es por tu cuenta en las tradicionales enramadas de Chacahua. Hay platillos de mariscos frescos riquísimos y tlayudas tradicionales a precios sumamente justos.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Le repas est-il compris dans la sortie ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Les repas ne sont pas inclus afin de vous laisser choisir librement parmi les restaurants familiaux en bord de plage à Chacahua (pensez à prendre des espèces).</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Es seguro el tour para niños y adultos mayores?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Sí, es un tour familiar muy relajante. Los traslados terrestres son climatizados, y la navegación es por aguas tranquilas de la laguna. Proporcionamos chalecos salvavidas certificados obligatorios para todos los pasajeros.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">L'excursion est-elle adaptée aux enfants et aux seniors ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Oui, c'est une sortie très paisible : véhicule climatisé, bateaux couverts stables avec gilets fournis et navigation sans houle sur les lagunes.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cuál es la mejor temporada para visitar Chacahua?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Cualquier mes es ideal. La temporada seca (noviembre a mayo) ofrece aguas más cristalinas e iluminadas. La temporada de lluvias (junio a octubre) tiñe el paisaje de un verde místico impresionante, idóneo para amantes de la fotografía.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Quelle est la meilleure saison pour aller à Chacahua ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Chacahua se visite toute l'année : de novembre à mai le ciel est ensoleillé et l'eau très limpide ; de juin à octobre la mangrove revêt un vert tropical spectaculaire.</p>
                     </details>
                 </div>
             </section>
 
             <!-- Related Blog Articles -->
             <section style="margin-top: 4rem;">
-                <h2 style="text-align: left; font-size: 1.4rem; margin-bottom: 1.5rem;">Artículos Relacionados</h2>
+                <h2 style="text-align: left; font-size: 1.4rem; margin-bottom: 1.5rem;">Guides &amp; Articles Associés</h2>
                 <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                     <a href="/fr/blog/guide-bioluminescence-manialtepec.html" class="glass-card" style="flex: 1; min-width: 280px; padding: 1.5rem; display: flex; gap: 1rem; align-items: center;">
                         <div>
-                            <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Ecoturismo en Oaxaca: Las Reservas Naturales de la Costa</h3>
-                            <p style="font-size: 0.85rem; margin: 0;">Un recorrido por Chacahua, Manialtepec y los mejores santuarios de la biodiversidad oaxaqueña.</p>
+                            <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Écotourisme à Oaxaca : Les Réserves de Manialtepec</h3>
+                            <p style="font-size: 0.85rem; margin: 0;">Découvrez les lagunes protégées, la bioluminescence et les sanctuaires côtiers autour de Puerto Escondido.</p>
                         </div>
                     </a>
                 </div>
@@ -335,12 +391,13 @@
 
             <!-- Bottom CTA -->
             <footer class="post-footer-cta" style="margin-top: 4rem;">
-                <h3>¿Listo para explorar Chacahua? 🏝️</h3>
-                <p>Escríbenos por WhatsApp para reservar tus lugares en la lancha, coordinar la recogida en tu hotel y asegurar un viaje inolvidable por los manglares.</p>
-                <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%9D%20Quiero%20reservar%20el%20Tour%20de%20Chacahua.%20%C2%BFCu%C3%A1les%20son%20las%20fechas%20disponibles%20esta%20semana%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
-                    Consultar Disponibilidad por WhatsApp
+                <h3>Prêt à explorer le Parc National de Chacahua ? 🏝️</h3>
+                <p>Écrivez-nous sur WhatsApp pour réserver vos places sur le bateau et coordonner la prise en charge à votre hôtel.</p>
+                <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%8F%9D%EF%B8%8F%20Je%20souhaite%20r%C3%A9server%20le%20tour%20au%20Parc%20de%20Chacahua%20cette%20semaine.%20Quelles%20dates%20sont%20disponibles%20%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
+                    Vérifier les Disponibilités sur WhatsApp
                 </a>
+                <p class="cta-trust-microcopy">⚡ Réponse moyenne en moins de 10 min · Sans acompte · Tarifs de groupe</p>
             </footer>
         </article>
     </main>
@@ -353,7 +410,7 @@
             <!-- Col 1: Marque & Conservation -->
             <div class="footer-col">
                 <a href="/fr/#inicio" class="logo" id="footer-logo-link" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                    <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                     <span style="font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
                 </a>
                 <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; text-align: left;">Nous concevons des éco-expériences d'exception à Puerto Escondido, favorisant la conservation et le tourisme durable.</p>
@@ -365,19 +422,20 @@
 
             <!-- Col 2: Collection -->
             <div class="footer-col">
-                <h4>Collection d'Excursions</h4>
+                <h3>Collection d'Excursions</h3>
                 <ul>
                     <li><a href="/fr/bioluminescence-oaxaca/">🌌 Bioluminescence</a></li>
                     <li><a href="/fr/liberation-tortues-puerto-escondido/">🐢 Libération des Tortues</a></li>
                     <li><a href="/fr/parc-national-chacahua-tour/">🏝️ Parc de Chacahua</a></li>
                     <li><a href="/fr/kayak-lagune-manialtepec/">🛶 Kayak dans les Mangroves</a></li>
                     <li><a href="/fr/balade-cheval-coucher-soleil/">🐎 Balade à Cheval</a></li>
+                    <li><a href="/fr/dauphins-baleines-puerto-escondido/">🐬 Dauphins &amp; Baleines</a></li>
                 </ul>
             </div>
 
             <!-- Col 3: Engagements -->
             <div class="footer-col">
-                <h4>Engagements</h4>
+                <h3>Engagements</h3>
                 <ul>
                     <li><a href="/fr/#contacto">Réservations Privées</a></li>
                     <li><a href="/fr/#testimonios">Avis Réels</a></li>
@@ -389,7 +447,7 @@
 
             <!-- Col 4: Suivez-nous & Contact -->
             <div class="footer-col">
-                <h4>Suivez-nous</h4>
+                <h3>Suivez-nous</h3>
                 <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem; text-align: left;">Suivez nos récits de préservation et nos observations de faune.</p>
                 <div class="footer-follow">
                     <a href="https://www.instagram.com/paraisolagunamx" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> Instagram</a>
@@ -424,10 +482,10 @@
 
     <!-- FLOATING WHATSAPP BUBBLE -->
     <div class="wa-widget-container" id="wa-chat-widget">
-        <div class="wa-floating-bubble" id="wa-chat-bubble" onclick="window.open('https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%9D%20Tengo%20una%20pregunta%20sobre%20el%20tour%20de%20Chacahua.', '_blank')">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
+        <div class="wa-floating-bubble" id="wa-chat-bubble" onclick="window.open('https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%8F%9D%EF%B8%8F%20J%27ai%20une%20question%20sur%20le%20tour%20%C3%A0%20Chacahua.', '_blank')">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
             <div class="wa-pulse-dot"></div>
-            <div class="wa-tooltip">¿Dudas sobre Chacahua? 🏝️</div>
+            <div class="wa-tooltip">Des questions sur Chacahua ? 🏝️</div>
         </div>
     </div>
 
@@ -437,7 +495,7 @@
             <a href="/fr/#inicio" class="logo" onclick="closeMobileMenu()">
                 <span style="font-weight: 800; font-size: 1.4rem; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
-            <button class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
+            <button type="button" class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
         </div>
         <nav class="drawer-nav" style="padding: 2rem;">
             <span style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 2rem;">✧ MENU DE NAVIGATION</span>
@@ -465,11 +523,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=2.8.2"></script>
+    <script src="/app.js?v=2.8.3"></script>
 
     <!-- CTA persistente en movil: antes esta pagina no ofrecia ningun
          punto de contacto durante la mayor parte del scroll. -->
-    <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%9D%20Quiero%20reservar%20el%20Tour%20de%20Chacahua.%20%C2%BFMe%20pueden%20dar%20informaci%C3%B3n%20y%20precios%3F" target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Réserver sur WhatsApp">
+    <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%8F%9D%EF%B8%8F%20J%27aimerais%20r%C3%A9server%20l%27excursion%20au%20Parc%20National%20de%20Chacahua.%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Réserver sur WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
         <span>Réserver sur WhatsApp</span>
     </a>

@@ -20,18 +20,18 @@
     
 
     <!-- OpenGraph -->
-    <meta property="og:locale" content="es_MX">
+    <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Balade à Cheval Coucher du Soleil, Oaxaca | Paraíso Laguna">
-    <meta property="og:description" content="Cabalga al atardecer por los paisajes de la Laguna de Manialtepec. Observa los caballos nadadores y disfruta vistas panorámicas al Pacífico.">
-    <meta property="og:url" content="https://paraisolaguna.com/paseo-caballo-puerto-escondido/">
+    <meta property="og:description" content="Balade à cheval de 3h au coucher du soleil à Manialtepec avec les célèbres chevaux nageurs. Transport hôtel depuis Puerto Escondido inclus.">
+    <meta property="og:url" content="https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/">
     <meta property="og:site_name" content="Paraíso Laguna">
     <meta property="og:image" content="https://paraisolaguna.com/assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Balade à Cheval Coucher du Soleil, Oaxaca | Paraíso Laguna">
-    <meta name="twitter:description" content="Paseo a caballo al atardecer en Puerto Escondido. Caballos nadadores, manglares y vistas al Pacífico. Reserva por WhatsApp.">
+    <meta name="twitter:description" content="Randonnée équestre au coucher du soleil à Puerto Escondido : mangroves et chevaux nageurs. Réservez sur WhatsApp.">
     <meta name="twitter:image" content="https://paraisolaguna.com/assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp">
 
     <!-- Stylesheets -->
@@ -39,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=2.8.2">
+    <link rel="stylesheet" href="/styles.css?v=2.8.3">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- JSON-LD Schema: TouristTrip + FAQPage + BreadcrumbList -->
@@ -47,118 +47,151 @@
     {
       "@context": "https://schema.org",
       "@graph": [
-        {
-          "@type": "TouristTrip",
-          "@id": "https://paraisolaguna.com/paseo-caballo-puerto-escondido/#tour",
-          "name": "Atardecer a Caballo en Puerto Escondido — Caballos Nadadores",
-          "description": "Cabalgata de 3 horas al atardecer por los paisajes de la Laguna de Manialtepec. Incluye el fenómeno de los caballos nadadores, vistas panorámicas al Pacífico, parada en la palapa Mangle Rojo y observación de flora y fauna local. Transporte, guía certificado y seguro incluidos.",
-          "touristType": "Ecoturismo de aventura",
-          "image": "https://paraisolaguna.com/assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp",
-          "provider": {
-            "@type": "TravelAgency",
-            "name": "Paraíso Laguna",
-            "url": "https://paraisolaguna.com",
-            "telephone": "+529541611334"
-          },
-          "offers": {
-            "@type": "Offer",
-            "description": "Cotización personalizada por WhatsApp según número de personas y temporada.",
-            "url": "https://paraisolaguna.com/paseo-caballo-puerto-escondido/#reservar",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          },
-          "itinerary": {
-            "@type": "ItemList",
-            "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Recogida en hotel de Puerto Escondido"},
-              {"@type": "ListItem", "position": 2, "name": "Traslado al rancho ecuestre en la ribera de la Laguna de Manialtepec"},
-              {"@type": "ListItem", "position": 3, "name": "Asignación de caballo y briefing de seguridad con guía certificado"},
-              {"@type": "ListItem", "position": 4, "name": "Cabalgata por senderos, manglares y orilla de la laguna"},
-              {"@type": "ListItem", "position": 5, "name": "Observación de los caballos nadadores en la laguna"},
-              {"@type": "ListItem", "position": 6, "name": "Parada en la palapa Mangle Rojo con vistas al atardecer"},
-              {"@type": "ListItem", "position": 7, "name": "Regreso al rancho y traslado a Puerto Escondido"}
-            ]
-          },
-          "duration": "PT3H",
-          "touristDestination": {
-            "@type": "TouristDestination",
-            "name": "Laguna de Manialtepec",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "15.9500",
-              "longitude": "-97.1167"
+            {
+                  "@type": "TouristTrip",
+                  "@id": "https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/#tour",
+                  "name": "Balade à Cheval au Coucher du Soleil à Puerto Escondido",
+                  "description": "Randonnée équestre guidée de 3 heures autour de la lagune de Manialtepec avec traversée des chevaux nageurs et arrêt panoramique à la palapa Mangle Rojo.",
+                  "touristType": "Écotourisme équestre",
+                  "image": "https://paraisolaguna.com/assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp",
+                  "provider": {
+                        "@type": "TravelAgency",
+                        "name": "Paraíso Laguna",
+                        "url": "https://paraisolaguna.com",
+                        "telephone": "+529541611334"
+                  },
+                  "offers": {
+                        "@type": "Offer",
+                        "description": "Devis personnalisé via WhatsApp selon la taille du groupe.",
+                        "url": "https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/#reservar",
+                        "priceCurrency": "MXN",
+                        "availability": "https://schema.org/InStock"
+                  },
+                  "itinerary": {
+                        "@type": "ItemList",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Prise en charge à votre hôtel à Puerto Escondido (15h30)"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Arrivée au ranch équestre de Manialtepec et briefing sécurité"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Balade sur les sentiers côtiers et sous-bois de mangroves"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 4,
+                                    "name": "Passage des célèbres chevaux nageurs dans la rivière"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 5,
+                                    "name": "Pause panoramique à la palapa Mangle Rojo au coucher du soleil"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 6,
+                                    "name": "Retour au crépuscule et transfert à votre hébergement"
+                              }
+                        ]
+                  },
+                  "duration": "PT3H",
+                  "touristDestination": {
+                        "@type": "TouristDestination",
+                        "name": "Lagune de Manialtepec",
+                        "geo": {
+                              "@type": "GeoCoordinates",
+                              "latitude": "15.9500",
+                              "longitude": "-97.1167"
+                        },
+                        "address": {
+                              "@type": "PostalAddress",
+                              "addressLocality": "Puerto Escondido",
+                              "addressRegion": "Oaxaca",
+                              "addressCountry": "MX"
+                        }
+                  }
             },
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Puerto Escondido",
-              "addressRegion": "Oaxaca",
-              "addressCountry": "MX"
+            {
+                  "@type": "FAQPage",
+                  "@id": "https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/#faqs",
+                  "mainEntity": [
+                        {
+                              "@type": "Question",
+                              "name": "Faut-il savoir déjà monter à cheval ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Aucune expérience préalable n'est requise. Nos chevaux sont très calmes et notre guide vous montre les gestes de base avant le départ."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "La balade est-elle sûre pour les enfants ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Oui, c'est une sortie idéale en famille. Dès 6 ans les enfants peuvent avoir leur propre monture calme, et les plus petits montent accompagnés d'un adulte."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Que sont exactement les chevaux nageurs ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Ce sont des chevaux côtiers élevés près de la lagune de Manialtepec et entraînés à traverser la rivière à la nage : une tradition rurale fascinante d'Oaxaca."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Quelle tenue est recommandée ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Un pantalon long et des chaussures fermées sont indispensables pour le confort en selle. Apportez un maillot en dessous si vous souhaitez entrer dans l'eau."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Y a-t-il un poids maximum par cavalier ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Par souci de bien-être pour nos chevaux, la limite est fixée à 100 kg (220 lb) par cavalier."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Quelle est la meilleure saison pour cette excursion ?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "L'excursion a lieu toute l'année : la saison sèche (novembre à mai) offre des sentiers secs et des ciels très dégagés, tandis que l'été rend la végétation tropicale spectaculaire."
+                              }
+                        }
+                  ]
+            },
+            {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                        {
+                              "@type": "ListItem",
+                              "position": 1,
+                              "name": "Accueil",
+                              "item": "https://paraisolaguna.com/fr/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 2,
+                              "name": "Balade à Cheval Puerto Escondido",
+                              "item": "https://paraisolaguna.com/fr/balade-cheval-coucher-soleil/"
+                        }
+                  ]
             }
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://paraisolaguna.com/paseo-caballo-puerto-escondido/#faqs",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Necesito experiencia previa para montar a caballo?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No, no necesitas ninguna experiencia previa. Nuestros caballos están entrenados para principiantes y nuestro guía certificado te dará una sesión de orientación antes de comenzar la cabalgata. Te enseñará cómo montar, dirigir y frenar de manera segura."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Es seguro el paseo a caballo para niños?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, es una actividad familiar. Niños desde los 6 años pueden montar solos en caballos mansos, y los más pequeños pueden ir acompañados de un adulto en el mismo caballo. Todos los jinetes reciben un casco de seguridad y un briefing completo."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué son los caballos nadadores?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Los caballos nadadores son caballos locales entrenados que cruzan nadando los canales y zonas poco profundas de la Laguna de Manialtepec. Es un espectáculo natural impresionante: verás cómo los caballos se sumergen con confianza mientras su crin flota sobre el agua. Es una tradición única de las comunidades lagunares de Oaxaca."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué ropa debo usar para la cabalgata?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Recomendamos pantalón largo cómodo (jeans o tipo cargo), zapatos cerrados o botas, playera de manga larga ligera para protección solar y un sombrero o gorra. Lleva bloqueador solar biodegradable y repelente natural. También trae traje de baño por si deseas refrescarte al final."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuál es el peso máximo permitido para los jinetes?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Por bienestar de los caballos, el peso máximo permitido es de 100 kg (220 libras) por jinete. Nuestros caballos son de raza criolla, fuertes y adaptados al terreno, pero respetamos sus límites para garantizar una experiencia cómoda y ética para todos."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuál es la mejor época del año para esta cabalgata?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La cabalgata al atardecer se realiza todo el año. De noviembre a mayo (temporada seca) los senderos están más firmes y los atardeceres son especialmente despejados. De junio a octubre (lluvias) la vegetación es exuberante y verde, pero algunos senderos pueden estar lodosos. Ambas temporadas ofrecen experiencias únicas."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://paraisolaguna.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Cabalgata Puerto Escondido", "item": "https://paraisolaguna.com/paseo-caballo-puerto-escondido/"}
-          ]
-        }
       ]
-    }
+}
     </script>
     
     
@@ -177,7 +210,7 @@
     <header id="main-header">
         <div class="nav-container">
             <a href="/fr/#inicio" class="logo" id="header-logo-link" style="display: flex; align-items: center; gap: 0.75rem;">
-                <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                 <span style="font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
             <nav id="navbar-menu">
@@ -195,7 +228,7 @@
                     <span class="lang-btn active" data-lang="fr">FR</span>
                 </div>
             <!-- Hamburger Button (Luxury Redesign Addition) -->
-            <button class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Ouvrir le menu de navigation">
+            <button type="button" class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Ouvrir le menu de navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -215,7 +248,7 @@
         <article>
             <section class="tour-hero" id="reservar">
                 <div class="tour-hero-media" aria-hidden="true">
-                    <img src="/assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp" alt="Cavalier au coucher du soleil le long de la lagune de Manialtepec à Puerto Escondido" fetchpriority="high">
+                    <img src="/assets/images/tours/atardecer-caballo/atardecer-caballo-manialtepec.webp" alt="Cavalier au coucher du soleil le long de la lagune de Manialtepec à Puerto Escondido" fetchpriority="high" width="1200" height="1200">
                 </div>
                 <div class="tour-hero-scrim" aria-hidden="true"></div>
                 <div class="tour-hero-inner">
@@ -224,11 +257,11 @@
                     <p class="tour-hero-lead">Chevauchez sur les rives paisibles de la <strong>lagune de Manialtepec</strong> au moment où le soleil embrase le Pacifique de nuances dorées. À 14 km de Puerto Escondido, explorez les mangroves et admirez le spectacle des chevaux nageurs.</p>
                     <div class="tour-hero-facts">
                     <div><strong>🕒 Durée</strong><span>3 Heures</span></div>
-                    <div><strong>🌅 Heurerio</strong><span>4:00 PM — Atardecer</span></div>
+                    <div><strong>🌅 Horaires</strong><span>16h00 — Coucher du soleil</span></div>
                     <div><strong>📍 Départ</strong><span>Puerto Escondido</span></div>
                     </div>
                     <p class="tour-hero-includes">Comprend : Cheval adapté, assurance, guide cavalier local certifié, transport aller-retour.</p>
-                    <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20!%20%F0%9F%90%B4%20J%27aimerais%20r%C3%A9server%20la%20Balade%20%C3%A0%20Cheval%20au%20Coucher%20du%20Soleil.%20Pourriez-vous%20me%20transmettre%20les%20tarifs%20et%20disponibilit%C3%A9s%20%3F" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-primary">
+                    <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%90%B4%20J%27aimerais%20r%C3%A9server%20la%20Balade%20%C3%A0%20Cheval%20au%20Coucher%20du%20Soleil.%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
                         Réserver via WhatsApp
                     </a>
@@ -239,116 +272,123 @@
             <section class="post-content">
 
                 <h2>En quoi consiste la balade équestre à Manialtepec ?</h2>
-                <p>La <strong>cabalgata al atardecer en Puerto Escondido</strong> es una experiencia ecuestre de 3 horas que te lleva a recorrer los paisajes más emblemáticos de la <strong>Laguna de Manialtepec</strong> montado en caballos criollos entrenados por familias locales que han trabajado con equinos durante generaciones. No es un simple paseo — es una inmersión total en el ecosistema lagunar oaxaqueño.</p>
-                <p>El recorrido comienza en un rancho ecuestre ubicado en la ribera sur de la laguna, donde recibirás tu caballo asignado y una sesión de orientación con nuestro guía certificado. Desde ahí, cabalgarás por senderos de tierra rodeados de vegetación tropical, cruzarás zonas de <strong>mangle rojo</strong> (<em>Rhizophora mangle</em>) y mangle blanco, y llegarás hasta la orilla de la laguna justo a tiempo para presenciar el atardecer más espectacular de la costa oaxaqueña.</p>
+                <p>La <strong>balade à cheval au coucher du soleil</strong> est une immersion équestre de 3 heures sur les rives sauvages de la <strong>lagune de Manialtepec</strong>. Vous montez des chevaux criollos calmes et en excellente santé, élevés par les familles locales de la côte d'Oaxaca.</p>
+                <p>Après un accueil et des explications claires au ranch, vous empruntez des sentiers sablonneux bordés de palmiers et de <strong>mangliers rouges</strong> (<em>Rhizophora mangle</em>) pour rejoindre la rive face au soleil couchant sur le Pacifique.</p>
 
                 <h2>Le phénomène des chevaux nageurs</h2>
-                <p>Uno de los momentos más memorables de esta cabalgata es observar (y, si lo deseas, experimentar) el <strong>fenómeno de los caballos nadadores</strong>. Los caballos de las comunidades lagunares de Manialtepec están acostumbrados desde potrillos a cruzar nadando los canales y brazos poco profundos de la laguna. Es una tradición que se ha transmitido por generaciones en las familias ribereñas.</p>
-                <p>Ver a un caballo sumergirse hasta el cuello con su crin flotando sobre el agua mientras cruza un canal con total confianza es un espectáculo que no encontrarás en ningún tour ecuestre convencional. Si te animas, puedes montar tu caballo mientras cruza nadando — una descarga de adrenalina única que se queda grabada en la memoria para siempre. Tu guía evaluará las condiciones del agua y tu nivel de confianza antes de invitarte a participar.</p>
+                <p>L'un des instants les plus marquants du parcours est l'observation — et si vous le souhaitez, l'expérience — des <strong>chevaux nageurs de Manialtepec</strong>. Habitués dès leur plus jeune âge aux cours d'eau lagunaires, ces chevaux traversent la rivière à la nage avec une aisance étonnante.</p>
+                <p>Votre guide évalue les conditions du jour avant de vous proposer, en option, la traversée à cru ou en selle légère en maillot de bain sous les couleurs de fin d'après-midi.</p>
 
                 <h2>Points de vue panoramiques au crépuscule</h2>
-                <p>El tour está diseñado para que llegues al punto panorámico principal exactamente durante la <strong>hora dorada</strong>. Desde la palapa <strong>Mangle Rojo</strong>, una estructura rústica de madera y palma construida sobre la ribera de la laguna, tendrás una vista de 180° del espejo de agua reflejando los colores del cielo: tonos dorados, naranjas, rosas intensos y violetas profundos que cambian minuto a minuto mientras el sol se hunde en el horizonte del Pacífico.</p>
-                <p>Es el momento perfecto para fotografías. La luz suave de la hora dorada ilumina tanto a los jinetes como a los caballos, creando siluetas naturales contra el cielo incendiado. Muchos de nuestros visitantes describen este atardecer como el más hermoso que han visto en México.</p>
+                <p>Le trajet est cadencé pour atteindre la palapa traditionnelle <strong>Mangle Rojo</strong> en pleine <strong>heure dorée</strong>. Surplombant les berges, ce point de vue dégagé à 180° permet d'admirer les reflets cuivrés, rosés et violets du ciel sur l'eau calme.</p>
 
                 <div class="post-highlight-box">
-                    <h3>🌿 Faune et flore observées</h3>
+                    <h3>🌿 Faune et flore le long des sentiers</h3>
                     <ul>
-                        <li><strong>Manglares:</strong> Mangle rojo (<em>Rhizophora mangle</em>), mangle blanco y mangle negro forman densos túneles naturales por los que cabalgarás.</li>
-                        <li><strong>Aves:</strong> Garzas blancas y azules, martín pescador, cormoranes, pelícanos cafés, y durante el invierno (noviembre-marzo), aves migratorias de Norteamérica.</li>
-                        <li><strong>Reptiles:</strong> Iguanas verdes y negras tomando el sol en las ramas de los árboles. Con suerte, podrás observar alguna tortuga de agua dulce.</li>
-                        <li><strong>Vegetación tropical:</strong> Palmeras de coco, árboles de guanacastle, ceibas y una rica variedad de plantas epífitas.</li>
+                        <li><strong>Mangroves :</strong> Palétuviers rouges, blancs et noirs formant des voûtes végétales naturelles.</li>
+                        <li><strong>Oiseaux côtiers :</strong> Hérons blancs et bleus, martins-pêcheurs, pélicans bruns et espèces migratrices d'hiver.</li>
+                        <li><strong>Reptiles &amp; palmeraies :</strong> Iguanes verts dans la canopée et vastes cocoteraies côtières.</li>
                     </ul>
                 </div>
 
-                <h2>Itinéraire de la randonnée al atardecer</h2>
+                <h2>Itinéraire complet de la randonnée</h2>
                 <ol>
-                    <li><strong>3:30 PM</strong> — Recogida en tu hotel de Puerto Escondido. Traslado en camioneta (20 minutos).</li>
-                    <li><strong>4:00 PM</strong> — Llegada al rancho ecuestre. Bienvenida, asignación de caballos y sesión de orientación con el guía.</li>
-                    <li><strong>4:30 PM</strong> — Inicio de la cabalgata por senderos de manglar y planicies costeras.</li>
-                    <li><strong>5:15 PM</strong> — Llegada a la orilla de la laguna. Observación de los caballos nadadores y posibilidad de cruzar a caballo.</li>
-                    <li><strong>5:45 PM</strong> — Parada en la palapa Mangle Rojo. Contemplación del atardecer con vista panorámica a la laguna y el Pacífico.</li>
-                    <li><strong>6:15 PM</strong> — Cabalgata de regreso al rancho bajo los últimos rayos del crepúsculo.</li>
-                    <li><strong>6:45 PM</strong> — Llegada al rancho. Despedida y traslado de vuelta a Puerto Escondido.</li>
+                    <li><strong>15h30</strong> — Prise en charge à votre hôtel à Puerto Escondido (trajet de 20 minutes).</li>
+                    <li><strong>16h00</strong> — Accueil au ranch équestre, choix du cheval adapté à votre gabarit et consignes.</li>
+                    <li><strong>16h30</strong> — Départ à travers sentiers ombragés et bordures de mangrove.</li>
+                    <li><strong>17h15</strong> — Arrivée à la rivière pour observer ou traverser avec les chevaux nageurs.</li>
+                    <li><strong>17h45</strong> — Pause contemplation du coucher du soleil à la palapa Mangle Rojo.</li>
+                    <li><strong>18h15</strong> — Retour paisible vers le ranch à la lueur du crépuscule.</li>
+                    <li><strong>18h45</strong> — Retour en véhicule jusqu'à votre hébergement à Puerto Escondido.</li>
                 </ol>
 
-                <h2>¿Qué ropa usar para la cabalgata?</h2>
+                <h2>Comment s'habiller pour monter à cheval ?</h2>
                 <ul>
-                    <li><strong>Pantalón largo</strong> obligatorio — jeans, pantalón tipo cargo o leggins gruesos. Nunca shorts, ya que la fricción con la montura puede causar rozaduras.</li>
-                    <li><strong>Zapatos cerrados</strong> o botas bajas con un ligero tacón. Evita sandalias o tenis planos que pueden resbalar del estribo.</li>
-                    <li><strong>Playera de manga larga ligera</strong> para protección solar y contra insectos. Telas transpirables como dry-fit o lino son ideales.</li>
-                    <li><strong>Sombrero o gorra</strong> con sujeción al mentón para que no se vuele durante el galope.</li>
-                    <li><strong>Bloqueador solar biodegradable</strong> — protege la laguna usando solo protector libre de oxibenzona y octinoxato.</li>
-                    <li>Lleva <strong>traje de baño debajo</strong> si quieres participar en el cruce con los caballos nadadores.</li>
+                    <li><strong>Pantalon long obligatoire :</strong> Jean ou pantalon confortable pour éviter les frottements de la selle.</li>
+                    <li><strong>Chaussures fermées :</strong> Baskets ou bottines maintenant bien le pied dans l'étrier.</li>
+                    <li><strong>Haut léger à manches longues :</strong> Protège du soleil et des insectes sous les arbres.</li>
+                    <li><strong>Chapeau attaché et protection solaire biodégradable :</strong> Respectueuse de la lagune.</li>
+                    <li><strong>Maillot de bain en dessous :</strong> Utile si vous souhaitez traverser la rivière avec les chevaux nageurs.</li>
                 </ul>
 
                 <div class="post-highlight-box" style="border-color: var(--accent-orange);">
-                    <h3 style="color: var(--accent-orange);">🛡️ Seguridad para principiantes</h3>
-                    <p>Esta cabalgata está <strong>diseñada para todos los niveles</strong>, incluyendo personas que nunca han montado a caballo:</p>
+                    <h3 style="color: var(--accent-orange);">🛡️ Sécurité et bien-être animal</h3>
+                    <p>Cette balade convient parfaitement aux <strong>débutants comme aux cavaliers</strong> :</p>
                     <ul>
-                        <li><strong>Caballos criollos mansos:</strong> Seleccionados por su temperamento tranquilo y entrenados específicamente para turismo ecuestre.</li>
-                        <li><strong>Briefing de 15 minutos:</strong> Antes de montar, el guía te enseña cómo sostener las riendas, dirigir al caballo, frenar y la postura correcta.</li>
-                        <li><strong>Guía siempre presente:</strong> El guía cabalga junto al grupo en todo momento, controlando el ritmo y asistiendo a quien lo necesite.</li>
-                        <li><strong>Seguro de viajero:</strong> Todos los participantes están cubiertos por un seguro de accidentes durante toda la actividad.</li>
-                        <li><strong>Grupos reducidos:</strong> Máximo 8 jinetes por salida para atención personalizada y seguridad óptima.</li>
+                        <li><strong>Chevaux dociles :</strong> Sélectionnés pour leur calme et parfaitement encadrés par nos guides natifs.</li>
+                        <li><strong>Initiation de 15 minutes :</strong> Apprentissage des rênes, du pas, des virages et de l'arrêt avant de partir.</li>
+                        <li><strong>Petits groupes :</strong> Maximum 8 cavaliers par sortie pour garder une atmosphère paisible et sûre.</li>
+                        <li><strong>Repos et pâturage libre :</strong> Nos chevaux vivent au pré et bénéficient de rotations respectueuses sans surmenage.</li>
                     </ul>
                 </div>
-
-                <h2>¿Por qué elegir Paraíso Laguna para tu cabalgata?</h2>
-                <ul>
-                    <li><strong>Caballos bien cuidados:</strong> Nuestros caballos viven en pastoreo libre en la ribera de la laguna. Están sanos, bien alimentados y tratados con respeto. No los sobreexplotamos con salidas excesivas.</li>
-                    <li><strong>Guías nativos:</strong> Nuestros guías nacieron en las comunidades de Manialtepec. Conocen cada sendero, cada canal y cada comportamiento de los caballos.</li>
-                    <li><strong>Ruta exclusiva:</strong> No seguimos rutas genéricas de playa. Nuestra cabalgata atraviesa ecosistemas de manglar y lagunar que la mayoría de tours no ofrecen.</li>
-                    <li><strong>Transporte incluido:</strong> Te recogemos y llevamos de vuelta a tu hotel. Sin preocupaciones logísticas.</li>
-                    <li><strong>Compromiso con el bienestar animal:</strong> Limitamos las salidas por día y rotamos los caballos para garantizar su descanso y salud.</li>
-                </ul>
             </section>
+
+            <!-- Tour Editorial Gallery -->
+            <section class="tour-photo-gallery">
+                <h2>Galerie Photo Réelle de l'Excursion</h2>
+                <div class="tour-photo-gallery-grid">
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/atardecer-caballo/cruzando-rio-dos-jinetes.webp" alt="Deux cavaliers traversant la rivière près de Manialtepec" loading="lazy" decoding="async" width="675" height="1200">
+                        <figcaption>Traversée emblématique avec nos chevaux nageurs</figcaption>
+                    </figure>
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/atardecer-caballo/jinete-playa-rio-montanas.webp" alt="Cavalier face à l'embouchure entre plage sauvage et montagnes" loading="lazy" decoding="async" width="768" height="1024">
+                        <figcaption>Paysage unique reliant rivière, Pacifique et Sierra</figcaption>
+                    </figure>
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/atardecer-caballo/cabalgata-el-aguaje.webp" alt="Groupe de cavaliers sur les sentiers tropicaux avant le crépuscule" loading="lazy" decoding="async" width="1200" height="1200">
+                        <figcaption>Chevaux criollos dociles accompagnés par nos guides natifs</figcaption>
+                    </figure>
+                </div>
+            </section>
+
 
             <!-- FAQ Section (Visible + Schema) -->
             <section style="margin-top: 4rem;">
-                <h2 style="text-align: left; font-size: 1.6rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem;">Questions Fréquentes sur la Balade Équestre</h2>
+                <h2 style="text-align: left; font-size: 1.6rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem;">Questions Fréquentes sur la Balade à Cheval</h2>
 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Necesito experiencia previa para montar a caballo?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">No, no necesitas ninguna experiencia previa. Nuestros caballos están entrenados para principiantes y nuestro guía certificado te dará una sesión de orientación antes de comenzar. Te enseñará cómo montar, dirigir y frenar de manera segura.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Faut-il savoir déjà monter à cheval ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Aucune expérience préalable n'est requise. Nos chevaux sont très calmes et notre guide vous montre les gestes de base avant le départ.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Es seguro el paseo a caballo para niños?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Sí, es una actividad familiar. Niños desde los 6 años pueden montar solos en caballos mansos, y los más pequeños pueden ir acompañados de un adulto en el mismo caballo. Todos los jinetes reciben un briefing de seguridad completo antes de la salida.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">La balade est-elle sûre pour les enfants ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Oui, c'est une sortie idéale en famille. Dès 6 ans les enfants peuvent avoir leur propre monture calme, et les plus petits montent accompagnés d'un adulte.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Qué son los caballos nadadores?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Los caballos nadadores son caballos locales entrenados desde potrillos para cruzar nadando los canales de la Laguna de Manialtepec. Es una tradición única de las comunidades lagunares de Oaxaca. Verás cómo se sumergen hasta el cuello con su crin flotando sobre el agua — un espectáculo impresionante.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Que sont exactement les chevaux nageurs ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Ce sont des chevaux côtiers élevés près de la lagune de Manialtepec et entraînés à traverser la rivière à la nage : une tradition rurale fascinante d'Oaxaca.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Qué ropa debo usar para la cabalgata?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Pantalón largo obligatorio (jeans o cargo), zapatos cerrados o botas, playera de manga larga ligera, sombrero con sujeción y bloqueador solar biodegradable. Si quieres participar en el cruce con los caballos nadadores, lleva traje de baño debajo.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Quelle tenue est recommandée ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Un pantalon long et des chaussures fermées sont indispensables pour le confort en selle. Apportez un maillot en dessous si vous souhaitez entrer dans l'eau.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cuál es el peso máximo permitido para los jinetes?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Por bienestar de los caballos, el peso máximo es de 100 kg (220 libras) por jinete. Nuestros caballos son de raza criolla, fuertes y adaptados al terreno, pero respetamos sus límites para garantizar una experiencia cómoda y ética.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Y a-t-il un poids maximum par cavalier ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Par souci de bien-être pour nos chevaux, la limite est fixée à 100 kg (220 lb) par cavalier.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cuál es la mejor época del año para esta cabalgata?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Se realiza todo el año. De noviembre a mayo (temporada seca) los senderos están más firmes y los atardeceres son despejados. De junio a octubre la vegetación es exuberante y verde, pero algunos senderos pueden estar lodosos. Ambas temporadas son hermosas.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Quelle est la meilleure saison pour cette excursion ?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">L'excursion a lieu toute l'année : la saison sèche (novembre à mai) offre des sentiers secs et des ciels très dégagés, tandis que l'été rend la végétation tropicale spectaculaire.</p>
                     </details>
                 </div>
             </section>
 
             <!-- Related Tours (Internal Linking) -->
             <section style="margin-top: 4rem;">
-                <h2 style="text-align: left; font-size: 1.4rem; margin-bottom: 1.5rem;">Experiencias Relacionadas</h2>
+                <h2 style="text-align: left; font-size: 1.4rem; margin-bottom: 1.5rem;">Expériences Associées</h2>
                 <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                     <a href="/fr/bioluminescence-oaxaca/" class="glass-card" style="flex: 1; min-width: 280px; padding: 1.5rem; display: flex; gap: 1rem; align-items: center;">
                         <div>
-                            <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Tour de Bioluminiscencia en Manialtepec</h3>
-                            <p style="font-size: 0.85rem; margin: 0;">Nada en aguas que brillan de azul neón. Experiencia nocturna en la misma laguna.</p>
+                            <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Bioluminescence Nocturne à Manialtepec</h3>
+                            <p style="font-size: 0.85rem; margin: 0;">Prolongez votre soirée sur la même lagune en nageant au milieu des éclats bleu néon.</p>
                         </div>
                     </a>
                     <a href="/fr/kayak-lagune-manialtepec/" class="glass-card" style="flex: 1; min-width: 280px; padding: 1.5rem; display: flex; gap: 1rem; align-items: center;">
                         <div>
-                            <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Kayak en los Manglares de Manialtepec</h3>
-                            <p style="font-size: 0.85rem; margin: 0;">Rema por canales rodeados de aves y naturaleza en la laguna.</p>
+                            <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 0.25rem;">Kayak dans les Mangroves</h3>
+                            <p style="font-size: 0.85rem; margin: 0;">Explorez en silence les tunnels de palétuviers et observez plus de 300 espèces d'oiseaux.</p>
                         </div>
                     </a>
                 </div>
@@ -356,12 +396,13 @@
 
             <!-- Bottom CTA -->
             <footer class="post-footer-cta" style="margin-top: 4rem;">
-                <h3>¿Listo para cabalgar al atardecer? 🐴</h3>
-                <p>Escríbenos por WhatsApp y te indicamos disponibilidad, cotización personalizada para tu grupo y todo lo que necesitas saber antes de tu cabalgata.</p>
-                <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%90%B4%20Quiero%20reservar%20la%20Cabalgata%20al%20Atardecer.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
+                <h3>Prêt pour une chevauchée face au Pacifique ? 🐴</h3>
+                <p>Écrivez-nous sur WhatsApp pour connaître les disponibilités du jour et organiser la prise en charge depuis votre hôtel.</p>
+                <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%90%B4%20Je%20veux%20r%C3%A9server%20la%20Balade%20%C3%A0%20Cheval%20%C3%A0%20Manialtepec.%20Quelles%20dates%20sont%20disponibles%20%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
-                    Consultar Disponibilidad y Precios por WhatsApp
+                    Vérifier les Disponibilités sur WhatsApp
                 </a>
+                <p class="cta-trust-microcopy">⚡ Réponse moyenne en moins de 10 min · Sans acompte · Tarifs de groupe</p>
             </footer>
         </article>
     </main>
@@ -374,7 +415,7 @@
             <!-- Col 1: Marque & Conservation -->
             <div class="footer-col">
                 <a href="/fr/#inicio" class="logo" id="footer-logo-link" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                    <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                     <span style="font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
                 </a>
                 <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; text-align: left;">Nous concevons des éco-expériences d'exception à Puerto Escondido, favorisant la conservation et le tourisme durable.</p>
@@ -386,19 +427,20 @@
 
             <!-- Col 2: Collection -->
             <div class="footer-col">
-                <h4>Collection d'Excursions</h4>
+                <h3>Collection d'Excursions</h3>
                 <ul>
                     <li><a href="/fr/bioluminescence-oaxaca/">🌌 Bioluminescence</a></li>
                     <li><a href="/fr/liberation-tortues-puerto-escondido/">🐢 Libération des Tortues</a></li>
                     <li><a href="/fr/parc-national-chacahua-tour/">🏝️ Parc de Chacahua</a></li>
                     <li><a href="/fr/kayak-lagune-manialtepec/">🛶 Kayak dans les Mangroves</a></li>
                     <li><a href="/fr/balade-cheval-coucher-soleil/">🐎 Balade à Cheval</a></li>
+                    <li><a href="/fr/dauphins-baleines-puerto-escondido/">🐬 Dauphins &amp; Baleines</a></li>
                 </ul>
             </div>
 
             <!-- Col 3: Engagements -->
             <div class="footer-col">
-                <h4>Engagements</h4>
+                <h3>Engagements</h3>
                 <ul>
                     <li><a href="/fr/#contacto">Réservations Privées</a></li>
                     <li><a href="/fr/#testimonios">Avis Réels</a></li>
@@ -410,7 +452,7 @@
 
             <!-- Col 4: Suivez-nous & Contact -->
             <div class="footer-col">
-                <h4>Suivez-nous</h4>
+                <h3>Suivez-nous</h3>
                 <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem; text-align: left;">Suivez nos récits de préservation et nos observations de faune.</p>
                 <div class="footer-follow">
                     <a href="https://www.instagram.com/paraisolagunamx" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> Instagram</a>
@@ -445,10 +487,10 @@
 
     <!-- FLOATING WHATSAPP BUBBLE -->
     <div class="wa-widget-container" id="wa-chat-widget">
-        <div class="wa-floating-bubble" id="wa-chat-bubble" onclick="window.open('https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%90%B4%20Tengo%20una%20pregunta%20sobre%20la%20cabalgata%20al%20atardecer.', '_blank')">
+        <div class="wa-floating-bubble" id="wa-chat-bubble" onclick="window.open('https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%90%B4%20J%27ai%20une%20question%20sur%20la%20Balade%20%C3%A0%20Cheval.', '_blank')">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
             <div class="wa-pulse-dot"></div>
-            <div class="wa-tooltip">¿Dudas sobre la cabalgata? 💬</div>
+            <div class="wa-tooltip">Des questions sur la balade à cheval ? 🐴</div>
         </div>
     </div>
 
@@ -458,7 +500,7 @@
             <a href="/fr/#inicio" class="logo" onclick="closeMobileMenu()">
                 <span style="font-weight: 800; font-size: 1.4rem; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
-            <button class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
+            <button type="button" class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
         </div>
         <nav class="drawer-nav" style="padding: 2rem;">
             <span style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 2rem;">✧ MENU DE NAVIGATION</span>
@@ -486,11 +528,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=2.8.2"></script>
+    <script src="/app.js?v=2.8.3"></script>
 
     <!-- CTA persistente en movil: antes esta pagina no ofrecia ningun
          punto de contacto durante la mayor parte del scroll. -->
-    <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20!%20%F0%9F%90%B4%20J%27aimerais%20r%C3%A9server%20la%20Balade%20%C3%A0%20Cheval%20au%20Coucher%20du%20Soleil.%20Pourriez-vous%20me%20transmettre%20les%20tarifs%20et%20disponibilit%C3%A9s%20%3F" target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Réserver sur WhatsApp">
+    <a href="https://wa.me/529541611334?text=Bonjour%20Para%C3%ADso%20Laguna%20%21%20%F0%9F%90%B4%20J%27aimerais%20r%C3%A9server%20la%20Balade%20%C3%A0%20Cheval%20au%20Coucher%20du%20Soleil.%20Quelles%20sont%20vos%20disponibilit%C3%A9s%20%3F" target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Réserver sur WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
         <span>Réserver sur WhatsApp</span>
     </a>

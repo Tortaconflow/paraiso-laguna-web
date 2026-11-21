@@ -685,6 +685,7 @@ let activeTourKey = null;
 const GALLERY_PHOTOS = [
     {
         src: "tours/bioluminiscencia/mano-brillo-real-1.webp",
+        w: 768, h: 1024,
         tag: "biolum",
         tagTitle: "Bioluminiscencia",
         title: "El agua responde con luz ✨",
@@ -693,6 +694,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/bioluminiscencia/estela-lancha-brillo.webp",
+        w: 540, h: 720,
         tag: "biolum",
         tagTitle: "Bioluminiscencia",
         title: "La estela de la lancha, encendida 🌌",
@@ -701,6 +703,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/bioluminiscencia/grupo-letrero-bioluminiscencia.webp",
+        w: 720, h: 960,
         tag: "biolum",
         tagTitle: "Bioluminiscencia",
         title: "Antes de zarpar a la laguna 🌙",
@@ -709,6 +712,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/bioluminiscencia/mano-brillo-real-2.webp",
+        w: 768, h: 768,
         tag: "biolum",
         tagTitle: "Bioluminiscencia",
         title: "Nadie sale igual de esta noche ✨",
@@ -717,6 +721,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/tortugas/crias-caminando-amanecer.webp",
+        w: 768, h: 1024,
         tag: "turtles",
         tagTitle: "Ecológico",
         title: "Rumbo al mar, solas 🐢",
@@ -725,6 +730,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/tortugas/cria-en-concha-coco.webp",
+        w: 768, h: 1024,
         tag: "turtles",
         tagTitle: "Ecológico",
         title: "Una cría, en la palma de la mano 🐢",
@@ -733,6 +739,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/tortugas/cubeta-crias-verde.webp",
+        w: 900, h: 1200,
         tag: "turtles",
         tagTitle: "Ecológico",
         title: "Listas para su primera nadada 🐢",
@@ -741,6 +748,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/tortugas/grupo-liberacion-playa.webp",
+        w: 768, h: 1024,
         tag: "turtles",
         tagTitle: "Ecológico",
         title: "Todos juntos, al atardecer 🐢",
@@ -749,6 +757,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/tortugas/crias-laud-canasta-1.webp",
+        w: 768, h: 1024,
         tag: "turtles",
         tagTitle: "Ecológico",
         title: "Tortugas laúd recién nacidas 🐢",
@@ -757,6 +766,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/delfines-ballenas/ballenas-aereo-1.webp",
+        w: 784, h: 1200,
         tag: "turtles",
         tagTitle: "Vida Marina",
         title: "Dos ballenas, vistas desde arriba 🐋",
@@ -765,6 +775,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/delfines-ballenas/ballenas-aereo-soplo.webp",
+        w: 799, h: 1200,
         tag: "turtles",
         tagTitle: "Vida Marina",
         title: "El soplo antes de sumergirse 🐋",
@@ -773,6 +784,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/delfines-ballenas/delfines-junto-lancha.webp",
+        w: 1024, h: 1024,
         tag: "turtles",
         tagTitle: "Vida Marina",
         title: "Mar abierto, 06:50 — Delfines junto a la lancha 🐬",
@@ -781,6 +793,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/atardecer-caballo/cruzando-rio-dos-jinetes.webp",
+        w: 675, h: 1200,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "Cruzando el río a caballo 🐎",
@@ -789,6 +802,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/atardecer-caballo/jinete-playa-rio-montanas.webp",
+        w: 768, h: 1024,
         tag: "landscapes",
         tagTitle: "Paisaje",
         title: "Donde el río se junta con la playa 🐎",
@@ -797,6 +811,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/atardecer-caballo/dos-mujeres-a-caballo.webp",
+        w: 768, h: 1024,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "Cabalgando entre palmeras 🐎",
@@ -805,6 +820,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/atardecer-caballo/cabalgata-el-aguaje.webp",
+        w: 1200, h: 1200,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "El Aguaje, 17:10 — Cabalgata rumbo al río 🐎",
@@ -813,6 +829,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/kayak/kayak-silueta-amanecer.webp",
+        w: 900, h: 1200,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "Kayak al amanecer, en silencio 🛶",
@@ -821,6 +838,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/kayak/kayak-entrando-tunel-manglar.webp",
+        w: 768, h: 1024,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "Entrando al túnel de manglar 🛶",
@@ -829,6 +847,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/kayak/kayak-resplandor-sol.webp",
+        w: 768, h: 1024,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "De frente al sol 🛶",
@@ -837,6 +856,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/kayak/espatulas-rosadas-volando.webp",
+        w: 768, h: 1024,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "Espátulas rosadas sobre el manglar 🦩",
@@ -845,6 +865,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/kayak/kayak-canales-manialtepec.webp",
+        w: 1200, h: 1200,
         tag: "adventures",
         tagTitle: "Aventura",
         title: "Manialtepec, 09:45 — Kayak entre canales 🛶",
@@ -853,6 +874,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/aguas-termales/poza-forma-corazon.webp",
+        w: 540, h: 960,
         tag: "landscapes",
         tagTitle: "Bienestar",
         title: "Una poza natural en forma de corazón ♥️",
@@ -861,6 +883,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/aguas-termales/poza-redonda.webp",
+        w: 552, h: 740,
         tag: "landscapes",
         tagTitle: "Bienestar",
         title: "Aguas termales, entre la selva 🌿",
@@ -869,6 +892,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/chacahua/cocodrilo-pasto.webp",
+        w: 720, h: 480,
         tag: "landscapes",
         tagTitle: "Paisaje",
         title: "Un cocodrilo tomando el sol 🐊",
@@ -877,6 +901,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/chacahua/dos-cocodrilos-manglar.webp",
+        w: 702, h: 468,
         tag: "landscapes",
         tagTitle: "Paisaje",
         title: "Chacahua, entre los manglares 🐊",
@@ -885,6 +910,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/chacahua/chacahua-canal-manglar.webp",
+        w: 1200, h: 1200,
         tag: "landscapes",
         tagTitle: "Paisaje",
         title: "Chacahua — Laberintos de manglar 🏝️",
@@ -893,6 +919,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/mazunte/letrero-punta-cometa.webp",
+        w: 768, h: 614,
         tag: "landscapes",
         tagTitle: "Costa",
         title: "Llegando a Punta Cometa 🌅",
@@ -901,6 +928,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/mazunte/mono-arana-santuario.webp",
+        w: 768, h: 1024,
         tag: "turtles",
         tagTitle: "Vida Silvestre",
         title: "Mono araña en La Ventanilla 🐒",
@@ -909,6 +937,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/mazunte/alimentando-venado-1.webp",
+        w: 768, h: 1024,
         tag: "turtles",
         tagTitle: "Vida Silvestre",
         title: "Cara a cara con un venado cola blanca 🦌",
@@ -917,6 +946,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/mazunte/degustacion-mezcal-chocolate.webp",
+        w: 768, h: 576,
         tag: "landscapes",
         tagTitle: "Costa",
         title: "Mezcal y chocolate de la región 🍫",
@@ -925,6 +955,7 @@ const GALLERY_PHOTOS = [
     },
     {
         src: "tours/atardecer-laguna/atardecer-embarcadero-manialtepec.webp",
+        w: 1200, h: 1200,
         tag: "landscapes",
         tagTitle: "Paisaje",
         title: "Manialtepec, 19:05 — El embarcadero al caer el sol 🌅",
@@ -932,7 +963,8 @@ const GALLERY_PHOTOS = [
         fr: { tagTitle: "Paysage", title: "Manialtepec, 19h05 — L'embarcadère au crépuscule 🌅" }
     },
     {
-        src: "tours/atardecer-laguna/imagen_redimensionada_2048.webp",
+        src: "tours/atardecer-laguna/atardecer-embarcadero-manialtepec.webp",
+        w: 1200, h: 1200,
         tag: "landscapes",
         tagTitle: "Paisaje",
         title: "Fogata en la Playa 🔥",
@@ -984,7 +1016,12 @@ function renderGalleryGrid() {
         const imgEl = document.createElement('img');
         imgEl.src = prefix + 'assets/images/' + photo.src;
         imgEl.alt = localized.title;
+        if (photo.w && photo.h) {
+            imgEl.width = photo.w;
+            imgEl.height = photo.h;
+        }
         imgEl.loading = 'lazy';
+        imgEl.decoding = 'async';
 
         const overlayEl = document.createElement('div');
         overlayEl.className = 'gallery-overlay';
@@ -1089,6 +1126,39 @@ function updateLightboxContent() {
     if (counterEl) counterEl.innerText = (currentLightboxIndex + 1) + ' / ' + currentFilteredPhotos.length;
 }
 
+const TOUR_GUIDE_URLS = {
+    es: {
+        biolum: '/bioluminiscencia-oaxaca/',
+        tortugas: '/liberacion-tortugas-oaxaca/',
+        delfines: '/avistamiento-delfines-oaxaca/',
+        cabalgata: '/paseo-caballo-puerto-escondido/',
+        kayak: '/kayak-manglares-manialtepec/',
+        chacahua: '/tour-chacahua/'
+    },
+    en: {
+        biolum: '/en/bioluminescence-tour-oaxaca/',
+        tortugas: '/en/turtle-release-puerto-escondido/',
+        delfines: '/en/dolphin-whale-watching-puerto-escondido/',
+        cabalgata: '/en/sunset-horseback-riding-puerto-escondido/',
+        kayak: '/en/kayak-manialtepec-lagoon/',
+        chacahua: '/en/chacahua-national-park-tour/'
+    },
+    fr: {
+        biolum: '/fr/bioluminescence-oaxaca/',
+        tortugas: '/fr/liberation-tortues-puerto-escondido/',
+        delfines: '/fr/dauphins-baleines-puerto-escondido/',
+        cabalgata: '/fr/balade-cheval-coucher-soleil/',
+        kayak: '/fr/kayak-lagune-manialtepec/',
+        chacahua: '/fr/parc-national-chacahua-tour/'
+    }
+};
+
+const TOUR_GUIDE_LINK_LABELS = {
+    es: 'Ver guía completa del tour →',
+    en: 'Read full tour guide →',
+    fr: 'Voir le guide complet →'
+};
+
 function openTourModal(tourKey) {
     const lang = getCurrentLang();
     const langTours = TOURS_DATA_I18N[lang] || TOURS_DATA_I18N.es;
@@ -1125,6 +1195,20 @@ function openTourModal(tourKey) {
 
     const bringEl = document.getElementById('modal-tour-bring');
     if (bringEl) bringEl.textContent = tour.bring;
+
+    const guideLinkEl = document.getElementById('modal-guide-link');
+    if (guideLinkEl) {
+        const langGuides = TOUR_GUIDE_URLS[lang] || TOUR_GUIDE_URLS.es;
+        const guideUrl = langGuides[tourKey];
+        if (guideUrl) {
+            guideLinkEl.href = guideUrl;
+            guideLinkEl.textContent = TOUR_GUIDE_LINK_LABELS[lang] || TOUR_GUIDE_LINK_LABELS.es;
+            guideLinkEl.style.display = 'inline-flex';
+        } else {
+            guideLinkEl.style.display = 'none';
+            guideLinkEl.href = '#';
+        }
+    }
     
     const modal = document.getElementById('tour-modal');
     if (modal) {

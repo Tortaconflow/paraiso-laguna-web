@@ -23,7 +23,7 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Manialtepec Bioluminescence Tour Oaxaca | Paraíso Laguna">
-    <meta property="og:description" content="Swim in the glowing neon waters of Manialtepec Lagoon. Night boat tour with roundtrip hotel transport and local guide. Instant booking via WhatsApp!">
+    <meta property="og:description" content="Swim in glowing neon waters in Manialtepec Lagoon. Night boat tour with roundtrip hotel transport, certified local guide, and traveler insurance.">
     <meta property="og:url" content="https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/">
     <meta property="og:site_name" content="Paraíso Laguna">
     <meta property="og:image" content="https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp">
@@ -39,7 +39,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=2.8.2">
+    <link rel="stylesheet" href="/styles.css?v=2.8.3">
     <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
     <!-- JSON-LD Schema: Tour + FAQPage -->
@@ -47,117 +47,151 @@
     {
       "@context": "https://schema.org",
       "@graph": [
-        {
-          "@type": "TouristTrip",
-          "@id": "https://paraisolaguna.com/bioluminiscencia-oaxaca/#tour",
-          "name": "Bioluminescence Tour at Manialtepec Lagoon",
-          "description": "Night eco-experience at Manialtepec Lagoon. Swim in glowing waters illuminated by bioluminescent dinoflagellates. Includes roundtrip hotel transport, certified naturalist guide, and life jacket.",
-          "touristType": "Night Ecotourism",
-          "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
-          "provider": {
-            "@type": "TravelAgency",
-            "name": "Paraíso Laguna",
-            "url": "https://paraisolaguna.com",
-            "telephone": "+529541611334"
-          },
-          "offers": {
-            "@type": "Offer",
-            "description": "Personalized quote via WhatsApp based on group size and season.",
-            "url": "https://paraisolaguna.com/bioluminiscencia-oaxaca/#reservar",
-            "priceCurrency": "MXN",
-            "availability": "https://schema.org/InStock"
-          },
-          "itinerary": {
-            "@type": "ItemList",
-            "itemListElement": [
-              {"@type": "ListItem", "position": 1, "name": "Recogida en hotel de Puerto Escondido"},
-              {"@type": "ListItem", "position": 2, "name": "Traslado a la comunidad del Aguaje del Zapote, Laguna de Manialtepec"},
-              {"@type": "ListItem", "position": 3, "name": "Abordaje de embarcación con guía certificado y chaleco salvavidas"},
-              {"@type": "ListItem", "position": 4, "name": "Navegación nocturna observando el fenómeno bioluminiscente"},
-              {"@type": "ListItem", "position": 5, "name": "Nado libre en aguas bioluminiscentes"},
-              {"@type": "ListItem", "position": 6, "name": "Regreso al punto de partida"}
-            ]
-          },
-          "duration": "PT3H",
-          "touristDestination": {
-            "@type": "TouristDestination",
-            "name": "Laguna de Manialtepec",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "15.9500",
-              "longitude": "-97.1167"
+            {
+                  "@type": "TouristTrip",
+                  "@id": "https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/#tour",
+                  "name": "Bioluminescence Tour at Manialtepec Lagoon",
+                  "description": "Night eco-experience at Manialtepec Lagoon. Swim in glowing waters illuminated by bioluminescent dinoflagellates. Includes roundtrip hotel transport, certified naturalist guide, and life jacket.",
+                  "touristType": "Night Ecotourism",
+                  "image": "https://paraisolaguna.com/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp",
+                  "provider": {
+                        "@type": "TravelAgency",
+                        "name": "Paraíso Laguna",
+                        "url": "https://paraisolaguna.com",
+                        "telephone": "+529541611334"
+                  },
+                  "offers": {
+                        "@type": "Offer",
+                        "description": "Personalized WhatsApp quote based on group size and season.",
+                        "url": "https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/#reservar",
+                        "priceCurrency": "MXN",
+                        "availability": "https://schema.org/InStock"
+                  },
+                  "itinerary": {
+                        "@type": "ItemList",
+                        "itemListElement": [
+                              {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "name": "Hotel pickup in Puerto Escondido (6:30 PM)"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 2,
+                                    "name": "Transfer to El Aguaje del Zapote community on Manialtepec Lagoon"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 3,
+                                    "name": "Boat boarding with certified local guide and mandatory life jacket"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 4,
+                                    "name": "Night boat navigation through the lagoon observing bioluminescence"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 5,
+                                    "name": "Free swimming time in the glowing neon waters"
+                              },
+                              {
+                                    "@type": "ListItem",
+                                    "position": 6,
+                                    "name": "Return boat ride and hotel drop-off in Puerto Escondido"
+                              }
+                        ]
+                  },
+                  "duration": "PT3H",
+                  "touristDestination": {
+                        "@type": "TouristDestination",
+                        "name": "Manialtepec Lagoon",
+                        "geo": {
+                              "@type": "GeoCoordinates",
+                              "latitude": "15.9500",
+                              "longitude": "-97.1167"
+                        },
+                        "address": {
+                              "@type": "PostalAddress",
+                              "addressLocality": "Puerto Escondido",
+                              "addressRegion": "Oaxaca",
+                              "addressCountry": "MX"
+                        }
+                  }
             },
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Puerto Escondido",
-              "addressRegion": "Oaxaca",
-              "addressCountry": "MX"
+            {
+                  "@type": "FAQPage",
+                  "@id": "https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/#faqs",
+                  "mainEntity": [
+                        {
+                              "@type": "Question",
+                              "name": "What is the best time of year to see bioluminescence in Manialtepec?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Bioluminescence is present year-round, with peak intensity from July to November (rainy season) when river nutrients boost dinoflagellate blooms. Visiting around the New Moon guarantees the darkest sky and brightest glow."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Can you swim in the bioluminescent water?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, swimming in the glowing lagoon is the most memorable part of the tour. As you move your hands and body, dinoflagellates emit blue-green flashes like swimming inside a starry sky. It is completely safe."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "How long does the bioluminescence tour last?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "The full tour lasts approximately 3 hours, including roundtrip transport from Puerto Escondido (14 km), night boat navigation, and free swimming time in the lagoon."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Is it safe for children and senior travelers?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Yes, it is a calm, family-friendly experience suitable for all ages. Mandatory certified life jackets are provided for every guest, and our boats are piloted by experienced local captains."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "What should I wear and bring to the bioluminescence tour?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Bring a swimsuit, towel, and comfortable dark clothes that can get wet. Very important: do NOT apply chemical insect repellents or sunscreen, as ingredients like DEET are toxic to dinoflagellates."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "How does the moon phase affect the bioluminescence?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "The moon phase is the single most important factor. On New Moon nights, the glow reaches 100% visibility. Around the Full Moon, bright moonlight dramatically reduces contrast, so we recommend nights below 20% lunar illumination."
+                              }
+                        }
+                  ]
+            },
+            {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                        {
+                              "@type": "ListItem",
+                              "position": 1,
+                              "name": "Home",
+                              "item": "https://paraisolaguna.com/en/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 2,
+                              "name": "Bioluminescence Tour Oaxaca",
+                              "item": "https://paraisolaguna.com/en/bioluminescence-tour-oaxaca/"
+                        }
+                  ]
             }
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://paraisolaguna.com/bioluminiscencia-oaxaca/#faqs",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What is the best time of year to see bioluminescence in Manialtepec?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La bioluminiscencia se puede ver durante todo el año, pero es más intensa de julio a noviembre (temporada de lluvias) cuando los nutrientes fluviales aumentan la población de dinoflagelados. Además, es fundamental ir durante la fase de Luna Nueva para máxima oscuridad y brillo."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you swim in the bioluminescent water?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, nadar en la bioluminiscencia es la parte más memorable del tour. Al mover tus manos y cuerpo en el agua, los dinoflagelados emiten destellos de luz azul-verdosa como si nadaras en un cielo estrellado líquido. Es completamente seguro."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does the bioluminescence tour last?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "El tour completo dura aproximadamente 3 horas: incluye el traslado desde Puerto Escondido (14 km), la navegación nocturna en lancha y el tiempo libre para nadar en la laguna."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is it safe for children and senior travelers?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí, es una actividad familiar y segura para todas las edades. Se proporcionan chalecos salvavidas obligatorios para todos los pasajeros, y las embarcaciones son manejadas por capitanes locales con años de experiencia en la laguna."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Qué ropa debo llevar al tour de bioluminiscencia?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Lleva traje de baño, toalla y ropa cómoda que se pueda mojar. Muy importante: NO uses repelentes ni bloqueadores solares químicos, ya que los compuestos como el DEET son tóxicos para los dinoflagelados y dañan el ecosistema lagunar."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does the moon affect the bioluminescence?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La fase lunar es el factor más importante. Durante la Luna Nueva (cielo completamente oscuro), el brillo bioluminiscente es visible al 100%. En Luna Llena, la claridad ambiental reduce drásticamente la visibilidad del fenómeno. Recomendamos reservar en días con menos del 20% de iluminación lunar."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://paraisolaguna.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Bioluminiscencia Oaxaca", "item": "https://paraisolaguna.com/bioluminiscencia-oaxaca/"}
-          ]
-        }
       ]
-    }
+}
     </script>
     
     
@@ -176,7 +210,7 @@
     <header id="main-header">
         <div class="nav-container">
             <a href="/en/#inicio" class="logo" id="header-logo-link" style="display: flex; align-items: center; gap: 0.75rem;">
-                <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                <img src="/assets/images/logo.jpg" alt="Logo Paraíso Laguna" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                 <span style="font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
             <nav id="navbar-menu">
@@ -194,7 +228,7 @@
                     <a href="/fr/bioluminescence-oaxaca/" class="lang-btn" hreflang="fr" lang="fr" data-lang="fr">FR</a>
                 </div>
             <!-- Hamburger Button (Luxury Redesign Addition) -->
-            <button class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
+            <button type="button" class="hamburger-menu" id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Open navigation menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -215,7 +249,7 @@
         <article>
             <section class="tour-hero" id="reservar">
                 <div class="tour-hero-media" aria-hidden="true">
-                    <img src="/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp" alt="Swimmers surrounded by neon blue bioluminescence in Manialtepec Lagoon, Oaxaca" fetchpriority="high">
+                    <img src="/assets/images/tours/bioluminiscencia/bioluminiscencia-laguna-manialtepec.webp" alt="Swimmers surrounded by neon blue bioluminescence in Manialtepec Lagoon, Oaxaca" fetchpriority="high" width="1200" height="1200">
                 </div>
                 <div class="tour-hero-scrim" aria-hidden="true"></div>
                 <div class="tour-hero-inner">
@@ -228,7 +262,7 @@
                     <div><strong>📍 Departure</strong><span>Puerto Escondido</span></div>
                     </div>
                     <p class="tour-hero-includes">Includes: Roundtrip transport, certified naturalist guide, life jacket, and traveler insurance.</p>
-                    <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%8C%20Quiero%20reservar%20el%20Tour%20de%20Bioluminiscencia%20en%20Manialtepec.%20%C2%BFMe%20dan%20disponibilidad%20y%20precio%3F" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-primary">
+                    <a href="https://wa.me/529541611334?text=Hello%20Para%C3%ADso%20Laguna%21%20%F0%9F%8C%8C%20I%20want%20to%20book%20the%20Bioluminescence%20Tour%20in%20Manialtepec.%20Could%20you%20share%20availability%3F" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
                         Book via WhatsApp
                     </a>
@@ -307,34 +341,54 @@
                 </ul>
             </section>
 
+            <!-- Tour Editorial Gallery -->
+            <section class="tour-photo-gallery">
+                <h2>Real Tour Photo Gallery</h2>
+                <div class="tour-photo-gallery-grid">
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/bioluminiscencia/mano-brillo-real-1.webp" alt="Hand swirling glowing neon dinoflagellates in Manialtepec Lagoon" loading="lazy" decoding="async" width="768" height="1024">
+                        <figcaption>Neon blue sparkles triggered by every hand movement</figcaption>
+                    </figure>
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/bioluminiscencia/estela-lancha-brillo.webp" alt="Glowing boat wake cutting across Manialtepec Lagoon at night" loading="lazy" decoding="async" width="540" height="720">
+                        <figcaption>Luminous wake shimmering behind the boat after dusk</figcaption>
+                    </figure>
+                    <figure class="tour-photo-card">
+                        <img src="/assets/images/tours/bioluminiscencia/grupo-letrero-bioluminiscencia.webp" alt="Guests gathering before boarding at El Aguaje del Zapote dock" loading="lazy" decoding="async" width="720" height="960">
+                        <figcaption>Small tour group ready before setting out on the lagoon</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+
             <!-- FAQ Section (Visible + Schema) -->
             <section style="margin-top: 4rem;">
                 <h2 style="text-align: left; font-size: 1.6rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem;">Frequently Asked Questions about Bioluminescence</h2>
 
                 <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cuál es la mejor época para ver la bioluminiscencia en Manialtepec?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Bioluminescence is present year-round, peaking from July to November during rainy season. Booking around the New Moon ensures maximum darkness and vivid glow.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">What is the best time of year to see bioluminescence in Manialtepec?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Bioluminescence is present year-round, with peak intensity from July to November (rainy season) when river nutrients boost dinoflagellate blooms. Visiting around the New Moon guarantees the darkest sky and brightest glow.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Se puede nadar en la bioluminiscencia?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Yes, swimming in the glowing water is the highlight of the experience. Every movement triggers blue-green sparkles around your body. It is completely safe for all ages.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Can you swim in the bioluminescent water?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Yes, swimming in the glowing lagoon is the most memorable part of the tour. As you move your hands and body, dinoflagellates emit blue-green flashes like swimming inside a starry sky. It is completely safe.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cuánto dura el tour de bioluminiscencia?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">The complete tour takes approximately 3 hours, including hotel roundtrip transfer, boat navigation, and swimming time.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">How long does the bioluminescence tour last?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">The full tour lasts approximately 3 hours, including roundtrip transport from Puerto Escondido (14 km), night boat navigation, and free swimming time in the lagoon.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Es seguro para niños y adultos mayores?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Yes, it is a safe, family-friendly tour. Life jackets are provided for all sizes and boats are navigated by certified local captains.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">Is it safe for children and senior travelers?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Yes, it is a calm, family-friendly experience suitable for all ages. Mandatory certified life jackets are provided for every guest, and our boats are piloted by experienced local captains.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">What should I wear and bring?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Wear a swimsuit, bring a towel and comfortable clothes. Crucial: Do NOT wear chemical repellents or sunscreens as they harm the microorganisms.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">What should I wear and bring to the bioluminescence tour?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">Bring a swimsuit, towel, and comfortable dark clothes that can get wet. Very important: do NOT apply chemical insect repellents or sunscreen, as ingredients like DEET are toxic to dinoflagellates.</p>
                     </details>
                     <details style="background: var(--bg-surface); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">¿Cómo afecta la luna a la bioluminiscencia?</summary>
-                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">The moon phase is essential. During New Moon, the glow is 100% visible. On Full Moon nights, ambient moonlight significantly reduces visibility.</p>
+                        <summary style="font-weight: 600; color: var(--text-primary); font-size: 1.05rem;">How does the moon phase affect the bioluminescence?</summary>
+                        <p style="margin-top: 1rem; color: var(--text-secondary); line-height: 1.7;">The moon phase is the single most important factor. On New Moon nights, the glow reaches 100% visibility. Around the Full Moon, bright moonlight dramatically reduces contrast, so we recommend nights below 20% lunar illumination.</p>
                     </details>
                 </div>
             </section>
@@ -356,10 +410,11 @@
             <footer class="post-footer-cta" style="margin-top: 4rem;">
                 <h3>Ready to Swim in the Glowing Waters? 🌌</h3>
                 <p>Chat with us on WhatsApp to check upcoming New Moon dates, real-time availability, and private group rates.</p>
-                <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%8C%20Quiero%20reservar%20el%20Tour%20de%20Bioluminiscencia.%20%C2%BFCu%C3%A1les%20son%20las%20fechas%20de%20Luna%20Nueva%20m%C3%A1s%20cercanas%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
+                <a href="https://wa.me/529541611334?text=Hello%20Para%C3%ADso%20Laguna%21%20%F0%9F%8C%8C%20I%20want%20to%20book%20the%20Bioluminescence%20Tour.%20Which%20New%20Moon%20dates%20are%20available%20soon%3F" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #25D366, #128C7E); box-shadow: 0 0 25px rgba(37, 211, 102, 0.25);">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
                     Check Availability & Rates via WhatsApp
                 </a>
+                <p class="cta-trust-microcopy">⚡ Avg. reply under 10 min · No deposit required · Private &amp; group rates</p>
             </footer>
         </article>
     </main>
@@ -372,7 +427,7 @@
             <!-- Col 1: Brand & Conservation Badges -->
             <div class="footer-col">
                 <a href="/en/#inicio" class="logo" id="footer-logo-link" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-                    <img src="/assets/images/logo.jpg" alt="Paraíso Laguna Logo" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                    <img src="/assets/images/logo.jpg" alt="Paraíso Laguna Logo" style="height: 50px; width: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.4);" width="512" height="509">
                     <span style="font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
                 </a>
                 <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; text-align: left;">We design premier eco-experiences in Puerto Escondido, promoting environmental conservation and low-impact responsible tourism.</p>
@@ -384,19 +439,20 @@
 
             <!-- Col 2: Tours Collection -->
             <div class="footer-col">
-                <h4>Tours Collection</h4>
+                <h3>Tours Collection</h3>
                 <ul>
                     <li><a href="/en/bioluminescence-tour-oaxaca/">🌌 Bioluminescence</a></li>
                     <li><a href="/en/turtle-release-puerto-escondido/">🐢 Turtle Release</a></li>
                     <li><a href="/en/chacahua-national-park-tour/">🏝️ Chacahua Tour</a></li>
                     <li><a href="/en/kayak-manialtepec-lagoon/">🛶 Mangrove Kayak</a></li>
                     <li><a href="/en/sunset-horseback-riding-puerto-escondido/">🐎 Horseback Riding</a></li>
+                    <li><a href="/en/dolphin-whale-watching-puerto-escondido/">🐬 Dolphins &amp; Whales</a></li>
                 </ul>
             </div>
 
             <!-- Col 3: Commitment -->
             <div class="footer-col">
-                <h4>Commitment</h4>
+                <h3>Commitment</h3>
                 <ul>
                     <li><a href="/en/#contacto">Private Bookings</a></li>
                     <li><a href="/en/#testimonios">Real Reviews</a></li>
@@ -408,7 +464,7 @@
 
             <!-- Col 4: Follow Us & Contact -->
             <div class="footer-col">
-                <h4>Follow Us</h4>
+                <h3>Follow Us</h3>
                 <p style="font-size: 0.9rem; line-height: 1.5; margin-bottom: 0.5rem; text-align: left;">Follow our local conservation chronicles and Pacific wildlife sightings.</p>
                 <div class="footer-follow">
                     <a href="https://www.instagram.com/paraisolagunamx" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg> Instagram</a>
@@ -443,7 +499,7 @@
 
     <!-- FLOATING WHATSAPP BUBBLE -->
     <div class="wa-widget-container" id="wa-chat-widget">
-        <div class="wa-floating-bubble" id="wa-chat-bubble" onclick="window.open('https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%8C%20Tengo%20una%20pregunta%20sobre%20el%20tour%20de%20bioluminiscencia.', '_blank')">
+        <div class="wa-floating-bubble" id="wa-chat-bubble" onclick="window.open('https://wa.me/529541611334?text=Hello%20Para%C3%ADso%20Laguna%21%20%F0%9F%8C%8C%20I%20have%20a%20question%20about%20the%20Bioluminescence%20Tour.', '_blank')">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
             <div class="wa-pulse-dot"></div>
             <div class="wa-tooltip">Questions about bioluminescence? 💬</div>
@@ -456,7 +512,7 @@
             <a href="/en/#inicio" class="logo" onclick="closeMobileMenu()">
                 <span style="font-weight: 800; font-size: 1.4rem; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-orange)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Paraíso Laguna</span>
             </a>
-            <button class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
+            <button type="button" class="drawer-close-btn" onclick="closeMobileMenu()" style="background: none; border: none; color: #fff; font-size: 2.2rem; cursor: pointer;">&times;</button>
         </div>
         <nav class="drawer-nav" style="padding: 2rem;">
             <span style="display: block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 2rem;">✧ NAVIGATION MENU</span>
@@ -484,11 +540,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/app.js?v=2.8.2"></script>
+    <script src="/app.js?v=2.8.3"></script>
 
     <!-- CTA persistente en movil: antes esta pagina no ofrecia ningun
          punto de contacto durante la mayor parte del scroll. -->
-    <a href="https://wa.me/529541611334?text=%C2%A1Hola%20Para%C3%ADso%20Laguna!%20%F0%9F%8C%8C%20Quiero%20reservar%20el%20Tour%20de%20Bioluminiscencia%20en%20Manialtepec.%20%C2%BFMe%20dan%20disponibilidad%20y%20precio%3F" target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Book on WhatsApp">
+    <a href="https://wa.me/529541611334?text=Hello%20Para%C3%ADso%20Laguna%21%20%F0%9F%8C%8C%20I%20want%20to%20book%20the%20Bioluminescence%20Tour%20in%20Manialtepec.%20Could%20you%20share%20availability%3F" target="_blank" rel="noopener noreferrer" class="mobile-sticky-cta" aria-label="Book on WhatsApp">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.324 5.328 0 11.832 0c3.152.001 6.116 1.229 8.349 3.463 2.233 2.235 3.46 5.201 3.46 8.354-.003 6.507-5.329 11.83-11.833 11.83-2.007-.001-3.98-.512-5.724-1.488L0 24zm6.09-3.722c1.677.995 3.325 1.52 5.679 1.522 5.378 0 9.756-4.374 9.759-9.754.002-2.607-1.012-5.059-2.857-6.905C16.828 3.292 14.382 2.28 11.782 2.28c-5.38 0-9.759 4.374-9.762 9.754-.001 2.254.587 4.453 1.705 6.382l-.991 3.614 3.708-.972z"/></svg>
         <span>Book on WhatsApp</span>
     </a>
